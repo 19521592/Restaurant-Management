@@ -1,6 +1,6 @@
-##**- Tên project: Phần mềm quản lý nhà hàng**
+**- Tên project: Phần mềm quản lý nhà hàng**
 
-##**- Description:**
+**- Description:**
 + Người dùng hướng đến: Nhân viên, quản lý nhà hàng / Khách hàng trong các nhà hàng.
 + Mục tiêu: Đáp ứng các tính năng cần có của một phần mềm quản lý nhà hàng cơ bản.
 + Danh sách tính năng:
@@ -11,7 +11,7 @@
 *Quản lý nhập xuất kho*
 *Thống kê doanh thu / nhập xuất kho bằng biểu đồ*
 
-##**- Tác giả:**
+**- Tác giả:**
 + Nguyễn Đức Hướng
 + Lý Quang Minh
 + Nguyễn Khánh Thành
