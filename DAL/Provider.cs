@@ -6,11 +6,13 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Configuration;
 namespace Restaurant_Management.DAL
 {
     class Provider
     {      
+        private string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
+
         private static Provider ins;
         public static Provider Ins
         {
@@ -20,9 +22,8 @@ namespace Restaurant_Management.DAL
         private Provider() { }
 
         public int ExcuteNonQuery(string query, object[] param = null)
-        {
-            string connStr = @"Server=DESKTOP-ALSR012;Database=Restaurent;User Id=sa;Password=14725836;";
-            SqlConnection connection = new SqlConnection(connStr);
+        {          
+            SqlConnection connection = new SqlConnection(conStr);
             connection.Open();
 
             SqlCommand cmd = new SqlCommand(query, connection);
@@ -53,11 +54,10 @@ namespace Restaurant_Management.DAL
         }
 
         public DataTable ExcuteQuery(string query, object[] param = null)
-        {
-            string connStr = @"Server=DESKTOP-ALSR012;Database=Restaurent;User Id=sa;Password=14725836;";
+        {          
             DataTable data = new DataTable();
 
-            SqlConnection connection = new SqlConnection(connStr);
+            SqlConnection connection = new SqlConnection(conStr);
             connection.Open();
 
             if (param == null)

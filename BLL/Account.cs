@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Configuration;
 namespace Restaurant_Management.BLL
 {
     class Account
@@ -67,20 +67,53 @@ namespace Restaurant_Management.BLL
                 return null;
             }
         }
+        private string getMaNVnext()
+        {
+            string query = "select ID from account";
+            DataTable tbl = Provider.Ins.ExcuteQuery(query);
+            string res = (tbl.Rows.Count + 1).ToString();
+            while (res.Length < 3)
+                res = "0" + res;
+            res = "NV" + res;
+            return res;
+        }
+        public bool Register(TypeAcc atype)
+        {
+            string query = "select * from account where username = @username and pass = @pass ;";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { userName, passWords });
+            if (rs.Rows.Count > 0)
+            {
+                return false;
+            }
+            else
+            {
+                string Rgtquery = "insert into account values ( @ID , @UserName , @Pass , @type );";
 
-        //public bool Register(TypeAcc aType)
-        //{
-        //    string query = "select * from ACCOUNT where username = @username and pass = @pass ;";
-        //    DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { userName, passWords});
-        //    if (rs.Rows.Count > 0)
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        //    string query = 
-        //        return true;
-        //    }
-        //}
+                int res = Provider.Ins.ExcuteNonQuery(Rgtquery, new object[]{
+                    this.getMaNVnext(), userName, passWords, atype.ToString()});
+
+                if (res > 0)
+                    return true;
+                else
+                    return false;               
+            }
+        }
+        public bool Delete(string ID)
+        {
+            string delquery = "delete from account where ID = @ID ";
+            int rs = Provider.Ins.ExcuteNonQuery(delquery, new object[] { ID });
+            return (rs > 0);
+        }
+        // -- ResetPassWords
+        //      null: Không tồn tại account
+        //      false: Oldpass không trùng pass hiện tại
+        //      true: thành cong.
+        public bool UpdatePassWords(string ID, string NewPass)
+        {          
+            string UpPassQuery = "UPDATE ACCOUNT SET PASS = @NewPass WHERE ID =  @ID ;";
+            int rs = Provider.Ins.ExcuteNonQuery(UpPassQuery, new object[]{
+            NewPass,ID});
+            return (rs > 0);
+        }
     }
 }
