@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Security.Cryptography;
+
 namespace Restaurant_Management.BLL
 {
     class Account
@@ -36,6 +38,20 @@ namespace Restaurant_Management.BLL
         }
         //
 
+        public string GetHashPassword(string password)
+        {
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
+            byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+            string hashPass = "";
+
+            foreach (byte item in hashData)
+            {
+                hashPass += item;
+            }
+            return hashPass;
+        }
+
         public TypeAcc? Login(string userName = null, string passWords = null)
         {
             string query = "select * from ACCOUNT where username = @username and pass = @pass ;";
@@ -47,14 +63,15 @@ namespace Restaurant_Management.BLL
             object[] acc = { this.userName, this.passWords };
 
             DataTable result = Provider.Ins.ExcuteQuery(query, acc);
+
             if (result.Rows.Count > 0)
             {
                 switch (result.Rows[0][3].ToString()) // 
                 {
-                    case "False":
+                    case "Staff":
                         return TypeAcc.Staff;
                         break;
-                    case "True":
+                    case "Admin":
                         return TypeAcc.Admin;
                         break;
                     default:
