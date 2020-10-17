@@ -32,10 +32,10 @@
             this.txb_UserName = new System.Windows.Forms.TextBox();
             this.lb_Uesr = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txbPassWord = new System.Windows.Forms.TextBox();
             this.lb_PassWord = new System.Windows.Forms.Label();
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
-            this.txbPassWord = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.txb_UserName.Multiline = true;
             this.txb_UserName.Name = "txb_UserName";
             this.txb_UserName.Size = new System.Drawing.Size(289, 33);
-            this.txb_UserName.TabIndex = 1;
+            this.txb_UserName.TabIndex = 0;
             this.txb_UserName.TextChanged += new System.EventHandler(this.txb_UserName_TextChanged);
             // 
             // lb_Uesr
@@ -78,6 +78,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(474, 65);
             this.panel2.TabIndex = 1;
+            // 
+            // txbPassWord
+            // 
+            this.txbPassWord.Location = new System.Drawing.Point(175, 17);
+            this.txbPassWord.Multiline = true;
+            this.txbPassWord.Name = "txbPassWord";
+            this.txbPassWord.PasswordChar = '•';
+            this.txbPassWord.Size = new System.Drawing.Size(289, 31);
+            this.txbPassWord.TabIndex = 1;
             // 
             // lb_PassWord
             // 
@@ -108,15 +117,6 @@
             this.btn_Exit.Text = "Thoát";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
-            // 
-            // txbPassWord
-            // 
-            this.txbPassWord.Location = new System.Drawing.Point(175, 17);
-            this.txbPassWord.Multiline = true;
-            this.txbPassWord.Name = "txbPassWord";
-            this.txbPassWord.PasswordChar = '•';
-            this.txbPassWord.Size = new System.Drawing.Size(289, 31);
-            this.txbPassWord.TabIndex = 1;
             // 
             // frmLogin
             // 
