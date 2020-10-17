@@ -23,10 +23,9 @@ C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\bin\Debug\Restaurant M
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\bin\Debug\Restaurant Management.pdb
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant_Management.frmLogin.resources
-C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant Management.exe
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant Management.pdb
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
-C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant_Management.Trangchinh.resources
+C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant_Management.OrderDoAn.resources

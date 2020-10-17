@@ -1,6 +1,6 @@
 ﻿namespace Restaurant_Management
 {
-    partial class Trangchinh
+    partial class OrderDoAn
     {
         /// <summary>
         /// Required designer variable.
