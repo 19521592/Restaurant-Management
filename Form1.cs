@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using Restaurant_Management.BLL;
 
 namespace Restaurant_Management
 {
@@ -15,6 +17,8 @@ namespace Restaurant_Management
         public frmLogin()
         {
             InitializeComponent();
+           
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
