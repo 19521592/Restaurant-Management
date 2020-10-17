@@ -51,10 +51,10 @@ namespace Restaurant_Management.BLL
             {
                 switch (result.Rows[0][3].ToString()) // 
                 {
-                    case "False":
+                    case "Admin":
                         return TypeAcc.Staff;
                         break;
-                    case "True":
+                    case "Staff":
                         return TypeAcc.Admin;
                         break;
                     default:
@@ -77,7 +77,7 @@ namespace Restaurant_Management.BLL
             res = "NV" + res;
             return res;
         }
-        public bool Register(TypeAcc atype)
+        public bool Insert(TypeAcc atype)
         {
             string query = "select * from account where username = @username and pass = @pass ;";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { userName, passWords });

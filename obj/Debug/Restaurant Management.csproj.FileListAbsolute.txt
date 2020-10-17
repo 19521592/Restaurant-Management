@@ -30,3 +30,15 @@ C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant M
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant Management.pdb
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
 C:\Users\ASUS\Source\Repos\19521592\Restaurant-Management\obj\Debug\Restaurant_Management.Trangchinh.resources
+D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.exe.config
+D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.exe
+D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.pdb
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.frmLogin.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.Trangchinh.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.exe
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.pdb
