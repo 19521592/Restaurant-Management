@@ -1,6 +1,6 @@
 ﻿namespace Restaurant_Management
 {
-    partial class Trangchinh
+    partial class OrderThucAn
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.chuyểnBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kháchHàngThânThiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpXuấtKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.billToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,7 +119,7 @@
             // quảnLýToolStripMenuItem
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nhânViênToolStripMenuItem,
+            this.staffToolStripMenuItem,
             this.kháchHàngThânThiếtToolStripMenuItem,
             this.nhậpXuấtKhoToolStripMenuItem,
             this.billToolStripMenuItem,
@@ -129,11 +129,12 @@
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
-            // nhânViênToolStripMenuItem
+            // staffToolStripMenuItem
             // 
-            this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.nhânViênToolStripMenuItem.Text = "Nhân viên";
+            this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.staffToolStripMenuItem.Text = "Nhân viên";
+            this.staffToolStripMenuItem.Click += new System.EventHandler(this.staffToolStripMenuItem_Click);
             // 
             // kháchHàngThânThiếtToolStripMenuItem
             // 
@@ -420,7 +421,7 @@
             this.panel5.Size = new System.Drawing.Size(119, 83);
             this.panel5.TabIndex = 5;
             // 
-            // Trangchinh
+            // OrderThucAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,7 +432,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Trangchinh";
+            this.Name = "OrderThucAn";
             this.Text = "Quản Lý Nhà Hàng";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -456,7 +457,7 @@
         private System.Windows.Forms.ToolStripMenuItem chuyểnBànToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thanhToánToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kháchHàngThânThiếtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhậpXuấtKhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem billToolStripMenuItem;

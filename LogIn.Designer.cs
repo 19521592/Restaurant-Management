@@ -48,7 +48,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(474, 65);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txb_UserName
             // 
@@ -57,7 +56,6 @@
             this.txb_UserName.Name = "txb_UserName";
             this.txb_UserName.Size = new System.Drawing.Size(289, 33);
             this.txb_UserName.TabIndex = 0;
-            this.txb_UserName.TextChanged += new System.EventHandler(this.txb_UserName_TextChanged);
             // 
             // lb_Uesr
             // 
@@ -68,7 +66,6 @@
             this.lb_Uesr.Size = new System.Drawing.Size(156, 24);
             this.lb_Uesr.TabIndex = 0;
             this.lb_Uesr.Text = "Tên Đăng Nhập";
-            this.lb_Uesr.Click += new System.EventHandler(this.lb_Uesr_Click);
             // 
             // panel2
             // 
