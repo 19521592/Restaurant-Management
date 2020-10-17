@@ -16,5 +16,10 @@ namespace Restaurant_Management
         {
             InitializeComponent();
         }
+
+        private void QuanLyNhanVien_Load(object sender, EventArgs e)
+        {
+            dataGridViewStaffList.DataSource = BLL.NhanVien.Ins.Display_Datatbl();
+        }
     }
 }

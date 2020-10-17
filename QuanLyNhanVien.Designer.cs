@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridViewStaffList = new System.Windows.Forms.DataGridView();
-            this.ColumnMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBoxBirth = new System.Windows.Forms.TextBox();
             this.txtBoxGender = new System.Windows.Forms.TextBox();
             this.txtBoxName = new System.Windows.Forms.TextBox();
@@ -75,72 +68,18 @@
             // 
             // dataGridViewStaffList
             // 
+            this.dataGridViewStaffList.AllowUserToAddRows = false;
+            this.dataGridViewStaffList.AllowUserToDeleteRows = false;
             this.dataGridViewStaffList.ColumnHeadersHeight = 29;
             this.dataGridViewStaffList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewStaffList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnMaNhanVien,
-            this.ColumnHoTen,
-            this.ColumnGioiTinh,
-            this.ColumnNgaySinh,
-            this.ColumnSDT,
-            this.ColumnCMND,
-            this.ColumnDiaChi});
             this.dataGridViewStaffList.Location = new System.Drawing.Point(3, 37);
             this.dataGridViewStaffList.Name = "dataGridViewStaffList";
+            this.dataGridViewStaffList.ReadOnly = true;
             this.dataGridViewStaffList.RowHeadersWidth = 51;
             this.dataGridViewStaffList.RowTemplate.Height = 24;
             this.dataGridViewStaffList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewStaffList.Size = new System.Drawing.Size(868, 329);
             this.dataGridViewStaffList.TabIndex = 0;
-            // 
-            // ColumnMaNhanVien
-            // 
-            this.ColumnMaNhanVien.HeaderText = "Mã nhân viên";
-            this.ColumnMaNhanVien.MinimumWidth = 6;
-            this.ColumnMaNhanVien.Name = "ColumnMaNhanVien";
-            this.ColumnMaNhanVien.Width = 125;
-            // 
-            // ColumnHoTen
-            // 
-            this.ColumnHoTen.HeaderText = "Họ và tên";
-            this.ColumnHoTen.MinimumWidth = 6;
-            this.ColumnHoTen.Name = "ColumnHoTen";
-            this.ColumnHoTen.Width = 125;
-            // 
-            // ColumnGioiTinh
-            // 
-            this.ColumnGioiTinh.HeaderText = "Giới tính";
-            this.ColumnGioiTinh.MinimumWidth = 6;
-            this.ColumnGioiTinh.Name = "ColumnGioiTinh";
-            this.ColumnGioiTinh.Width = 90;
-            // 
-            // ColumnNgaySinh
-            // 
-            this.ColumnNgaySinh.HeaderText = "Ngày sinh";
-            this.ColumnNgaySinh.MinimumWidth = 6;
-            this.ColumnNgaySinh.Name = "ColumnNgaySinh";
-            this.ColumnNgaySinh.Width = 125;
-            // 
-            // ColumnSDT
-            // 
-            this.ColumnSDT.HeaderText = "Số điện thoại";
-            this.ColumnSDT.MinimumWidth = 6;
-            this.ColumnSDT.Name = "ColumnSDT";
-            this.ColumnSDT.Width = 125;
-            // 
-            // ColumnCMND
-            // 
-            this.ColumnCMND.HeaderText = "CMND/CCCD";
-            this.ColumnCMND.MinimumWidth = 6;
-            this.ColumnCMND.Name = "ColumnCMND";
-            this.ColumnCMND.Width = 125;
-            // 
-            // ColumnDiaChi
-            // 
-            this.ColumnDiaChi.HeaderText = "Địa chỉ";
-            this.ColumnDiaChi.MinimumWidth = 6;
-            this.ColumnDiaChi.Name = "ColumnDiaChi";
-            this.ColumnDiaChi.Width = 125;
             // 
             // txtBoxBirth
             // 
@@ -425,6 +364,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "QuanLyNhanVien";
             this.Text = "Quản lý nhân viên";
+            this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaffList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -448,13 +388,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCMND;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiaChi;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtBoxAddress;
         private System.Windows.Forms.TextBox txtBoxCMND;

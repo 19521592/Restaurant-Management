@@ -50,7 +50,7 @@ namespace Restaurant_Management
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
-        {
+        {          
             fTableManagement f = new fTableManagement();
             this.Hide();
             this.ShowDialog();
