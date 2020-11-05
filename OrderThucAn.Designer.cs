@@ -46,8 +46,8 @@
             this.nhàHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tàiKhoảnCủaTôiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,6 +70,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -211,23 +212,25 @@
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tàiKhoảnCủaTôiToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
+            this.myAccountToolStripMenuItem,
+            this.logOutToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
-            // tàiKhoảnCủaTôiToolStripMenuItem
+            // myAccountToolStripMenuItem
             // 
-            this.tàiKhoảnCủaTôiToolStripMenuItem.Name = "tàiKhoảnCủaTôiToolStripMenuItem";
-            this.tàiKhoảnCủaTôiToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.tàiKhoảnCủaTôiToolStripMenuItem.Text = "Tài khoản của tôi";
+            this.myAccountToolStripMenuItem.Name = "myAccountToolStripMenuItem";
+            this.myAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.myAccountToolStripMenuItem.Text = "Tài khoản của tôi";
             // 
-            // đăngXuấtToolStripMenuItem
+            // logOutToolStripMenuItem
             // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logOutToolStripMenuItem.Text = "Đăng xuất";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -421,6 +424,13 @@
             this.panel5.Size = new System.Drawing.Size(119, 83);
             this.panel5.TabIndex = 5;
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Thoát";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // OrderThucAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -470,8 +480,8 @@
         private System.Windows.Forms.ToolStripMenuItem nhàHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnCủaTôiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem myAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
@@ -494,5 +504,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnThanhTien;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

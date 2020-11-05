@@ -21,7 +21,7 @@ namespace Restaurant_Management.BLL
 
         private string getMaNVnext()
         {
-            string query = "select ID from account";
+            string query = "select ID from nhanvien";
             DataTable tbl = Provider.Ins.ExcuteQuery(query);
             string res = (tbl.Rows.Count + 1).ToString();
             while (res.Length < 3)

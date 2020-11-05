@@ -84,6 +84,7 @@
             this.txbPassWord.PasswordChar = '•';
             this.txbPassWord.Size = new System.Drawing.Size(289, 31);
             this.txbPassWord.TabIndex = 1;
+            this.txbPassWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPassWord_KeyPress);
             // 
             // lb_PassWord
             // 

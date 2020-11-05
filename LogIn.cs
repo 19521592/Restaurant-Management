@@ -37,10 +37,22 @@ namespace Restaurant_Management
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            Login();
+        }
+
+        private void txbPassWord_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                Login();
+            }
+        }
+        private void Login()
+        {
             string userName = txb_UserName.Text;
             string password = Account.Ins.GetHashPassword(txbPassWord.Text);
             var loginResult = Account.Ins.Login(userName, password);
-            try
+            //try
             {
                 switch (loginResult)
                 {
@@ -48,25 +60,24 @@ namespace Restaurant_Management
                         MessageBox.Show("Tài khoản / mật khẩu không đúng, xin vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OKCancel);
                         break;
                     case Account.TypeAcc.Admin: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OrderThucAn admin = new OrderThucAn();
-                        this.Hide();
-                        admin.Show();
-                        this.ShowDialog();
+                        OpenOrderThucAnForm();
                         break;
                     case Account.TypeAcc.Staff: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OrderThucAn staff = new OrderThucAn();
-                        this.Hide();
-                        staff.ShowDialog();
-                        this.ShowDialog();
+                        OpenOrderThucAnForm();
                         break;
                 }
             }
-            catch (Exception ex)
+            //catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               // MessageBox.Show(ex.Message);
             }
         }
-
-  
+        private void OpenOrderThucAnForm()
+        {
+            OrderThucAn frmOrderFood = new OrderThucAn(this);
+            frmOrderFood.FormClosing += delegate { this.Show(); };
+            frmOrderFood.Show();
+            this.Hide();
+        }
     }
 }

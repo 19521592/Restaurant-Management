@@ -12,9 +12,11 @@ namespace Restaurant_Management
 {
     public partial class OrderThucAn : Form
     {
-        public OrderThucAn()
+        Form parent { get; set; }
+        public OrderThucAn(Form parent)
         {
             InitializeComponent();
+            this.parent = parent;
         }
 
 
@@ -24,6 +26,17 @@ namespace Restaurant_Management
             this.Hide();
             staffForm.FormClosing += delegate { this.Show(); };
             staffForm.ShowDialog();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
