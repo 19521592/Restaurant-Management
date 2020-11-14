@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Restaurant_Management
+namespace Restaurant_Management.Foods
 {
-    public partial class fTableManagement : Form
+    public partial class FormAppetizer : Form
     {
-        public fTableManagement()
+        public FormAppetizer()
         {
             InitializeComponent();
+        }
+
+        private void FormAppetizer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
