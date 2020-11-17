@@ -71,6 +71,12 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyMonAn.Designer.cs">
+      <DependentUpon>QuanLyMonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyMonAn.resx">
+      <DependentUpon>QuanLyMonAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
