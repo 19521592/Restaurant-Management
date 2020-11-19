@@ -67,7 +67,7 @@ namespace Restaurant_Management.BLL
             string res = (tbl.Rows.Count + 1).ToString();
             while (res.Length < 3)
                 res = "0" + res;
-            res = "NV" + res;
+            res = "NV" + res; 
             return res;
         }
 
@@ -83,7 +83,7 @@ namespace Restaurant_Management.BLL
             DataTable rs = DAL.Provider.Ins.ExcuteQuery(query, new object[] { id });
             this.id = rs.Rows[0][0].ToString();
             this.hoten = rs.Rows[0][1].ToString();
-            this.gtinh = rs.Rows[0][2].ToString();
+            this.gtinh = rs.Rows[0][2].ToString();  
             this.ngsinh = (DateTime)rs.Rows[0][3];
             this.dchi = rs.Rows[0][4].ToString();
             this.cmnd = rs.Rows[0][5].ToString();
