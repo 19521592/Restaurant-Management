@@ -7,6 +7,7 @@ using System.IO;
 using System.Drawing;
 using System.Data;
 using Restaurant_Management.DAL;
+using Restaurant_Management.DTO;
 namespace Restaurant_Management.BLL
 {
     class MONAN
@@ -25,21 +26,6 @@ namespace Restaurant_Management.BLL
         //   HINHANH NTEXT,
         //   GHICHU NVARCHAR(100),
         //   TRANGTHAI BIT,
-        private string id;
-        private string ten;
-        private int dongia;
-        private string loai;
-        private string hinhanh;
-        private string ghichu;
-        private bool trangthai;
-
-        public string Id { get => id; }
-        public string Ten { get => ten; }
-        public int Dongia { get => dongia; }
-        public string Loai { get => loai; }
-        public string Hinhanh { get => hinhanh; }
-        public string Ghichu { get => ghichu; }
-        public bool Trangthai { get => trangthai; }
 
         public byte[] converImgToByte(string Path)
         {
@@ -87,20 +73,19 @@ namespace Restaurant_Management.BLL
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { id });
             return (rs > 0);
         }
-        public bool getMONAN(string id)
+        public monanDTO getMONAN(string id)
         {
             string query = "SELECT * FROM MONAN WHERE ID = @ID AND TRANGTHAI = 1";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { id });
-            if (rs.Rows.Count == 0)
-                return false;
-            this.id = rs.Rows[0][0].ToString();
-            this.ten = rs.Rows[0][1].ToString();
-            this.dongia = int.Parse(rs.Rows[0][2].ToString());
-            this.loai = rs.Rows[0][3].ToString();
-            this.hinhanh = rs.Rows[0][4].ToString();
-            this.ghichu = rs.Rows[0][5].ToString();
-            this.trangthai = (bool)rs.Rows[0][6];
-            return true;
+            monanDTO p = new monanDTO();
+            p.Id = rs.Rows[0][0].ToString();
+            p.Ten = rs.Rows[0][1].ToString();
+            p.Dongia = int.Parse(rs.Rows[0][2].ToString());
+            p.Loai = rs.Rows[0][3].ToString();
+            p.Hinhanh = rs.Rows[0][4].ToString();
+            p.Ghichu = rs.Rows[0][5].ToString();
+            p.Trangthai = (rs.Rows[0][6].ToString() == "True") ? true : false;
+            return p;
         }
     }
 }

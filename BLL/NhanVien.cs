@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Restaurant_Management.DAL;
 using System.IO;
 using System.Drawing;
+using Restaurant_Management.DTO;
 namespace Restaurant_Management.BLL
 {
     class NhanVien
@@ -30,18 +31,6 @@ namespace Restaurant_Management.BLL
         //   ACTIVE BIT,
         //   VITRI NVARCHAR(50),
         //   AVATAR NTEXT,
-        //   CONSTRAINT PK_NHANVIEN PRIMARY KEY(ID)
-
-        private string id;
-        private string hoten;
-        private string gtinh;
-        private DateTime ngsinh;
-        private string dchi;
-        private string cmnd;
-        private bool isactive;
-        private string vitri;
-        private Image avatar;
-        private string sdt;
 
         public byte[] converImgToByte(string Path)
         {
@@ -77,21 +66,21 @@ namespace Restaurant_Management.BLL
             DataTable rs = Provider.Ins.ExcuteQuery(query);
             return rs;
         }
-        public NhanVien getNV(string id)
+        public nhanvienDTO getNV(string id)
         {
+            nhanvienDTO p = new nhanvienDTO();
             string query = "select * from NHANVIEN where ID = @ID ";
             DataTable rs = DAL.Provider.Ins.ExcuteQuery(query, new object[] { id });
-            this.id = rs.Rows[0][0].ToString();
-            this.hoten = rs.Rows[0][1].ToString();
-            this.gtinh = rs.Rows[0][2].ToString();  
-            this.ngsinh = (DateTime)rs.Rows[0][3];
-            this.dchi = rs.Rows[0][4].ToString();
-            this.cmnd = rs.Rows[0][5].ToString();
-            this.isactive = (bool)rs.Rows[0][6];
-            this.vitri = rs.Rows[0][7].ToString();
-            this.avatar = ByteToImg(rs.Rows[0][8].ToString());
-            this.sdt = rs.Rows[0][9].ToString();
-            return this;
+            p.Id = rs.Rows[0][0].ToString();
+            p.Hoten = rs.Rows[0][1].ToString();
+            p.Gtinh = rs.Rows[0][2].ToString();
+            p.Ngsinh = Convert.ToDateTime(rs.Rows[0][3].ToString());
+            p.Dchi = rs.Rows[0][4].ToString();
+            p.Cmnd = rs.Rows[0][5].ToString();
+            p.Trangthai = (rs.Rows[0][6].ToString() == "True" ? true : false);
+            p.Vitri = rs.Rows[0][7].ToString();
+            p.ImgStr = rs.Rows[0][8].ToString();
+            return p;
       }
         public bool Insert(string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd, string vitri, Image avatar, string sdt)
         {
