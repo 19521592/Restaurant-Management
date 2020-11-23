@@ -17,25 +17,6 @@ namespace Restaurant_Management
             InitializeComponent();
         }
 
-        private void LabelEffect_Click(object sender, EventArgs e)
-        {
-            var lbl = sender as Label;
-
-            if (lbl.Location.X == 20 || lbl.Location.X == 260)
-            {
-                lbl.Font = new Font("Microsoft Sans Serif", 9);
-                lbl.Cursor = Cursors.Arrow;
-                lbl.Location = new Point(lbl.Location.X, lbl.Location.Y - 12);
-                foreach (Control txt in pnlInformation.Controls)
-                {
-                    if (txt.GetType() == typeof(TextBox) && txt.Name == "txtBox" + lbl.Name.Remove(0, 3))
-                    {
-                        txt.Focus();
-                    }
-                }
-            }
-        }
-
         private void TextBox_Enter(object sender, EventArgs e)
         {
             TextBox txt = sender as TextBox;
@@ -46,20 +27,6 @@ namespace Restaurant_Management
                 {
                     ctrl.BackColor = Color.DodgerBlue;
                 }
-
-                if (ctrl.GetType() == typeof(Label) && ctrl.Name == "lbl" + txt.Name.Remove(0, 6))
-                {
-                    ctrl.ForeColor = Color.DodgerBlue;
-                    if (ctrl.Location.X != 20 || ctrl.Location.X != 260)
-                    {
-                        txt.Clear();
-                        ctrl.Font = new Font("Microsoft Sans Serif", 9);
-                        ctrl.Cursor = Cursors.Arrow;
-                        ctrl.Location = new Point(ctrl.Location.X , ctrl.Location.Y - 12);
-                    }
-                }
-
-
             }
         }
 
@@ -73,26 +40,13 @@ namespace Restaurant_Management
                 {
                     ctrl.BackColor = Color.Silver;
                 }
-
-                if (ctrl.GetType() == typeof(Label) && ctrl.Name == "lbl" + txt.Name.Remove(0, 6))
-                {
-                    ctrl.ForeColor = Color.Silver;
-                    if (string.IsNullOrWhiteSpace(txt.Text))
-                    {
-                        txt.Clear();
-                        ctrl.Font = new Font("Microsoft Sans Serif", 13);
-                        ctrl.Cursor = Cursors.IBeam;
-                        ctrl.Location = new Point(ctrl.Location.X , ctrl.Location.Y + 16);
-                    }
-                }
-
-
             }
         }
 
-        private void pnlInformation_Paint(object sender, PaintEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            ThemMon themMon = new ThemMon();
+            themMon.Show();
         }
     }
 }

@@ -102,5 +102,12 @@ namespace Restaurant_Management.BLL
             this.trangthai = (bool)rs.Rows[0][6];
             return true;
         }
+
+        public DataTable getListThucAn(string loai)
+        {
+            string query = "select ID , TEN , DONGIA , HINHANH from MONAN where LOAI = @loai and TRANGTHAI = 1 ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            return rs;
+        }
     }
-}
+}   
