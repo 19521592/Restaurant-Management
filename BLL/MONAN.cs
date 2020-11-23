@@ -87,5 +87,11 @@ namespace Restaurant_Management.BLL
             p.Trangthai = (rs.Rows[0][6].ToString() == "True") ? true : false;
             return p;
         }
+        public DataTable getList()
+        {
+            string query = "SELECT ID, TEN, DONGIA FROM MONAN WHERE TRANGTHAI = 1";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            return rs;
+        }
     }
 }

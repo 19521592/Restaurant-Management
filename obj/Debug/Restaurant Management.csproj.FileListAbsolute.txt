@@ -15,3 +15,20 @@ C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.exe
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.pdb
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.Foods.FormAppetizer.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.frmLogin.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.OrderThucAn.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.exe
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.pdb
+D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.exe.config
+D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.exe
+D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.pdb
+D:\Git\Restaurant-Management\bin\Debug\FontAwesome.Sharp.dll
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CopyComplete

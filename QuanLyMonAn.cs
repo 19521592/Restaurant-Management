@@ -89,10 +89,29 @@ namespace Restaurant_Management
 
             }
         }
-
         private void pnlInformation_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = BLL.MONAN.Ins.getList();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            DTO.monanDTO p = BLL.MONAN.Ins.getMONAN(id);
+            lblName.Text = p.Ten;
+            lblUnitPrice.Text = p.Dongia.ToString();
+            lblKind.Text = p.Loai;
+            lblNote.Text = p.Ghichu;
+            pictureBox1.Image = BLL.MONAN.Ins.ByteToImg(p.Hinhanh);
         }
     }
 }

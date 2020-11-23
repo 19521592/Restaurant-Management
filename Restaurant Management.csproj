@@ -51,7 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
+    <Compile Include="BLL\BANAN.cs" />
+    <Compile Include="BLL\HOADONBAN.cs" />
+    <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="BLL\SANH.cs" />
+    <Compile Include="BLL\THUCDONBAN.cs" />
+    <Compile Include="BLL\TIEC.cs" />
     <Compile Include="CustomerOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,8 @@
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Provider.cs" />
+    <Compile Include="DTO\monanDTO.cs" />
+    <Compile Include="DTO\nhanvienDTO.cs" />
     <Compile Include="Foods\FormAppetizer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +136,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
