@@ -9,18 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using Restaurant_Management.BLL;
-
+using Restaurant_Management.DTO;
 namespace Restaurant_Management
 {
     public partial class frmLogin : Form
     {
+        private accountDTO account;
+
         public frmLogin()
         {
             InitializeComponent();
-           
-
+            Init();
         }
-
+        private void Init()
+        {
+            account = new accountDTO();
+        }
 
         private void Btn_Exit_Click(object sender, EventArgs e)
         {
@@ -48,25 +52,25 @@ namespace Restaurant_Management
             }
         }
         private void Login()
-        {
-            string userName = txb_UserName.Text;
-            string password = Account.Ins.GetHashPassword(txbPassWord.Text);
-            var loginResult = Account.Ins.Login(userName, password);
+        {          
+            account.UserName = txb_UserName.Text;
+            account.PassWords = txbPassWord.Text;
+            //var loginResult = Account.Ins.Login(userName, password);
             //try
-            {
-                switch (loginResult)
-                {
-                    case null:
-                        MessageBox.Show("Tài khoản / mật khẩu không đúng, xin vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OKCancel);
-                        break;
-                    case Account.TypeAcc.Admin: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OpenOrderThucAnForm();
-                        break;
-                    case Account.TypeAcc.Staff: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OpenOrderThucAnForm();
-                        break;
-                }
-            }
+            //{
+            //    switch (loginResult)
+            //    {
+            //        case null:
+            //            MessageBox.Show("Tài khoản / mật khẩu không đúng, xin vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OKCancel);
+            //            break;
+            //        case Account.TypeAcc.Admin: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
+            //            OpenOrderThucAnForm();
+            //            break;
+            //        case Account.TypeAcc.Staff: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
+            //            OpenOrderThucAnForm();
+            //            break;
+            //    }
+            //}
             //catch (Exception ex)
             {
                // MessageBox.Show(ex.Message);

@@ -32,3 +32,6 @@ D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.exe
 D:\Git\Restaurant-Management\bin\Debug\Restaurant Management.pdb
 D:\Git\Restaurant-Management\bin\Debug\FontAwesome.Sharp.dll
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CopyComplete
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.MINH.Form1.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.MINH.TransPic.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.MINH.UpdateAccountForm.resources

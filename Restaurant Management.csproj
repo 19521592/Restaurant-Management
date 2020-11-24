@@ -65,6 +65,7 @@
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Provider.cs" />
+    <Compile Include="DTO\accountDTO.cs" />
     <Compile Include="DTO\monanDTO.cs" />
     <Compile Include="DTO\nhanvienDTO.cs" />
     <Compile Include="Foods\FormAppetizer.cs">
@@ -78,6 +79,24 @@
     </Compile>
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MINH\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MINH\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MINH\TransPic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MINH\TransPic.Designer.cs">
+      <DependentUpon>TransPic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MINH\UpdateAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MINH\UpdateAccountForm.Designer.cs">
+      <DependentUpon>UpdateAccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyMonAn.cs">
       <SubType>Form</SubType>
@@ -108,6 +127,15 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MINH\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MINH\TransPic.resx">
+      <DependentUpon>TransPic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MINH\UpdateAccountForm.resx">
+      <DependentUpon>UpdateAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -116,6 +144,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLyMonAn.resx">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
@@ -141,6 +170,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
