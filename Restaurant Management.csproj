@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
     <Compile Include="BLL\BANAN.cs" />
+    <Compile Include="BLL\DICHVU.cs" />
     <Compile Include="BLL\HOADONBAN.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
@@ -66,6 +67,7 @@
     </Compile>
     <Compile Include="DAL\Provider.cs" />
     <Compile Include="DTO\accountDTO.cs" />
+    <Compile Include="DTO\dichvuDTO.cs" />
     <Compile Include="DTO\monanDTO.cs" />
     <Compile Include="DTO\nhanvienDTO.cs" />
     <Compile Include="Foods\FormAppetizer.cs">

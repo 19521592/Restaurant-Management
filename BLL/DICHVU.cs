@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using System.Drawing;
 using System.Data;
+using System.IO;
 using Restaurant_Management.DAL;
 using Restaurant_Management.DTO;
+using System.Drawing;
 namespace Restaurant_Management.BLL
 {
-    class MONAN
+    class DICHVU
     {
-        private static MONAN ins;
-        public static MONAN Ins
+        private static DICHVU ins;
+        public static DICHVU Ins
         {
-            get { if (ins == null) ins = new MONAN(); return ins; }
+            get { if (ins == null) ins = new DICHVU(); return ins; }
             private set { ins = value; }
         }
-        private MONAN() { }
+        private DICHVU() { }
         //   ID VARCHAR(5) NOT NULL,
         //   TEN VARCHAR(50),
         //   DONGIA INT,
@@ -47,37 +47,37 @@ namespace Restaurant_Management.BLL
         //--
         private string getMaMONANnext()
         {
-            string query = "select ID from MONAN";
+            string query = "select ID from DICHVU";
             DataTable tbl = DAL.Provider.Ins.ExcuteQuery(query);
             string res = (tbl.Rows.Count + 1).ToString();
             while (res.Length < 4)
                 res = "0" + res;
-            res = "M" + res;
+            res = "D" + res;
             return res;
         }
         public bool Insert(string ten, int dongia, string loai, string hinhanh, string ghichu)
         {
-            string query = "INSERT INTO MONAN VALUES ( @id , @ten , @dongia , @loai , @hinhanh , @ghichu , @trangthai );";
-            int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { getMaMONANnext(),ten, dongia, loai, hinhanh, ghichu, '1' }) ;
+            string query = "INSERT INTO DICHVU VALUES ( @id , @ten , @dongia , @loai , @hinhanh , @ghichu , @trangthai );";
+            int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { getMaMONANnext(), ten, dongia, loai, hinhanh, ghichu, '1' });
             return (rs > 0);
         }
-        public bool Update(string id, string ten, int dongia, string loai, Image hinhanh, string ghichu)
+        public bool Update(string id, string ten, int dongia, string loai, string hinhanh, string ghichu)
         {
-            string query = "UPDATE MONAN SET TEN = @TEN , DONGIA = @DONGIA , LOAI = @LOAI , HINHANH = @HINHANH , GHICHU = @GHICHU  WHERE ID = @ID ";
+            string query = "UPDATE DICHVU SET TEN = @TEN , DONGIA = @DONGIA , LOAI = @LOAI , HINHANH = @HINHANH , GHICHU = @GHICHU  WHERE ID = @ID ";
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { ten, dongia, loai, hinhanh, ghichu, id });
             return (rs > 0);
         }
         public bool Delete(string id)
         {
-            string query = "UPDATE MONAN SET TRANGTHAI = 0 WHERE ID = @ID";
+            string query = "UPDATE DICHVU SET TRANGTHAI = 0 WHERE ID = @ID";
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { id });
             return (rs > 0);
         }
-        public monanDTO getMONAN(string id)
+        public dichvuDTO getMONAN(string id)
         {
             string query = "SELECT * FROM MONAN WHERE ID = @ID AND TRANGTHAI = 1";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { id });
-            monanDTO p = new monanDTO();
+            dichvuDTO p = new dichvuDTO();
             p.Id = rs.Rows[0][0].ToString();
             p.Ten = rs.Rows[0][1].ToString();
             p.Dongia = int.Parse(rs.Rows[0][2].ToString());
@@ -89,15 +89,9 @@ namespace Restaurant_Management.BLL
         }
         public DataTable getList()
         {
-            string query = "SELECT ID, TEN, DONGIA FROM MONAN WHERE TRANGTHAI = 1";
+            string query = "SELECT ID, TEN, DONGIA FROM DICHVU WHERE TRANGTHAI = 1";
             DataTable rs = Provider.Ins.ExcuteQuery(query);
             return rs;
         }
-        public bool check_Ten(string ten) 
-        {
-            if (ten == null) return false;
-            if (ten.Length > 256) return false;
-
-        }
     }
-
+}

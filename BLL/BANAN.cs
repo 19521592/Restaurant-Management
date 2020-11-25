@@ -38,14 +38,14 @@ namespace Restaurant_Management.BLL
             return (rs > 0);           
            
         }
-        public DataRow getInfo(string id)
-        {
-            string query = "SELECT * FROM BANAN WHERE ID = @ID ";
-            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { id });
-            if (rs.Rows.Count > 0)
-                return rs.Rows[0];
-            return null;
-        }
+        //public DataRow getInfo(string id)
+        //{
+        //    string query = "SELECT * FROM BANAN WHERE ID = @ID ";
+        //    DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { id });
+        //    if (rs.Rows.Count > 0)
+        //        return rs.Rows[0];
+        //    return null;
+        //}
 
     }
 }
