@@ -97,7 +97,7 @@ namespace Restaurant_Management.BLL
         {
             if (ten == null) return false;
             if (ten.Length > 256) return false;
-
+            
         }
     }
 
