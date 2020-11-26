@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Restaurant_Management.DTO;
+using Restaurant_Management.BLL;
 namespace Restaurant_Management
 {
     public partial class ThemMon : Form
     {
+        private monanDTO food;
+        string PathImg;
+        string ImgStrDefaut;
         public ThemMon()
         {
             InitializeComponent();
+            food = new monanDTO();
+            PathImg = "";
+            ImgStrDefaut = Convert.ToBase64String(MONAN.Ins.converImgToByte(@"..\..\images\1food.png"));
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -40,7 +47,6 @@ namespace Restaurant_Management
                 }
             }
         }
-
         private void TextBox_Enter(object sender, EventArgs e)
         {
             TextBox txt = sender as TextBox;
@@ -63,11 +69,8 @@ namespace Restaurant_Management
                         ctrl.Location = new Point(ctrl.Location.X, ctrl.Location.Y - 12);
                     }
                 }
-
-
             }
         }
-
         private void TextBox_Leave(object sender, EventArgs e)
         {
             TextBox txt = sender as TextBox;
@@ -90,6 +93,69 @@ namespace Restaurant_Management
                         ctrl.Location = new Point(ctrl.Location.X, ctrl.Location.Y + 16);
                     }
                 }
+            }
+        }
+        //     
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtBoxName.Text == "")
+                    throw new Exception("Trường 'Tên' không được trống");
+                if (txtBoxUnitPrice.Text == "")
+                    throw new Exception("Trường 'Đơn giá' không được trống");
+                if (!MONAN.Ins.check_Dongia(txtBoxUnitPrice.Text))
+                    throw new Exception("Trường 'Đơn giá' không hợp lệ");
+                if (txtBoxKind.Text == "")
+                    throw new Exception("Trường 'loại' không được trống");                    
+                food.Ten = txtBoxName.Text;
+                food.Dongia = txtBoxUnitPrice.Text;
+                food.Ghichu = txtBoxNote.Text;
+                food.Loai = txtBoxKind.Text;
+                if (PathImg == "")
+                {
+                    food.Hinhanh = ImgStrDefaut;
+                }
+                else
+                {
+                    food.Hinhanh = Convert.ToBase64String(MONAN.Ins.converImgToByte(PathImg));
+                }
+
+                bool rs = MONAN.Ins.Insert(food.Ten, int.Parse(food.Dongia), food.Loai, food.Hinhanh, food.Ghichu);
+                if (rs == true)
+                {
+                    MessageBox.Show("Thêm món thành công");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm món thất bại");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+                openFile.FilterIndex = 1;
+                openFile.RestoreDirectory = true;
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    PathImg = openFile.FileName;
+                    pictureBox1.Image = Image.FromFile(openFile.FileName);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Chọn file ảnh.");
             }
         }
     }

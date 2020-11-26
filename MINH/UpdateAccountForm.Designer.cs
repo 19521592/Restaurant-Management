@@ -200,10 +200,11 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Location = new System.Drawing.Point(130, 12);
+            this.panel7.Location = new System.Drawing.Point(125, 12);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(128, 128);
             this.panel7.TabIndex = 11;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // UpdateAccountForm
             // 

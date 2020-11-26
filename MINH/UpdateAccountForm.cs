@@ -46,5 +46,10 @@ namespace Restaurant_Management.MINH
         {
 
         }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

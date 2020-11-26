@@ -58,10 +58,10 @@ namespace Restaurant_Management.BLL
         public bool Insert(string ten, int dongia, string loai, string hinhanh, string ghichu)
         {
             string query = "INSERT INTO MONAN VALUES ( @id , @ten , @dongia , @loai , @hinhanh , @ghichu , @trangthai );";
-            int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { getMaMONANnext(),ten, dongia, loai, hinhanh, ghichu, '1' }) ;
+            int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { getMaMONANnext(), ten, dongia, loai, hinhanh, ghichu, '1' });
             return (rs > 0);
         }
-        public bool Update(string id, string ten, int dongia, string loai, Image hinhanh, string ghichu)
+        public bool Update(string id, string ten, int dongia, string loai, string hinhanh, string ghichu)
         {
             string query = "UPDATE MONAN SET TEN = @TEN , DONGIA = @DONGIA , LOAI = @LOAI , HINHANH = @HINHANH , GHICHU = @GHICHU  WHERE ID = @ID ";
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { ten, dongia, loai, hinhanh, ghichu, id });
@@ -80,7 +80,7 @@ namespace Restaurant_Management.BLL
             monanDTO p = new monanDTO();
             p.Id = rs.Rows[0][0].ToString();
             p.Ten = rs.Rows[0][1].ToString();
-            p.Dongia = int.Parse(rs.Rows[0][2].ToString());
+            p.Dongia = rs.Rows[0][2].ToString();
             p.Loai = rs.Rows[0][3].ToString();
             p.Hinhanh = rs.Rows[0][4].ToString();
             p.Ghichu = rs.Rows[0][5].ToString();
@@ -89,15 +89,29 @@ namespace Restaurant_Management.BLL
         }
         public DataTable getList()
         {
-            string query = "SELECT ID, TEN, DONGIA FROM MONAN WHERE TRANGTHAI = 1";
+            string query = "SELECT ID, TEN, DONGIA FROM MONAN WHERE TRANGTHAI = 1 ";
             DataTable rs = Provider.Ins.ExcuteQuery(query);
             return rs;
         }
-        public bool check_Ten(string ten) 
+        public DataTable getListThucAn(string loai)
         {
-            if (ten == null) return false;
-            if (ten.Length > 256) return false;
-            
+            string query = "SELECT ID, TEN, DONGIA FROM MONAN WHERE LOAI = @loai and TRANGTHAI = 1";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { loai});
+            return rs;
+        }
+        //
+        public bool check_Dongia(string dongia)
+        {
+            if (dongia.Length > 13) return false;
+            for (int i = 0; i < dongia.Length; i++)
+            {
+                if (('0' <= dongia[i]) && (dongia[i] <= '9'))
+                { }    
+                else
+                    return false;
+            }
+            return true;
         }
     }
+}
 

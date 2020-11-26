@@ -100,7 +100,8 @@ namespace Restaurant_Management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            ThemMon themMonFrom = new ThemMon();
+            themMonFrom.ShowDialog();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -112,6 +113,18 @@ namespace Restaurant_Management
             lblKind.Text = p.Loai;
             lblNote.Text = p.Ghichu;
             pictureBox1.Image = BLL.MONAN.Ins.ByteToImg(p.Hinhanh);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn món.");
+                return;
+            }
+            string id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            BLL.MONAN.Ins.Delete(id);
+            dataGridView1.DataSource = BLL.MONAN.Ins.getList();
         }
     }
 }

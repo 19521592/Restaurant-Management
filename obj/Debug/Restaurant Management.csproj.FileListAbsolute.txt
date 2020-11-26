@@ -35,3 +35,5 @@ D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CopyComplete
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.MINH.Form1.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.MINH.TransPic.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.MINH.UpdateAccountForm.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.ThemMon.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.TrangChinh.resources

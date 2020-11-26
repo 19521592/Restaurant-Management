@@ -52,7 +52,6 @@
             this.pnlKind = new System.Windows.Forms.Panel();
             this.lblKind = new System.Windows.Forms.Label();
             this.pnlNote = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.lblNote = new System.Windows.Forms.Label();
             this.pnlInformation = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -94,6 +93,7 @@
             this.iconButton2.Text = "Xóa";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -229,9 +229,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(519, 262);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -357,24 +360,6 @@
             this.pnlNote.Size = new System.Drawing.Size(197, 2);
             this.pnlNote.TabIndex = 3;
             // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton3.IconColor = System.Drawing.Color.LimeGreen;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(260, 359);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(197, 47);
-            this.iconButton3.TabIndex = 5;
-            this.iconButton3.Text = "Thêm ảnh";
-            this.iconButton3.UseVisualStyleBackColor = false;
-            // 
             // lblNote
             // 
             this.lblNote.AutoSize = true;
@@ -393,7 +378,6 @@
             // 
             this.pnlInformation.BackColor = System.Drawing.Color.White;
             this.pnlInformation.Controls.Add(this.lblNote);
-            this.pnlInformation.Controls.Add(this.iconButton3);
             this.pnlInformation.Controls.Add(this.pnlNote);
             this.pnlInformation.Controls.Add(this.lblKind);
             this.pnlInformation.Controls.Add(this.pnlKind);
@@ -463,7 +447,6 @@
         private System.Windows.Forms.Panel pnlKind;
         private System.Windows.Forms.Label lblKind;
         private System.Windows.Forms.Panel pnlNote;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Label lblNote;
         private System.Windows.Forms.Panel pnlInformation;
     }

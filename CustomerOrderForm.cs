@@ -78,24 +78,24 @@ namespace Restaurant_Management
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        /*private void OpenChildForm(Form childForm)
-        {
-            //open only form
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            currentChildForm = childForm;
-            //End
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            pnlDesktop.Controls.Add(childForm);
-            pnlDesktop.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-            lblTitleChildForm.Text = currentBtn.Text;
-        }*/
+        //private void OpenChildForm(Form childForm)
+        //{
+        //    //open only form
+        //    if (currentChildForm != null)
+        //    {
+        //        currentChildForm.Close();
+        //    }
+        //    currentChildForm = childForm;
+        //    //End
+        //    childForm.TopLevel = false;
+        //    childForm.FormBorderStyle = FormBorderStyle.None;
+        //    childForm.Dock = DockStyle.Fill;
+        //    pnlDesktop.Controls.Add(childForm);
+        //    pnlDesktop.Tag = childForm;
+        //    childForm.BringToFront();
+        //    childForm.Show();
+        //    lblTitleChildForm.Text = currentBtn.Text;
+        //}
         private void Reset()
         {
             DisableButton();

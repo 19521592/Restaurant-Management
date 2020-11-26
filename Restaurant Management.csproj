@@ -120,6 +120,18 @@
     <Compile Include="OrderThucAn.Designer.cs">
       <DependentUpon>OrderThucAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemMon.Designer.cs">
+      <DependentUpon>ThemMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChinh.Designer.cs">
+      <DependentUpon>TrangChinh.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerOrderForm.resx">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +169,12 @@
     <EmbeddedResource Include="OrderThucAn.resx">
       <DependentUpon>OrderThucAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemMon.resx">
+      <DependentUpon>ThemMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChinh.resx">
+      <DependentUpon>TrangChinh.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +195,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\1food.png" />
+    <Content Include="images\user2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

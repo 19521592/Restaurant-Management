@@ -93,5 +93,18 @@ namespace Restaurant_Management.BLL
             DataTable rs = Provider.Ins.ExcuteQuery(query);
             return rs;
         }
+        //
+        public bool check_Dongia(string dongia)
+        {
+            if (dongia.Length > 13) return false;
+            for (int i = 0; i < dongia.Length; i++)
+            {
+                if (('0' < dongia[i]) && (dongia[i] < '9'))
+                    continue;
+                else
+                    return false;
+            }
+            return true;
+        }
     }
 }
