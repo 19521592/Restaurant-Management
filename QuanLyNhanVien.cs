@@ -190,10 +190,10 @@ namespace Restaurant_Management
 
         }
 
-        private void txtBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-            string sqlTimKiem = "select *from NHANVIEN Where MANV ";
+        //private void txtBoxSearch_TextChanged(object sender, EventArgs e)
+        //{
             
-        }
+            
+        //}
     }
 }

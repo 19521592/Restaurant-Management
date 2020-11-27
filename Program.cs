@@ -18,7 +18,7 @@ namespace Restaurant_Management
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new CustomerOrderForm());
-            Application.Run(new QuanLyNhanVien());
+            Application.Run(new HoaDon());
         }
     }
 }

@@ -15,3 +15,16 @@ C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.exe
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.pdb
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.Foods.FormAppetizer.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.HoaDon.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.Properties.Resources.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.OrderThucAn.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.exe
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.pdb
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.frmLogin.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
