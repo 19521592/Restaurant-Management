@@ -38,5 +38,10 @@ namespace Restaurant_Management
         {
             Application.Exit();
         }
+
+        private void OrderThucAn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
