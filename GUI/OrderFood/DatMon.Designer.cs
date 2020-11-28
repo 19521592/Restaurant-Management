@@ -269,8 +269,9 @@
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(170, 53);
             this.btnTable.TabIndex = 2;
-            this.btnTable.Text = "Bàn: ";
+            this.btnTable.Text = "Bàn";
             this.btnTable.UseVisualStyleBackColor = false;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // panel1
             // 

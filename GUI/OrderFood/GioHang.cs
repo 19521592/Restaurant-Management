@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restaurant_Management.GUI.CustomNofication;
+using Restaurant_Management.GUI.Table;
 
 namespace Restaurant_Management.GUI
 {
@@ -16,6 +17,7 @@ namespace Restaurant_Management.GUI
     {
         private IDictionary<string, Food> orderedFood;
         private List<string> idOrderedFood;
+        private Ban selectedTable;
 
         double Price = 0;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -28,11 +30,12 @@ namespace Restaurant_Management.GUI
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-        public GioHang(IDictionary<string, Food> orderedFood, List<string> idOrderedFood)
+        public GioHang(IDictionary<string, Food> orderedFood, List<string> idOrderedFood, Ban selectedTable)
         {
             InitializeComponent();
             this.orderedFood = orderedFood;
             this.idOrderedFood = idOrderedFood;
+            this.selectedTable = selectedTable;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
         }
 
@@ -45,6 +48,7 @@ namespace Restaurant_Management.GUI
                 flpnlSelectedFood.Controls.Add(foodCartItem);
                 Price += orderedFood[idFoodItem].Price * orderedFood[idFoodItem].Number;
             }
+            lblTableNumber.Text = selectedTable.tableName;
             lblPrice.Text = Price.ToString("#,##0");
             lblFoodCount.Text = "(" + orderedFood.Count() + " món ăn)";
             btnSubmit.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSubmit.Width, btnSubmit.Height, 20, 20));
@@ -73,7 +77,7 @@ namespace Restaurant_Management.GUI
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             Form_Alert frmAlert = new Form_Alert();
-            frmAlert.showAlert("Thêm món thành công!", Form_Alert.enmType.Success);
+            frmAlert.showAlert("Đặt món thành công!", Form_Alert.enmType.Success);
         }
     }
 }

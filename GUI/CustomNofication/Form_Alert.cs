@@ -12,7 +12,7 @@ namespace Restaurant_Management.GUI.CustomNofication
 {
     public partial class Form_Alert : Form
     {
-        public void Alert(string msg, Form_Alert.enmType type)
+        public static void Alert(string msg, Form_Alert.enmType type)
         {
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
@@ -127,7 +127,6 @@ namespace Restaurant_Management.GUI.CustomNofication
 
 
             this.lblMessage.Text = msg;
-
             this.Show();
             this.action = enmAction.start;
             this.timer1.Interval = 1;

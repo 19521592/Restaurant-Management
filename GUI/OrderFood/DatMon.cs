@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Restaurant_Management.BLL;
 using Restaurant_Management.GUI;
+using Restaurant_Management.GUI.Table;
+using Restaurant_Management.GUI.CustomNofication;
 
 namespace Restaurant_Management
 {
@@ -300,7 +302,17 @@ namespace Restaurant_Management
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            GioHang gioHang = new GioHang(orderedFood, idOrderedFood);
+            if (selectedTable == null)
+            {
+                Form_Alert.Alert("Lỗi: Chưa thêm bàn!", Form_Alert.enmType.Error);
+                return;
+            }
+            if (orderedFood == null)
+            {
+                Form_Alert.Alert("Lỗi: Chưa thêm món!", Form_Alert.enmType.Error);
+                return;
+            }
+            GioHang gioHang = new GioHang(orderedFood, idOrderedFood, selectedTable);
             gioHang.ShowDialog();
             gioHang.Focus();
         }
@@ -318,6 +330,25 @@ namespace Restaurant_Management
 
                 g.FillEllipse(redBrush, 35, 0, 20, 20);
                 g.DrawString(allFoodCount.ToString(), font, whiteBrush, 36, 0);
+            }
+        }
+        //Select Table
+        Ban selectedTable;
+        BanAn banAn;
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            banAn = new BanAn();
+            banAn.FormClosed += new FormClosedEventHandler(updateTableInfo);
+            banAn.ShowDialog();
+            banAn.Focus();
+            banAn.loadTableIntoFlowLayoutPanel();
+        }
+        private void updateTableInfo(object sender, FormClosedEventArgs e)
+        {
+            selectedTable = banAn.selectedTable;
+            if (selectedTable != null)
+            {
+                this.btnTable.Text = selectedTable.tableName;
             }
         }
     }

@@ -147,9 +147,9 @@ namespace Restaurant_Management.GUI
             this.lblTableNumber.AutoSize = true;
             this.lblTableNumber.Location = new System.Drawing.Point(118, 25);
             this.lblTableNumber.Name = "lblTableNumber";
-            this.lblTableNumber.Size = new System.Drawing.Size(16, 17);
+            this.lblTableNumber.Size = new System.Drawing.Size(53, 17);
             this.lblTableNumber.TabIndex = 0;
-            this.lblTableNumber.Text = "0";
+            this.lblTableNumber.Text = "Bàn 69";
             // 
             // lblPriceName
             // 
