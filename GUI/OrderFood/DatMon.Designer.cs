@@ -37,11 +37,15 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.homeBtn = new FontAwesome.Sharp.IconPictureBox();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlPurchase = new System.Windows.Forms.Panel();
+            this.btnPrice = new FontAwesome.Sharp.IconButton();
+            this.btnCart = new System.Windows.Forms.Button();
+            this.btnTable = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).BeginInit();
+            this.pnlPurchase.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -196,46 +200,104 @@
             // 
             // flowLayoutPanelMain
             // 
+            this.flowLayoutPanelMain.AutoScroll = true;
             this.flowLayoutPanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 72);
+            this.flowLayoutPanelMain.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanelMain.Location = new System.Drawing.Point(7, 72);
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1280, 528);
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1273, 475);
             this.flowLayoutPanelMain.TabIndex = 3;
+            // 
+            // pnlPurchase
+            // 
+            this.pnlPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.pnlPurchase.Controls.Add(this.btnPrice);
+            this.pnlPurchase.Controls.Add(this.btnCart);
+            this.pnlPurchase.Controls.Add(this.btnTable);
+            this.pnlPurchase.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlPurchase.Location = new System.Drawing.Point(0, 547);
+            this.pnlPurchase.Name = "pnlPurchase";
+            this.pnlPurchase.Size = new System.Drawing.Size(1280, 53);
+            this.pnlPurchase.TabIndex = 4;
+            // 
+            // btnPrice
+            // 
+            this.btnPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(147)))), ((int)(((byte)(185)))));
+            this.btnPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPrice.FlatAppearance.BorderSize = 0;
+            this.btnPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrice.ForeColor = System.Drawing.Color.White;
+            this.btnPrice.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.btnPrice.IconColor = System.Drawing.Color.White;
+            this.btnPrice.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrice.Location = new System.Drawing.Point(894, 0);
+            this.btnPrice.Name = "btnPrice";
+            this.btnPrice.Size = new System.Drawing.Size(228, 53);
+            this.btnPrice.TabIndex = 1;
+            this.btnPrice.Text = "0";
+            this.btnPrice.UseVisualStyleBackColor = false;
+            this.btnPrice.Paint += new System.Windows.Forms.PaintEventHandler(this.btnPrice_Paint);
+            // 
+            // btnCart
+            // 
+            this.btnCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(101)))), ((int)(((byte)(104)))));
+            this.btnCart.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCart.FlatAppearance.BorderSize = 0;
+            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCart.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCart.ForeColor = System.Drawing.Color.White;
+            this.btnCart.Location = new System.Drawing.Point(1122, 0);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(158, 53);
+            this.btnCart.TabIndex = 0;
+            this.btnCart.Text = "Giỏ hàng";
+            this.btnCart.UseVisualStyleBackColor = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
+            // btnTable
+            // 
+            this.btnTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(101)))), ((int)(((byte)(104)))));
+            this.btnTable.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTable.FlatAppearance.BorderSize = 0;
+            this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTable.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTable.ForeColor = System.Drawing.Color.White;
+            this.btnTable.Location = new System.Drawing.Point(0, 0);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Size = new System.Drawing.Size(170, 53);
+            this.btnTable.TabIndex = 2;
+            this.btnTable.Text = "Bàn: ";
+            this.btnTable.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 547);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 72);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 53);
-            this.panel1.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1076, 72);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(204, 475);
-            this.panel2.TabIndex = 5;
+            this.panel1.Size = new System.Drawing.Size(7, 475);
+            this.panel1.TabIndex = 6;
             // 
             // CustomerOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 600);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanelMain);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.pnlPurchase);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerOrderForm";
             this.Text = "CustomerOrderForm";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).EndInit();
+            this.pnlPurchase.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -251,7 +313,10 @@
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconPictureBox homeBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
+        private System.Windows.Forms.Panel pnlPurchase;
+        private FontAwesome.Sharp.IconButton btnPrice;
+        private System.Windows.Forms.Button btnCart;
+        private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
     }
 }

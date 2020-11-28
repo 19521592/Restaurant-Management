@@ -13,9 +13,22 @@ namespace Restaurant_Management
 {
     public partial class TrangChinh : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
+        Region normalRegion;
         public TrangChinh()
         {
+            normalRegion = Region;
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
             hideSubMenu();
         }
         private void hideSubMenu()
@@ -105,13 +118,21 @@ namespace Restaurant_Management
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
+            {
+                Region = normalRegion;
                 WindowState = FormWindowState.Maximized;
+            }
             else
+            {
+                
                 WindowState = FormWindowState.Normal;
+                this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 40, 40));
+            }
         }
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
+
     }
 }

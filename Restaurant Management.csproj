@@ -54,64 +54,77 @@
     <Compile Include="BLL\Bill.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
-    <Compile Include="CustomerOrderForm.cs">
+    <Compile Include="GUI\CustomNofication\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerOrderForm.Designer.cs">
-      <DependentUpon>CustomerOrderForm.cs</DependentUpon>
+    <Compile Include="GUI\CustomNofication\Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OrderFood\DatMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\DatMon.Designer.cs">
+      <DependentUpon>DatMon.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Provider.cs" />
-    <Compile Include="Foods\FormAppetizer.cs">
+    <Compile Include="GUI\OrderFood\FoodCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\FoodCartItem.Designer.cs">
+      <DependentUpon>FoodCartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OrderFood\FoodItem.cs" />
+    <Compile Include="GUI\OrderFood\GioHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Foods\FormAppetizer.Designer.cs">
-      <DependentUpon>FormAppetizer.cs</DependentUpon>
+    <Compile Include="GUI\OrderFood\GioHang.Designer.cs">
+      <DependentUpon>GioHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogIn.cs">
+    <Compile Include="GUI\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogIn.Designer.cs">
+    <Compile Include="GUI\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyMonAn.cs">
+    <Compile Include="GUI\ManageFood\QuanLyMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyMonAn.Designer.cs">
+    <Compile Include="GUI\ManageFood\QuanLyMonAn.Designer.cs">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyNhanVien.cs">
+    <Compile Include="GUI\QuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyNhanVien.Designer.cs">
+    <Compile Include="GUI\QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="OrderThucAn.cs">
+    <Compile Include="GUI\ManageFood\ThemMon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderThucAn.Designer.cs">
-      <DependentUpon>OrderThucAn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThemMon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThemMon.Designer.cs">
+    <Compile Include="GUI\ManageFood\ThemMon.Designer.cs">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrangChinh.cs">
+    <Compile Include="GUI\TrangChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrangChinh.Designer.cs">
+    <Compile Include="GUI\TrangChinh.Designer.cs">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomerOrderForm.resx">
-      <DependentUpon>CustomerOrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\CustomNofication\Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Foods\FormAppetizer.resx">
-      <DependentUpon>FormAppetizer.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
+      <DependentUpon>DatMon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogIn.resx">
+    <EmbeddedResource Include="GUI\OrderFood\FoodCartItem.resx">
+      <DependentUpon>FoodCartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OrderFood\GioHang.resx">
+      <DependentUpon>GioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -123,19 +136,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanLyMonAn.resx">
+    <EmbeddedResource Include="GUI\ManageFood\QuanLyMonAn.resx">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyNhanVien.resx">
+    <EmbeddedResource Include="GUI\QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderThucAn.resx">
-      <DependentUpon>OrderThucAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThemMon.resx">
+    <EmbeddedResource Include="GUI\ManageFood\ThemMon.resx">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrangChinh.resx">
+    <EmbeddedResource Include="GUI\TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

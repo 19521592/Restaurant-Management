@@ -16,9 +16,7 @@ namespace Restaurant_Management
     {
         public frmLogin()
         {
-            InitializeComponent();
-           
-
+            InitializeComponent();         
         }
 
 
@@ -74,8 +72,8 @@ namespace Restaurant_Management
         }
         private void OpenOrderThucAnForm()
         {
-            OrderThucAn frmOrderFood = new OrderThucAn(this);
-            frmOrderFood.FormClosing += delegate { this.Show(); };
+            TrangChinh frmOrderFood = new TrangChinh();
+            frmOrderFood.Parent = this;
             frmOrderFood.Show();
             this.Hide();
         }

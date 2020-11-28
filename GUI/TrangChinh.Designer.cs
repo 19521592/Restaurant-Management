@@ -52,20 +52,20 @@
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
             this.btnMaximize = new FontAwesome.Sharp.IconPictureBox();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlSideMenu.SuspendLayout();
             this.pnlAccountSubMenu.SuspendLayout();
             this.pnlAboutSubMenu.SuspendLayout();
             this.pnlStatisticsSubMenu.SuspendLayout();
             this.pnlManageSubMenu.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -85,7 +85,7 @@
             this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(250, 600);
+            this.pnlSideMenu.Size = new System.Drawing.Size(250, 760);
             this.pnlSideMenu.TabIndex = 0;
             // 
             // pnlAccountSubMenu
@@ -409,7 +409,7 @@
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(0, 0);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(1205, 556);
+            this.pnlChildForm.Size = new System.Drawing.Size(1205, 722);
             this.pnlChildForm.TabIndex = 1;
             // 
             // panel1
@@ -421,30 +421,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(250, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 44);
+            this.panel1.Size = new System.Drawing.Size(1205, 38);
             this.panel1.TabIndex = 2;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel2.Controls.Add(this.pnlChildForm);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(250, 44);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1205, 556);
-            this.panel2.TabIndex = 3;
             // 
             // btnMinimize
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(11)))), ((int)(((byte)(7)))));
             this.btnMinimize.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.btnMinimize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 23;
-            this.btnMinimize.Location = new System.Drawing.Point(1116, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(1116, 10);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(23, 23);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -455,13 +445,13 @@
             // btnMaximize
             // 
             this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(11)))), ((int)(((byte)(7)))));
             this.btnMaximize.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.btnMaximize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 23;
-            this.btnMaximize.Location = new System.Drawing.Point(1145, 12);
+            this.btnMaximize.Location = new System.Drawing.Point(1145, 10);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(23, 23);
             this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -472,13 +462,13 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(11)))), ((int)(((byte)(7)))));
             this.btnExit.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 23;
-            this.btnExit.Location = new System.Drawing.Point(1174, 12);
+            this.btnExit.Location = new System.Drawing.Point(1174, 10);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(23, 23);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -486,11 +476,21 @@
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panel2.Controls.Add(this.pnlChildForm);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(250, 38);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1205, 722);
+            this.panel2.TabIndex = 3;
+            // 
             // TrangChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1455, 600);
+            this.ClientSize = new System.Drawing.Size(1455, 760);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlSideMenu);
@@ -505,10 +505,10 @@
             this.pnlStatisticsSubMenu.ResumeLayout(false);
             this.pnlManageSubMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

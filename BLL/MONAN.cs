@@ -105,8 +105,8 @@ namespace Restaurant_Management.BLL
 
         public DataTable getListThucAn(string loai)
         {
-            string query = "select ID , TEN , DONGIA , HINHANH from MONAN where LOAI = @loai and TRANGTHAI = 1 ";
-            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            string query = "select ID , TEN , DONGIA , HINHANH, GHICHU from MONAN where loai = @loai and TRANGTHAI = 1 ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { loai});
             return rs;
         }
     }
