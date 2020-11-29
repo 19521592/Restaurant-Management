@@ -52,9 +52,9 @@
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
     <Compile Include="BLL\BANAN.cs" />
-    <Compile Include="BLL\Bill.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="DTO\FoodDTO.cs" />
     <Compile Include="GUI\CustomNofication\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
