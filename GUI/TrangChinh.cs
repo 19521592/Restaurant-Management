@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restaurant_Management.GUI.ManagerStaff;
+using Restaurant_Management.GUI.Revenue;
 namespace Restaurant_Management
 {
     public partial class TrangChinh : Form
@@ -137,6 +138,12 @@ namespace Restaurant_Management
         private void button1_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new QuanLyNhanVien());
+            hideSubMenu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Revenue());
             hideSubMenu();
         }
     }

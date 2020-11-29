@@ -22,3 +22,5 @@ D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManageFood.SuaM
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.QuanLyNhanVien.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.Revenue.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.ThemNhanVien.resources

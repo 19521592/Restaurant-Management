@@ -82,6 +82,12 @@
     <Compile Include="GUI\ManagerStaff\StaffItem.Designer.cs">
       <DependentUpon>StaffItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ManagerStaff\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\OrderFood\DatMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="GUI\ManageFood\QuanLyMonAn.Designer.cs">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Revenue\Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\Revenue.Designer.cs">
+      <DependentUpon>Revenue.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Table\Ban.cs">
       <SubType>UserControl</SubType>
@@ -152,6 +164,9 @@
     <EmbeddedResource Include="GUI\ManagerStaff\StaffItem.resx">
       <DependentUpon>StaffItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\Revenue.resx">
+      <DependentUpon>Revenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Table\Ban.resx">
       <DependentUpon>Ban.cs</DependentUpon>
@@ -204,6 +222,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\food.png" />
+    <Content Include="images\staff.png" />
+    <Content Include="images\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

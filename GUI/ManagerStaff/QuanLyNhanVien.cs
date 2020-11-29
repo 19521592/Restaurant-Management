@@ -13,25 +13,43 @@ namespace Restaurant_Management.GUI.ManagerStaff
 {
     public partial class QuanLyNhanVien : Form
     {
+        List<staffDTO> listDTO;
         public QuanLyNhanVien()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
         {
-            StaffItem a = new StaffItem();
-            StaffItem b = new StaffItem();
-            StaffItem c = new StaffItem();
-            a.BackColor = Color.AliceBlue;
-            b.BackColor = Color.Red;
-            a.lbName.Text = "Minh";
-            staffDTO stf = NhanVien.Ins.getNV("NV002");
+            listDTO = NhanVien.Ins.getListDTO();            
+            StaffItem item;
+            for (int i = 0; i < listDTO.Count ; i++)
+            {              
+                item = new StaffItem();
+                item.lbID.Text = listDTO[i].Id;
+                item.lbName.Text = listDTO[i].Hoten;
+                item.lbPhone.Text = listDTO[i].Sdt;               
+                item.lbSex.Text = listDTO[i].Gtinh;
+                item.lbCHUC.Text = listDTO[i].Vitri;
+                item.pictureBox1.Image = NhanVien.Ins.ByteToImg(listDTO[i].ImgStr);
+                if (i % 2 == 0)
+                {
+                    item.BackColor = Color.AliceBlue;
+                }
+                else
+                {
+                    item.BackColor = Color.LightBlue;
+                }
+                this.DataPanel.Controls.Add(item);
+                item.Dock = DockStyle.Top;
+            }
+            lbCount.Text = listDTO.Count.ToString();
+        }
 
-            this.flowLayoutPanel1.Controls.Add(a);
-            this.flowLayoutPanel1.Controls.Add(b);
-            this.flowLayoutPanel1.Controls.Add(c);
-            
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ThemNhanVien form = new ThemNhanVien();
+            form.ShowDialog();
         }
     }
 }
