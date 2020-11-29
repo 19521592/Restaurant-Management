@@ -63,9 +63,9 @@ namespace Restaurant_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap home {
+        internal static System.Drawing.Bitmap dev {
             get {
-                object obj = ResourceManager.GetObject("home", resourceCulture);
+                object obj = ResourceManager.GetObject("dev", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,26 +76,6 @@ namespace Restaurant_Management.Properties {
         internal static System.Drawing.Bitmap NH {
             get {
                 object obj = ResourceManager.GetObject("NH", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nhahang03 {
-            get {
-                object obj = ResourceManager.GetObject("nhahang03", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tải_xuống {
-            get {
-                object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

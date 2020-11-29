@@ -21,3 +21,4 @@ D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.Ta
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.ThemMon.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.TrangChinh.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources

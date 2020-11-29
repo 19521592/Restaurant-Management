@@ -55,6 +55,12 @@
     <Compile Include="BLL\Bill.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="GUI\About\deverloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\About\deverloper.Designer.cs">
+      <DependentUpon>deverloper.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\About\NhanhHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="GUI\TrangChinh.Designer.cs">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\About\deverloper.resx">
+      <DependentUpon>deverloper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\About\NhanhHang.resx">
       <DependentUpon>NhanhHang.cs</DependentUpon>
     </EmbeddedResource>
