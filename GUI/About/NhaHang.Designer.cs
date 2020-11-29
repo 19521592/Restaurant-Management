@@ -1,7 +1,7 @@
 ﻿
 namespace Restaurant_Management.GUI.About
 {
-    partial class NhanhHang
+    partial class NhaHang
     {
         /// <summary>
         /// Required designer variable.

@@ -61,11 +61,11 @@
     <Compile Include="GUI\About\deverloper.Designer.cs">
       <DependentUpon>deverloper.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\About\NhanhHang.cs">
+    <Compile Include="GUI\About\NhaHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\About\NhanhHang.Designer.cs">
-      <DependentUpon>NhanhHang.cs</DependentUpon>
+    <Compile Include="GUI\About\NhaHang.Designer.cs">
+      <DependentUpon>NhaHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\CustomNofication\Form_Alert.cs">
       <SubType>Form</SubType>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="GUI\About\deverloper.resx">
       <DependentUpon>deverloper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\About\NhanhHang.resx">
-      <DependentUpon>NhanhHang.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\About\NhaHang.resx">
+      <DependentUpon>NhaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CustomNofication\Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>

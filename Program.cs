@@ -17,7 +17,7 @@ namespace Restaurant_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.About.deverloper());
+            Application.Run(new TrangChinh());
         }
     }
 }

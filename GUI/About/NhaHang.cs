@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Restaurant_Management.GUI.About
 {
-    public partial class NhanhHang : Form
+    public partial class NhaHang : Form
     {
-        public NhanhHang()
+        public NhaHang()
         {
             InitializeComponent();
         }

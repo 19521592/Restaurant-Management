@@ -13,7 +13,6 @@ D:\Downloads\Restaurant-Management-master\bin\Debug\FontAwesome.Sharp.dll
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csproj.CopyComplete
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.exe
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.pdb
-D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.About.NhanhHang.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.CustomNofication.Form_Alert.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.FoodCartItem.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.GioHang.resources
@@ -22,3 +21,4 @@ D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.Ta
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.ThemMon.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.TrangChinh.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.About.NhaHang.resources

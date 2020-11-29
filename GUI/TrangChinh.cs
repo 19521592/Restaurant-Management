@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restaurant_Management.GUI;
 
 namespace Restaurant_Management
 {
@@ -134,5 +135,20 @@ namespace Restaurant_Management
             WindowState = FormWindowState.Minimized;
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            GUI.About.NhaHang a = new GUI.About.NhaHang();
+            this.Hide();
+            a.ShowDialog();
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            GUI.About.deverloper b = new GUI.About.deverloper();
+            this.Hide();
+            b.ShowDialog();
+
+        }
     }
 }
