@@ -28,6 +28,7 @@ namespace Restaurant_Management.GUI.ManagerStaff
             this.flowLayoutPanel1.Controls.Add(a);
             this.flowLayoutPanel1.Controls.Add(b);
             this.flowLayoutPanel1.Controls.Add(c);
+            a.Dock = DockStyle.Top;
         }
     }
 }
