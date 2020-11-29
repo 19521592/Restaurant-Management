@@ -1,30 +1,23 @@
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\bin\Debug\Restaurant Management.exe.config
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\bin\Debug\Restaurant Management.exe
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\bin\Debug\Restaurant Management.pdb
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.Foods.FormAppetizer.resources
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.frmLogin.resources
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.OrderThucAn.resources
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CopyComplete
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.exe
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.pdb
-C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
-D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
-D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.Foods.FormAppetizer.resources
-D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.HoaDon.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.frmLogin.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.Properties.Resources.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
-D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.OrderThucAn.resources
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+D:\Downloads\Restaurant-Management-master\bin\Debug\Restaurant Management.exe.config
+D:\Downloads\Restaurant-Management-master\bin\Debug\Restaurant Management.exe
+D:\Downloads\Restaurant-Management-master\bin\Debug\Restaurant Management.pdb
+D:\Downloads\Restaurant-Management-master\bin\Debug\FontAwesome.Sharp.dll
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csproj.CopyComplete
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.exe
 D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.pdb
-D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.frmLogin.resources
-D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.About.NhanhHang.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.CustomNofication.Form_Alert.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.FoodCartItem.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.GioHang.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.Table.Ban.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.ThemMon.resources
+D:\Downloads\Restaurant-Management-master\obj\Debug\Restaurant_Management.TrangChinh.resources

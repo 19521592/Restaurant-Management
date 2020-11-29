@@ -45,7 +45,6 @@ namespace Restaurant_Management
             this.lbTenKH = new System.Windows.Forms.Label();
             this.lbMaKH = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.dateNgBan = new System.Windows.Forms.DateTimePicker();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
@@ -66,7 +65,6 @@ namespace Restaurant_Management
             this.label12 = new System.Windows.Forms.Label();
             this.txtTenMonAn = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbMaMonAn = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTong = new System.Windows.Forms.TextBox();
@@ -75,6 +73,8 @@ namespace Restaurant_Management
             this.btnLuuHD = new System.Windows.Forms.Button();
             this.btnInHD = new System.Windows.Forms.Button();
             this.btnHuyHD = new System.Windows.Forms.Button();
+            this.txtMaMonAn = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -142,6 +142,7 @@ namespace Restaurant_Management
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtMaNV);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtTenKH);
@@ -151,7 +152,6 @@ namespace Restaurant_Management
             this.groupBox1.Controls.Add(this.lbTenKH);
             this.groupBox1.Controls.Add(this.lbMaKH);
             this.groupBox1.Controls.Add(this.txtTenNV);
-            this.groupBox1.Controls.Add(this.cmbMaNV);
             this.groupBox1.Controls.Add(this.dateNgBan);
             this.groupBox1.Controls.Add(this.txtMaHD);
             this.groupBox1.Controls.Add(this.lbTenNhanVien);
@@ -236,14 +236,6 @@ namespace Restaurant_Management
             this.txtTenNV.Size = new System.Drawing.Size(200, 22);
             this.txtTenNV.TabIndex = 7;
             // 
-            // cmbMaNV
-            // 
-            this.cmbMaNV.FormattingEnabled = true;
-            this.cmbMaNV.Location = new System.Drawing.Point(121, 97);
-            this.cmbMaNV.Name = "cmbMaNV";
-            this.cmbMaNV.Size = new System.Drawing.Size(200, 24);
-            this.cmbMaNV.TabIndex = 6;
-            // 
             // dateNgBan
             // 
             this.dateNgBan.Location = new System.Drawing.Point(121, 61);
@@ -327,6 +319,7 @@ namespace Restaurant_Management
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtMaMonAn);
             this.panel3.Controls.Add(this.txtThanhTien);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.txtGiamGia);
@@ -337,7 +330,6 @@ namespace Restaurant_Management
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.txtTenMonAn);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.cmbMaMonAn);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(0, 21);
             this.panel3.Name = "panel3";
@@ -427,14 +419,6 @@ namespace Restaurant_Management
             this.label11.TabIndex = 2;
             this.label11.Text = "Tên Món Ăn";
             // 
-            // cmbMaMonAn
-            // 
-            this.cmbMaMonAn.FormattingEnabled = true;
-            this.cmbMaMonAn.Location = new System.Drawing.Point(85, 8);
-            this.cmbMaMonAn.Name = "cmbMaMonAn";
-            this.cmbMaMonAn.Size = new System.Drawing.Size(121, 24);
-            this.cmbMaMonAn.TabIndex = 1;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -505,6 +489,20 @@ namespace Restaurant_Management
             this.btnHuyHD.Text = "Hủy Hóa Đơn";
             this.btnHuyHD.UseVisualStyleBackColor = true;
             // 
+            // txtMaMonAn
+            // 
+            this.txtMaMonAn.Location = new System.Drawing.Point(85, 11);
+            this.txtMaMonAn.Name = "txtMaMonAn";
+            this.txtMaMonAn.Size = new System.Drawing.Size(121, 22);
+            this.txtMaMonAn.TabIndex = 12;
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Location = new System.Drawing.Point(121, 93);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(200, 22);
+            this.txtMaNV.TabIndex = 16;
+            // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -547,7 +545,6 @@ namespace Restaurant_Management
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtTenNV;
-        private System.Windows.Forms.ComboBox cmbMaNV;
         private System.Windows.Forms.DateTimePicker dateNgBan;
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label lbTenNhanVien;
@@ -577,7 +574,6 @@ namespace Restaurant_Management
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtTenMonAn;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbMaMonAn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTong;
         private System.Windows.Forms.Button btnTong;
@@ -585,5 +581,7 @@ namespace Restaurant_Management
         private System.Windows.Forms.Button btnLuuHD;
         private System.Windows.Forms.Button btnInHD;
         private System.Windows.Forms.Button btnHuyHD;
+        private System.Windows.Forms.TextBox txtMaMonAn;
+        private System.Windows.Forms.TextBox txtMaNV;
     }
 }

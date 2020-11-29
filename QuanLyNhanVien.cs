@@ -38,7 +38,7 @@ namespace Restaurant_Management
 
         private void LoadStaffData()
         {
-            dataGridViewStaffList.DataSource = BLL.NhanVien.Ins.Display_Datatbl();
+           //dataGridViewStaffList.DataSource = BLL.NhanVien.Ins.Display_Datatbl();
         }
 
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
@@ -66,16 +66,16 @@ namespace Restaurant_Management
                 btnEditStaff.Enabled = false;
                 btnDeleteStaff.Enabled = false;
             }
-            else
-            {
-                NhanVien.Ins.Insert(txtBoxName.Text, txtBoxGender.Text, txtBoxBirth.Text, txtBoxAddress.Text, txtBoxPhoneNumber.Text, txtBoxCMND.Text);
-                readOnlyStaffAttribute(true);
-                emptyStaffAttribute();
-                btnAddStaff.Text = "Thêm";
-                btnEditStaff.Enabled = true;
-                btnDeleteStaff.Enabled = true;
-                LoadStaffData();
-            }
+            //else
+            //{
+            //    NhanVien.Ins.Insert(txtBoxName.Text, txtBoxGender.Text, txtBoxBirth.Text, txtBoxAddress.Text, txtBoxPhoneNumber.Text, txtBoxCMND.Text);
+            //    readOnlyStaffAttribute(true);
+            //    emptyStaffAttribute();
+            //    btnAddStaff.Text = "Thêm";
+            //    btnEditStaff.Enabled = true;
+            //    btnDeleteStaff.Enabled = true;
+            //    LoadStaffData();
+            //}
 
         }
 
@@ -117,17 +117,17 @@ namespace Restaurant_Management
                     btnAddStaff.Enabled = false;
                     btnDeleteStaff.Enabled = false;
                 }
-                else
-                {
+                //else
+                //{
 
-                    NhanVien.Ins.Update(dataGridViewStaffList.SelectedCells[0].OwningRow.Cells[0].Value.ToString(), txtBoxName.Text, txtBoxGender.Text, txtBoxBirth.Text, txtBoxAddress.Text, txtBoxPhoneNumber.Text, txtBoxCMND.Text);
-                    readOnlyStaffAttribute(true);
-                    emptyStaffAttribute();
-                    btnEditStaff.Text = "Sửa";
-                    btnAddStaff.Enabled = true;
-                    btnDeleteStaff.Enabled = true;
-                    LoadStaffData();
-                }
+                //    NhanVien.Ins.Update(dataGridViewStaffList.SelectedCells[0].OwningRow.Cells[0].Value.ToString(), txtBoxName.Text, txtBoxGender.Text, txtBoxBirth.Text, txtBoxAddress.Text, txtBoxPhoneNumber.Text, txtBoxCMND.Text);
+                //    readOnlyStaffAttribute(true);
+                //    emptyStaffAttribute();
+                //    btnEditStaff.Text = "Sửa";
+                //    btnAddStaff.Enabled = true;
+                //    btnDeleteStaff.Enabled = true;
+                //    LoadStaffData();
+                //}
             }
             catch (Exception ex)
             {
