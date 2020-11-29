@@ -10,7 +10,7 @@ namespace Restaurant_Management.DTO
     {
         private string id;
         private string ten;
-        private int dongia;
+        private string dongia;
         private string loai;
         private string hinhanh;
         private string ghichu;
@@ -19,7 +19,7 @@ namespace Restaurant_Management.DTO
 
         public string Id { get => id; set { id = value; } }
         public string Ten { get => ten; set { ten = value; } }
-        public int Dongia { get => dongia; set { dongia = value; } }
+        public string Dongia { get => dongia; set { dongia = value; } }
         public string Loai { get => loai; set { loai = value; } }
         public string Hinhanh { get => hinhanh; set { hinhanh = value; } }
         public string Ghichu { get => ghichu; set { ghichu = value; } }

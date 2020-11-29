@@ -11,7 +11,6 @@ D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Table.Ban.resou
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
-D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyNhanVien.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.ThemMon.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.TrangChinh.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
@@ -19,3 +18,7 @@ D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CoreCompileI
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CopyComplete
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.exe
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.pdb
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManageFood.SuaMon.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.QuanLyNhanVien.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources

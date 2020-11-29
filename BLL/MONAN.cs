@@ -61,7 +61,7 @@ namespace Restaurant_Management.BLL
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { getMaMONANnext(),ten, dongia, loai, hinhanh, ghichu, '1' }) ;
             return (rs > 0);
         }
-        public bool Update(string id, string ten, int dongia, string loai, Image hinhanh, string ghichu)
+        public bool Update(string id, string ten, int dongia, string loai, string hinhanh, string ghichu)
         {
             string query = "UPDATE MONAN SET TEN = @TEN , DONGIA = @DONGIA , LOAI = @LOAI , HINHANH = @HINHANH , GHICHU = @GHICHU  WHERE ID = @ID ";
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { ten, dongia, loai, hinhanh, ghichu, id });
@@ -82,7 +82,7 @@ namespace Restaurant_Management.BLL
             FoodDTO res = new FoodDTO();        
             res.Id = rs.Rows[0][0].ToString();
             res.Ten = rs.Rows[0][1].ToString();
-            res.Dongia = int.Parse(rs.Rows[0][2].ToString());
+            res.Dongia = rs.Rows[0][2].ToString();
             res.Loai = rs.Rows[0][3].ToString();
             res.Hinhanh = rs.Rows[0][4].ToString();
             res.Ghichu = rs.Rows[0][5].ToString();
@@ -95,6 +95,24 @@ namespace Restaurant_Management.BLL
             string query = "select ID , TEN , DONGIA , HINHANH, GHICHU from MONAN where loai = @loai and TRANGTHAI = 1 ";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { loai});
             return rs;
+        }
+        public DataTable getList()
+        {
+            string query = "select ID , TEN , DONGIA from MONAN where TRANGTHAI = 1 ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            return rs;
+        }
+        public bool check_Dongia(string dongia)
+        {
+            if (dongia.Length > 13) return false;
+            for (int i = 0; i < dongia.Length; i++)
+            {
+                if (('0' <= dongia[i]) && (dongia[i] <= '9'))
+                { }
+                else
+                    return false;
+            }
+            return true;
         }
     }
 }   
