@@ -129,5 +129,11 @@ namespace Restaurant_Management.BLL
             NewPass,ID});
             return (rs > 0);
         }
+        public string getMaNV(string userName)
+        {
+            string query = "select ID from account where username = @userName";
+            DataTable tbl = Provider.Ins.ExcuteQuery(query, new object[] { userName });
+            return tbl.Rows[0][0].ToString();
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using Restaurant_Management.BLL;
+using Restaurant_Management.GUI.Login;
 
 namespace Restaurant_Management
 {
@@ -58,10 +59,10 @@ namespace Restaurant_Management
                         MessageBox.Show("Tài khoản / mật khẩu không đúng, xin vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OKCancel);
                         break;
                     case Account.TypeAcc.Admin: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OpenOrderThucAnForm();
+                        OpenOrderThucAnForm(userName);
                         break;
                     case Account.TypeAcc.Staff: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OpenOrderThucAnForm();
+                        OpenOrderThucAnForm(userName);
                         break;
                 }
             }
@@ -70,9 +71,12 @@ namespace Restaurant_Management
                // MessageBox.Show(ex.Message);
             }
         }
-        private void OpenOrderThucAnForm()
+        private void OpenOrderThucAnForm(string userName)
         {
-            TrangChinh trangChinh = new TrangChinh();
+            AccountApp account = new AccountApp();
+            account.Username = userName;
+            account.Id = Account.Ins.getMaNV(userName);
+            TrangChinh trangChinh = new TrangChinh(account);
             trangChinh.ShowDialog();
             trangChinh.ParentForm = this;
             this.Close();

@@ -52,16 +52,13 @@
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
     <Compile Include="BLL\BANAN.cs" />
+    <Compile Include="BLL\HOADONBAN.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="BLL\THUCDONBAN.cs" />
     <Compile Include="DTO\FoodDTO.cs" />
     <Compile Include="DTO\staffDTO.cs" />
-    <Compile Include="GUI\CustomNofication\Form_Alert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\CustomNofication\Form_Alert.Designer.cs">
-      <DependentUpon>Form_Alert.cs</DependentUpon>
-    </Compile>
+    <Compile Include="GUI\Login\AccountApp.cs" />
     <Compile Include="GUI\ManageFood\SuaMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +77,10 @@
     <Compile Include="GUI\ManagerStaff\StaffItem.Designer.cs">
       <DependentUpon>StaffItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Notification\Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Notification\Form_Alert.Designer.cs" />
     <Compile Include="GUI\OrderFood\DatMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,10 +101,10 @@
     <Compile Include="GUI\OrderFood\GioHang.Designer.cs">
       <DependentUpon>GioHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LogIn.cs">
+    <Compile Include="GUI\Login\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\LogIn.Designer.cs">
+    <Compile Include="GUI\Login\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ManageFood\QuanLyMonAn.cs">
@@ -138,9 +139,6 @@
     <Compile Include="GUI\TrangChinh.Designer.cs">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\CustomNofication\Form_Alert.resx">
-      <DependentUpon>Form_Alert.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManageFood\SuaMon.resx">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +148,7 @@
     <EmbeddedResource Include="GUI\ManagerStaff\StaffItem.resx">
       <DependentUpon>StaffItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Notification\Form_Alert.resx" />
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,7 +158,7 @@
     <EmbeddedResource Include="GUI\OrderFood\GioHang.resx">
       <DependentUpon>GioHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\LogIn.resx">
+    <EmbeddedResource Include="GUI\Login\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Table\Ban.resx">

@@ -21,6 +21,7 @@ namespace Restaurant_Management
         //Fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        public string staffId { get; set; }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -34,7 +35,7 @@ namespace Restaurant_Management
         );
 
         //Constructor
-        public CustomerOrderForm()
+        public CustomerOrderForm(string staffId)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -46,15 +47,8 @@ namespace Restaurant_Management
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
-            IconButton number = new IconButton();
-            //number.Text = "0";
-            //number.BackColor = this.btnPrice.BackColor;
-            //number.IconChar = IconChar.Circle;
-            //number.ForeColor = Color.White;
-            //number.
-
-            //this.btnPrice.Controls.Add(number);
+            this.staffId = staffId;
+            IconButton number = new IconButton();          
         }
 
         //Structs
@@ -314,7 +308,7 @@ namespace Restaurant_Management
                 Form_Alert.Alert("Lỗi: Chưa thêm món!", Form_Alert.enmType.Error);
                 return;
             }
-            GioHang gioHang = new GioHang(orderedFood, idOrderedFood, selectedTable);
+            GioHang gioHang = new GioHang(orderedFood, idOrderedFood, selectedTable, staffId);
             gioHang.ShowDialog();
             gioHang.Focus();
         }
@@ -339,7 +333,7 @@ namespace Restaurant_Management
         BanAn banAn;
         private void btnTable_Click(object sender, EventArgs e)
         {
-            banAn = new BanAn();
+            banAn = new BanAn(selectedTable);
             banAn.FormClosed += new FormClosedEventHandler(updateTableInfo);
             banAn.ShowDialog();
             banAn.Focus();

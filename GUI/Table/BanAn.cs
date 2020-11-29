@@ -18,11 +18,12 @@ namespace Restaurant_Management.GUI.Table
         IDictionary<string, Ban> listTable { get; set; }
         Ban selectingTable;
         public Ban selectedTable { get; set; }
-        public BanAn()
+        public BanAn(Ban selectedTable)
         {
             InitializeComponent();
             loadTableIntoFlowLayoutPanel();
             btnPay.Visible = false;
+            this.selectedTable = selectedTable;
         }
         public void loadTableIntoFlowLayoutPanel()
         {
@@ -76,11 +77,14 @@ namespace Restaurant_Management.GUI.Table
         {
             if (this.lblTableStatus.Text == "Trống")
             {
+                if (selectedTable != null)
+                {
+                    BANAN.Ins.setTableStatus(selectedTable.tableId, "0");
+                }
                 this.selectedTable = this.selectingTable;
                 Form_Alert.Alert("Thêm bàn thành công!", Form_Alert.enmType.Success);
-                BANAN.Ins.setTableStatus(selectingTable.tableId, "1");
+                BANAN.Ins.setTableStatus(selectingTable.tableId, "");
                 this.Close();
-                //this.ParentForm.Focus();
             }
             else
             {
@@ -93,6 +97,8 @@ namespace Restaurant_Management.GUI.Table
             Form_Alert.Alert("Thanh toán thành công!", Form_Alert.enmType.Success);
             BANAN.Ins.setTableStatus(selectingTable.tableId, "0");
             loadTableIntoFlowLayoutPanel();
+            lblTableName.Text = "Bàn";
+            lblTableStatus.Text = "";
         }
     }
 }

@@ -19,6 +19,8 @@ namespace Restaurant_Management.GUI
         private IDictionary<string, Food> orderedFood;
         private List<string> idOrderedFood;
         private Ban selectedTable;
+        private string staffId;
+        private string idBanAn;
 
         double Price = 0;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -31,12 +33,13 @@ namespace Restaurant_Management.GUI
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-        public GioHang(IDictionary<string, Food> orderedFood, List<string> idOrderedFood, Ban selectedTable)
+        public GioHang(IDictionary<string, Food> orderedFood, List<string> idOrderedFood, Ban selectedTable, string staffId)
         {
             InitializeComponent();
             this.orderedFood = orderedFood;
             this.idOrderedFood = idOrderedFood;
             this.selectedTable = selectedTable;
+            this.staffId = staffId;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
         }
 
@@ -77,8 +80,27 @@ namespace Restaurant_Management.GUI
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            addBanAn();
+            addThucDonBan();
+            addHoaDonBan();
+
             Form_Alert.Alert("Đặt món thành công!", Form_Alert.enmType.Success);
             BANAN.Ins.setTableStatus(this.selectedTable.tableId, "1");
+        }
+        private void addBanAn()
+        {
+            this.idBanAn = BANAN.Ins.Insert(staffId, "", selectedTable.tableId);
+        }
+        private void addThucDonBan()
+        {
+            foreach (string idFood in this.idOrderedFood)
+            {
+                THUCDONBAN.Ins.ThemMon(this.idBanAn, idFood, this.orderedFood[idFood].Number);
+            }
+        }
+        private void addHoaDonBan()
+        {
+            HOADONBAN.Ins.Create(idBanAn, 0);
         }
     }
 }

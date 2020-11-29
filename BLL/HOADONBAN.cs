@@ -28,8 +28,8 @@ namespace Restaurant_Management.BLL
             }
             Money -= (Money * discount) / 100;
 
-            string query = "INSERT INTO HOADONBAN VALUES ( @idBANAN, @TONGTIEN , @DISCOUNT , GETDATE() );";
-            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { idBANAN, Money, discount });
+            string query = "INSERT INTO HOADONBAN (id, tongtien, ngaythanhtoan) VALUES ( @idBANAN , @TONGTIEN , GETDATE() )";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { idBANAN, Money});
             return (rs > 0);
         }
         public DataTable getList()

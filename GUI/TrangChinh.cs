@@ -8,12 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restaurant_Management.GUI.ManagerStaff;
+using Restaurant_Management.GUI.Login;
 
 namespace Restaurant_Management
 {
     public partial class TrangChinh : Form
     {
+
         public frmLogin ParentForm { get; set; }
+        public AccountApp Account { get; set; }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -25,8 +29,9 @@ namespace Restaurant_Management
             int nHeightEllipse // height of ellipse
         );
         Region normalRegion;
-        public TrangChinh()
+        public TrangChinh(AccountApp account)
         {
+            this.Account = account;
             normalRegion = Region;
             this.Controls.Clear();
             InitializeComponent();
@@ -84,11 +89,6 @@ namespace Restaurant_Management
             childForm.Show();
         }
 
-        private void btnStaff_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new CustomerOrderForm());
-            hideSubMenu();
-        }
 
         private void btnManageFood_Click(object sender, EventArgs e)
         {
@@ -98,7 +98,7 @@ namespace Restaurant_Management
 
         private void btnOrderFood_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new CustomerOrderForm());
+            openChildFormInPanel(new CustomerOrderForm(Account.Id));
             hideSubMenu();
         }
 
@@ -136,9 +136,17 @@ namespace Restaurant_Management
             WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new QuanLyNhanVien());
+            hideSubMenu();
+        }
+
+        private void btnStaff_Click_1(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new QuanLyNhanVien());
+            hideSubMenu();
         }
     }
 }

@@ -230,6 +230,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "StaffItem";
             this.Size = new System.Drawing.Size(920, 150);
             this.panel1.ResumeLayout(false);

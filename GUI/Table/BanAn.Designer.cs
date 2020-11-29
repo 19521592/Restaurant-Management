@@ -33,12 +33,12 @@ namespace Restaurant_Management.GUI.Table
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPay = new System.Windows.Forms.Button();
             this.btnSelectTable = new System.Windows.Forms.Button();
             this.lblTableStatus = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblTableName = new System.Windows.Forms.Label();
             this.flpnlTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnPay = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,6 +97,20 @@ namespace Restaurant_Management.GUI.Table
             this.panel2.Size = new System.Drawing.Size(156, 409);
             this.panel2.TabIndex = 1;
             // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPay.FlatAppearance.BorderSize = 0;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(31, 329);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(96, 44);
+            this.btnPay.TabIndex = 2;
+            this.btnPay.Text = "Thanh toán";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // btnSelectTable
             // 
             this.btnSelectTable.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -149,20 +163,6 @@ namespace Restaurant_Management.GUI.Table
             this.flpnlTable.Size = new System.Drawing.Size(644, 409);
             this.flpnlTable.TabIndex = 2;
             // 
-            // btnPay
-            // 
-            this.btnPay.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnPay.FlatAppearance.BorderSize = 0;
-            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(31, 329);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(96, 44);
-            this.btnPay.TabIndex = 2;
-            this.btnPay.Text = "Thanh toán";
-            this.btnPay.UseVisualStyleBackColor = false;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
             // BanAn
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -170,6 +170,7 @@ namespace Restaurant_Management.GUI.Table
             this.Controls.Add(this.flpnlTable);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BanAn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

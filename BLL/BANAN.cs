@@ -31,12 +31,20 @@ namespace Restaurant_Management.BLL
                 res = "0" + res;              
             return res;
         }
-        public bool Insert(string idNV, string idKH, string idBAN)
+        public string Insert(string idNV, string idKH, string idBAN)
         {
+            int rs;
+            string idBanAn = this.getIDnext();
             string query = "INSERT INTO BANAN VALUES ( @ID , @IDNHANVIEN , @IDKHACHHANG , @IDBAN , GETDATE() , GETDATE() )";
-            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { this.getIDnext(), idNV, idKH, idBAN });
-            return (rs > 0);           
-           
+            if (idKH == "")
+            {
+                rs = Provider.Ins.ExcuteNonQuery(query, new object[] { idBanAn, idNV, DBNull.Value, idBAN });
+            }
+            else
+            {
+                rs = Provider.Ins.ExcuteNonQuery(query, new object[] { idBanAn, idNV, idKH, idBAN });
+            }
+            return idBanAn;                   
         }
         public DataRow getInfo(string id)
         {
@@ -54,8 +62,16 @@ namespace Restaurant_Management.BLL
         }
         public void setTableStatus(string id, string status)
         {
+
             string query = "UPDATE BAN SET TINHTRANG = @tableStatus WHERE ID = @id ";
-            Provider.Ins.ExcuteNonQuery(query, new object[] { status, id});
+            if (status != "")
+            {
+                Provider.Ins.ExcuteNonQuery(query, new object[] { status, id });
+            }
+            else
+            {
+                Provider.Ins.ExcuteNonQuery(query, new object[] { DBNull.Value, id });
+            }
         }
 
     }

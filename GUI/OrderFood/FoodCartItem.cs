@@ -48,6 +48,7 @@ namespace Restaurant_Management.GUI
             else
             {
                 canChangePrice = false;
+                return;
             }
             foodItem.Number = num;
             this.Tag = foodItem;

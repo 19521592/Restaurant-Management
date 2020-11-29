@@ -13,7 +13,7 @@ namespace Restaurant_Management.GUI.Table
 {
     public partial class Ban : UserControl
     {
-        string notAvailableImg;
+        public string notAvailableImg;
         string availableImg;
         string bookedImg;
         public string tableStatus { get; set; }
@@ -32,22 +32,22 @@ namespace Restaurant_Management.GUI.Table
             this.ParentForm = ParentForm;
             this.Click += new EventHandler(Table_Click);
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            designTable();
+            designTable(this.tableStatus, this);
         }
 
-        private void designTable()
+        public void designTable(string tableStatus, Ban table)
         {
             lblTableName.Text = tableName;
             switch (tableStatus)
             {
                 case "False":
-                    this.BackgroundImage = MONAN.Ins.ByteToImg(availableImg);
+                    table.BackgroundImage = MONAN.Ins.ByteToImg(availableImg);
                     break;
                 case "True":
-                    this.BackgroundImage = MONAN.Ins.ByteToImg(bookedImg);
+                    table.BackgroundImage = MONAN.Ins.ByteToImg(bookedImg);
                     break;
                 default:
-                    this.BackgroundImage = MONAN.Ins.ByteToImg(notAvailableImg);
+                    table.BackgroundImage = MONAN.Ins.ByteToImg(notAvailableImg);
                     break;
             }
         }
