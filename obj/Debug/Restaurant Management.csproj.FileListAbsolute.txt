@@ -24,3 +24,4 @@ D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.Qu
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.Revenue.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.ThemNhanVien.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.SuaNhanVien.resources

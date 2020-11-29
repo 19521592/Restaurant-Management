@@ -17,18 +17,18 @@ namespace Restaurant_Management.GUI.ManagerStaff
         public QuanLyNhanVien()
         {
             InitializeComponent();          
-        }
+        }   
 
-        private void QuanLyNhanVien_Load(object sender, EventArgs e)
+        public void Staff_Load()
         {
-            listDTO = NhanVien.Ins.getListDTO();            
+            listDTO = NhanVien.Ins.getListDTO();
             StaffItem item;
-            for (int i = 0; i < listDTO.Count ; i++)
-            {              
+            for (int i = 0; i < listDTO.Count; i++)
+            {
                 item = new StaffItem();
                 item.lbID.Text = listDTO[i].Id;
                 item.lbName.Text = listDTO[i].Hoten;
-                item.lbPhone.Text = listDTO[i].Sdt;               
+                item.lbPhone.Text = listDTO[i].Sdt;
                 item.lbSex.Text = listDTO[i].Gtinh;
                 item.lbCHUC.Text = listDTO[i].Vitri;
                 item.pictureBox1.Image = NhanVien.Ins.ByteToImg(listDTO[i].ImgStr);
@@ -45,11 +45,19 @@ namespace Restaurant_Management.GUI.ManagerStaff
             }
             lbCount.Text = listDTO.Count.ToString();
         }
+        private void QuanLyNhanVien_Load(object sender, EventArgs e)
+        {
+            Staff_Load();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ThemNhanVien form = new ThemNhanVien();
             form.ShowDialog();
+            DataPanel.Controls.Clear();
+            QuanLyNhanVien_Load(sender, e);
         }
+
+
     }
 }

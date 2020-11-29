@@ -12,20 +12,37 @@ using Restaurant_Management.DTO;
 using Restaurant_Management.GUI.CustomNofication;
 namespace Restaurant_Management.GUI.ManagerStaff
 {
-    public partial class ThemNhanVien : Form
+    public partial class SuaNhanVien : Form
     {
         private staffDTO staff;
         private string PathImg;
         private string ImgStrDefault;
-        public ThemNhanVien()
+        public SuaNhanVien(string id)
         {
             InitializeComponent();
             PathImg = "";
             ImgStrDefault = Convert.ToBase64String(NhanVien.Ins.converImgToByte(@"..\..\images\user.png"));
-            staff = new staffDTO();
-            txtID.Text = NhanVien.Ins.getMaNVnext();
+            staff = NhanVien.Ins.getNV(id);
+            BindingData();
+            
         }
-
+        private void BindingData()
+        {
+            txtID.Text = staff.Id;
+            txtName.Text = staff.Hoten;
+            txtPhone.Text = staff.Sdt;
+            txtCMND.Text = staff.Cmnd;
+            txtDiaChi.Text = staff.Dchi;
+            dateTimePicker1.Value = staff.Ngsinh;
+            switch (staff.Gtinh)
+            {
+                case "Nam": radioButton1.Checked = true; break;
+                case "Nữ":  radioButton2.Checked = true; break;
+                default: radioButton3.Checked = true; break;
+            }
+            comboBox1.Text = staff.Vitri;
+            pictureBox1.Image = NhanVien.Ins.ByteToImg(staff.ImgStr);
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             try
@@ -80,7 +97,7 @@ namespace Restaurant_Management.GUI.ManagerStaff
                 staff.Dchi = txtDiaChi.Text;
                 staff.Sdt = txtPhone.Text;
                 staff.Ngsinh = dateTimePicker1.Value;
-                staff.Vitri = comboBox1.Text;              
+                staff.Vitri = comboBox1.Text;
                 if (PathImg == "")
                 {
                     staff.ImgStr = ImgStrDefault;
@@ -90,17 +107,17 @@ namespace Restaurant_Management.GUI.ManagerStaff
                     staff.ImgStr = Convert.ToBase64String(NhanVien.Ins.converImgToByte(PathImg));
                 }
 
-                bool rs = NhanVien.Ins.Insert(staff.Hoten, staff.Gtinh, staff.Ngsinh, staff.Dchi, staff.Cmnd, staff.Vitri, staff.ImgStr, staff.Sdt);               
+                bool rs = NhanVien.Ins.Insert(staff.Hoten, staff.Gtinh, staff.Ngsinh, staff.Dchi, staff.Cmnd, staff.Vitri, staff.ImgStr, staff.Sdt);
                 if (rs == true)
                 {
-                    Form_Alert.Alert("Thêm thành công!", Form_Alert.enmType.Success);
+                    Form_Alert.Alert("Lưu thành công!", Form_Alert.enmType.Success);
                     this.Close();
                 }
                 else
                 {
-                    Form_Alert.Alert("Thêm thất bại!", Form_Alert.enmType.Error);
+                    Form_Alert.Alert("Lưu thất bại!", Form_Alert.enmType.Error);
                 }
-                
+
             }
             catch (Exception Ex)
             {

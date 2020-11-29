@@ -1,6 +1,6 @@
 ﻿namespace Restaurant_Management.GUI.ManagerStaff
 {
-    partial class ThemNhanVien
+    partial class SuaNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -81,9 +80,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 34);
+            this.label1.Size = new System.Drawing.Size(286, 34);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thêm mới nhân viên";
+            this.label1.Text = "Cập nhật nhân viên";
             // 
             // panel2
             // 
@@ -131,7 +130,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(127, 54);
             this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "Lưu";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -139,7 +138,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(144, 180);
@@ -390,7 +388,7 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Chứng minh nhân dân:";
             // 
-            // ThemNhanVien
+            // SuaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -424,7 +422,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ThemNhanVien";
+            this.Name = "SuaNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ThemNhanVien";
             this.panel1.ResumeLayout(false);
@@ -436,7 +434,6 @@
 
         }
 
-        #endregion
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -469,4 +466,6 @@
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label label9;
     }
+
+        #endregion
 }

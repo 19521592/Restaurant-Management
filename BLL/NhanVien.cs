@@ -85,7 +85,7 @@ namespace Restaurant_Management.BLL
             res.Sdt = rs.Rows[0][9].ToString();
             return res;
       }
-        public bool Insert(string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd, string vitri, string avatar, string sdt)
+        public bool Insert(string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd ,string vitri, string avatar, string sdt)
         {
             string query = "insert into NHANVIEN values( @ID , @HOTEN , @GTINH , @NGSINH , @DCHI , @CMND , @ACTIVE , @VITRI , @AVATAR , @SDT );";
             int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { getMaNVnext(), hoten, gtinh, ngsinh.ToString(), dchi, cmnd, "1" , vitri, avatar , sdt});

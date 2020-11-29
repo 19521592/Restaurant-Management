@@ -375,6 +375,7 @@
             this.DataPanel.Name = "DataPanel";
             this.DataPanel.Size = new System.Drawing.Size(1167, 331);
             this.DataPanel.TabIndex = 1;
+            this.DataPanel.AutoScroll = true;
             // 
             // lbCount
             // 
