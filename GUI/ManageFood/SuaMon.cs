@@ -9,19 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restaurant_Management.BLL;
 using Restaurant_Management.DTO;
-namespace Restaurant_Management
+namespace Restaurant_Management.GUI.ManageFood
 {
-    public partial class ThemMon : Form
+    public partial class SuaMon : Form
     {
-        private FoodDTO food;
-        string PathImg;
+        FoodDTO food;
         string ImgStrDefault;
-        public ThemMon()
+        string PathImg;
+        public SuaMon(string id)
         {
-            InitializeComponent();
+            InitializeComponent();        
+            food = MONAN.Ins.getMONAN(id);
             PathImg = "";
-            ImgStrDefault = Convert.ToBase64String(MONAN.Ins.converImgToByte(@"..\..\images\food.png"));
-            food = new FoodDTO();
+            ImgStrDefault = food.Hinhanh;
+            // DataUI
+            txtBoxName.Text = food.Ten;
+            txtBoxKind.Text = food.Loai;
+            txtBoxNote.Text = food.Ghichu;
+            txtBoxUnitPrice.Text = food.Dongia;
+            pictureBox1.Image = MONAN.Ins.ByteToImg(food.Hinhanh);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -100,6 +106,14 @@ namespace Restaurant_Management
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtBoxName.Text = food.Ten;
+            txtBoxUnitPrice.Text = food.Dongia;
+            txtBoxKind.Text = food.Loai;
+            txtBoxNote.Text = food.Ghichu;
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -124,16 +138,16 @@ namespace Restaurant_Management
                 {
                     food.Hinhanh = Convert.ToBase64String(MONAN.Ins.converImgToByte(PathImg));
                 }
-
-                bool rs = MONAN.Ins.Insert(food.Ten, int.Parse(food.Dongia), food.Loai, food.Hinhanh, food.Ghichu);
+                
+                bool rs = MONAN.Ins.Update(food.Id, food.Ten, int.Parse(food.Dongia), food.Loai, food.Hinhanh, food.Ghichu);
                 if (rs == true)
                 {
-                    MessageBox.Show("Thêm món thành công");
+                    MessageBox.Show("Cập nhật thành công");
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Thêm món thất bại");
+                    MessageBox.Show("Cập nhật thất bại");
                     this.Close();
                 }
             }
@@ -161,6 +175,12 @@ namespace Restaurant_Management
             {
                 MessageBox.Show("Chọn file ảnh.");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PathImg = "";
+            pictureBox1.Image = MONAN.Ins.ByteToImg(ImgStrDefault);
         }
     }
 }

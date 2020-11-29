@@ -52,14 +52,33 @@
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
     <Compile Include="BLL\BANAN.cs" />
-    <Compile Include="BLL\Bill.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
-    <Compile Include="GUI\CustomNotification\Form_Alert.cs">
+    <Compile Include="DTO\FoodDTO.cs" />
+    <Compile Include="DTO\staffDTO.cs" />
+    <Compile Include="GUI\CustomNofication\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\CustomNotification\Form_Alert.Designer.cs">
+    <Compile Include="GUI\CustomNofication\Form_Alert.Designer.cs">
       <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManageFood\SuaMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageFood\SuaMon.Designer.cs">
+      <DependentUpon>SuaMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\StaffItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\StaffItem.Designer.cs">
+      <DependentUpon>StaffItem.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\OrderFood\DatMon.cs">
       <SubType>Form</SubType>
@@ -93,12 +112,6 @@
     <Compile Include="GUI\ManageFood\QuanLyMonAn.Designer.cs">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLyNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyNhanVien.Designer.cs">
-      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Table\Ban.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,8 +138,17 @@
     <Compile Include="GUI\TrangChinh.Designer.cs">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\CustomNotification\Form_Alert.resx">
+    <EmbeddedResource Include="GUI\CustomNofication\Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManageFood\SuaMon.resx">
+      <DependentUpon>SuaMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\StaffItem.resx">
+      <DependentUpon>StaffItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
@@ -158,9 +180,6 @@
     <EmbeddedResource Include="GUI\ManageFood\QuanLyMonAn.resx">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyNhanVien.resx">
-      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManageFood\ThemMon.resx">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\food.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

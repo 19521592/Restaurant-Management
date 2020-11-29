@@ -7,6 +7,7 @@ using System.IO;
 using System.Drawing;
 using System.Data;
 using Restaurant_Management.DAL;
+using Restaurant_Management.DTO;
 namespace Restaurant_Management.BLL
 {
     class MONAN
@@ -25,21 +26,6 @@ namespace Restaurant_Management.BLL
         //   HINHANH NTEXT,
         //   GHICHU NVARCHAR(100),
         //   TRANGTHAI BIT,
-        private string id;
-        private string ten;
-        private int dongia;
-        private string loai;
-        private string hinhanh;
-        private string ghichu;
-        private bool trangthai;
-
-        public string Id { get => id; }
-        public string Ten { get => ten; }
-        public int Dongia { get => dongia; }
-        public string Loai { get => loai; }
-        public string Hinhanh { get => hinhanh; }
-        public string Ghichu { get => ghichu; }
-        public bool Trangthai { get => trangthai; }
 
         public byte[] converImgToByte(string Path)
         {
@@ -75,7 +61,7 @@ namespace Restaurant_Management.BLL
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { getMaMONANnext(),ten, dongia, loai, hinhanh, ghichu, '1' }) ;
             return (rs > 0);
         }
-        public bool Update(string id, string ten, int dongia, string loai, Image hinhanh, string ghichu)
+        public bool Update(string id, string ten, int dongia, string loai, string hinhanh, string ghichu)
         {
             string query = "UPDATE MONAN SET TEN = @TEN , DONGIA = @DONGIA , LOAI = @LOAI , HINHANH = @HINHANH , GHICHU = @GHICHU  WHERE ID = @ID ";
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { ten, dongia, loai, hinhanh, ghichu, id });
@@ -87,20 +73,21 @@ namespace Restaurant_Management.BLL
             int rs = DAL.Provider.Ins.ExcuteNonQuery(query, new object[] { id });
             return (rs > 0);
         }
-        public bool getMONAN(string id)
+        public FoodDTO getMONAN(string id)
         {
             string query = "SELECT * FROM MONAN WHERE ID = @ID AND TRANGTHAI = 1";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { id });
             if (rs.Rows.Count == 0)
-                return false;
-            this.id = rs.Rows[0][0].ToString();
-            this.ten = rs.Rows[0][1].ToString();
-            this.dongia = int.Parse(rs.Rows[0][2].ToString());
-            this.loai = rs.Rows[0][3].ToString();
-            this.hinhanh = rs.Rows[0][4].ToString();
-            this.ghichu = rs.Rows[0][5].ToString();
-            this.trangthai = (bool)rs.Rows[0][6];
-            return true;
+                return null;
+            FoodDTO res = new FoodDTO();        
+            res.Id = rs.Rows[0][0].ToString();
+            res.Ten = rs.Rows[0][1].ToString();
+            res.Dongia = rs.Rows[0][2].ToString();
+            res.Loai = rs.Rows[0][3].ToString();
+            res.Hinhanh = rs.Rows[0][4].ToString();
+            res.Ghichu = rs.Rows[0][5].ToString();
+            res.Trangthai = (bool)rs.Rows[0][6];
+            return res;
         }
 
         public DataTable getListThucAn(string loai)
@@ -108,6 +95,24 @@ namespace Restaurant_Management.BLL
             string query = "select ID , TEN , DONGIA , HINHANH, GHICHU from MONAN where loai = @loai and TRANGTHAI = 1 ";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { loai});
             return rs;
+        }
+        public DataTable getList()
+        {
+            string query = "select ID , TEN , DONGIA from MONAN where TRANGTHAI = 1 ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            return rs;
+        }
+        public bool check_Dongia(string dongia)
+        {
+            if (dongia.Length > 13) return false;
+            for (int i = 0; i < dongia.Length; i++)
+            {
+                if (('0' <= dongia[i]) && (dongia[i] <= '9'))
+                { }
+                else
+                    return false;
+            }
+            return true;
         }
     }
 }   
