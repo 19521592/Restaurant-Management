@@ -163,7 +163,7 @@ namespace Restaurant_Management
                 pnlFood.Height = 300;
                 pnlFood.BackColor = Color.White;
                 pnlFood.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlFood.Width, pnlFood.Height, 30, 30));
-                
+
                 pic = new PictureBox();
                 pic.Width = 350;
                 pic.Height = 300;
@@ -191,7 +191,7 @@ namespace Restaurant_Management
                 detail.BackColor = Color.White;
                 detail.TextAlign = ContentAlignment.TopLeft;
                 detail.Location = new Point(pnlFood.Width - 180, 160);
-                
+
 
                 description = new Label();
                 description.AllowDrop = true;
@@ -216,6 +216,8 @@ namespace Restaurant_Management
                 num.TextAlign = HorizontalAlignment.Left;
                 num.Font = new Font(new FontFamily("Arial"), 10.0F,
                 FontStyle.Regular, num.Font.Unit);
+                num.TextChanged += new EventHandler(checkValue);
+                num.Leave += new EventHandler(checkEmpty);
 
                 Food selectedFood = new Food();
                 selectedFood.Name = food[1].ToString();
@@ -278,7 +280,7 @@ namespace Restaurant_Management
             allFoodCount += selectedFood.Number;
             if (orderedFood.ContainsKey(selectedFood.Id))
             {
-                orderedFood[selectedFood.Id].Number +=selectedFood.Number ;
+                orderedFood[selectedFood.Id].Number += selectedFood.Number;
             }
             else
             {
@@ -349,6 +351,38 @@ namespace Restaurant_Management
             if (selectedTable != null)
             {
                 this.btnTable.Text = selectedTable.tableName;
+            }
+        }
+        private void checkValue(object sender, EventArgs e)
+        {
+            TextBox txtBoxNumber = sender as TextBox;
+            string allowedchar = "0123456789";
+            int num = 0;
+            if (txtBoxNumber.Text == "") return;
+            if (/*!txtBoxNumber.Text.All(allowedchar.Contains) ||*/ !Int32.TryParse(txtBoxNumber.Text, out num))
+            {
+                Form_Alert.Alert("Chỉ được nhập số", Form_Alert.enmType.Warning);
+
+                if (txtBoxNumber.Text.Length > 1) txtBoxNumber.Text = txtBoxNumber.Text.Remove(txtBoxNumber.Text.Length - 1, 1);
+                else if (txtBoxNumber.Text.Length == 1) txtBoxNumber.Text = "1";
+                return;
+            }
+            if (num <= 0)
+            {
+                Form_Alert.Alert("Số lượng phải >= 0", Form_Alert.enmType.Warning);
+                txtBoxNumber.Text = "1";
+                return;
+            }
+        }
+        private void checkEmpty(object sender, EventArgs e)
+        {
+            TextBox txtBoxNumber = sender as TextBox;
+            string allowedchar = "0123456789";
+            int num = 0;
+            if (txtBoxNumber.Text == "")
+            {
+                Form_Alert.Alert("Không được để trống", Form_Alert.enmType.Warning);
+                txtBoxNumber.Text = "1";
             }
         }
     }

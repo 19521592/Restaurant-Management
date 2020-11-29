@@ -43,10 +43,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.btnStatistics = new FontAwesome.Sharp.IconButton();
             this.pnlManageSubMenu = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnTable = new System.Windows.Forms.Button();
             this.btnManageFood = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
             this.btnManage = new FontAwesome.Sharp.IconButton();
             this.btnOrderFood = new FontAwesome.Sharp.IconButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -287,30 +287,30 @@
             // pnlManageSubMenu
             // 
             this.pnlManageSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlManageSubMenu.Controls.Add(this.button4);
+            this.pnlManageSubMenu.Controls.Add(this.btnTable);
             this.pnlManageSubMenu.Controls.Add(this.btnManageFood);
-            this.pnlManageSubMenu.Controls.Add(this.button2);
-            this.pnlManageSubMenu.Controls.Add(this.button1);
+            this.pnlManageSubMenu.Controls.Add(this.btnCustomer);
+            this.pnlManageSubMenu.Controls.Add(this.btnStaff);
             this.pnlManageSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlManageSubMenu.Location = new System.Drawing.Point(0, 190);
             this.pnlManageSubMenu.Name = "pnlManageSubMenu";
             this.pnlManageSubMenu.Size = new System.Drawing.Size(229, 161);
             this.pnlManageSubMenu.TabIndex = 3;
             // 
-            // button4
+            // btnTable
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.LightGray;
-            this.button4.Location = new System.Drawing.Point(0, 120);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(229, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Bàn";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTable.FlatAppearance.BorderSize = 0;
+            this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTable.ForeColor = System.Drawing.Color.LightGray;
+            this.btnTable.Location = new System.Drawing.Point(0, 120);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnTable.Size = new System.Drawing.Size(229, 40);
+            this.btnTable.TabIndex = 3;
+            this.btnTable.Text = "Bàn";
+            this.btnTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTable.UseVisualStyleBackColor = true;
             // 
             // btnManageFood
             // 
@@ -328,35 +328,35 @@
             this.btnManageFood.UseVisualStyleBackColor = true;
             this.btnManageFood.Click += new System.EventHandler(this.btnManageFood_Click);
             // 
-            // button2
+            // btnCustomer
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(0, 40);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(229, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Khách Hàng";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.ForeColor = System.Drawing.Color.LightGray;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 40);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(229, 40);
+            this.btnCustomer.TabIndex = 1;
+            this.btnCustomer.Text = "Khách Hàng";
+            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnStaff
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(229, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Nhân VIên";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaff.FlatAppearance.BorderSize = 0;
+            this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaff.ForeColor = System.Drawing.Color.LightGray;
+            this.btnStaff.Location = new System.Drawing.Point(0, 0);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnStaff.Size = new System.Drawing.Size(229, 40);
+            this.btnStaff.TabIndex = 0;
+            this.btnStaff.Text = "Nhân VIên";
+            this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaff.UseVisualStyleBackColor = true;
             // 
             // btnManage
             // 
@@ -488,12 +488,12 @@
             // 
             // TrangChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1455, 760);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlSideMenu);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1280, 600);
             this.Name = "TrangChinh";
@@ -520,10 +520,10 @@
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel pnlManageSubMenu;
         private System.Windows.Forms.Button btnManageFood;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnStaff;
         private FontAwesome.Sharp.IconButton btnManage;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Panel pnlStatisticsSubMenu;
         private System.Windows.Forms.Button button8;
         private FontAwesome.Sharp.IconButton btnStatistics;

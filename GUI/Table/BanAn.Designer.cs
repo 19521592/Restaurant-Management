@@ -38,6 +38,7 @@ namespace Restaurant_Management.GUI.Table
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblTableName = new System.Windows.Forms.Label();
             this.flpnlTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnPay = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +86,7 @@ namespace Restaurant_Management.GUI.Table
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnPay);
             this.panel2.Controls.Add(this.btnSelectTable);
             this.panel2.Controls.Add(this.lblTableStatus);
             this.panel2.Controls.Add(this.lblStatus);
@@ -101,7 +103,7 @@ namespace Restaurant_Management.GUI.Table
             this.btnSelectTable.FlatAppearance.BorderSize = 0;
             this.btnSelectTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectTable.ForeColor = System.Drawing.Color.White;
-            this.btnSelectTable.Location = new System.Drawing.Point(31, 335);
+            this.btnSelectTable.Location = new System.Drawing.Point(31, 214);
             this.btnSelectTable.Name = "btnSelectTable";
             this.btnSelectTable.Size = new System.Drawing.Size(96, 44);
             this.btnSelectTable.TabIndex = 2;
@@ -147,10 +149,23 @@ namespace Restaurant_Management.GUI.Table
             this.flpnlTable.Size = new System.Drawing.Size(644, 409);
             this.flpnlTable.TabIndex = 2;
             // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPay.FlatAppearance.BorderSize = 0;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(31, 329);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(96, 44);
+            this.btnPay.TabIndex = 2;
+            this.btnPay.Text = "Thanh toán";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // BanAn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flpnlTable);
             this.Controls.Add(this.panel2);
@@ -179,5 +194,6 @@ namespace Restaurant_Management.GUI.Table
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblTableName;
         private System.Windows.Forms.Button btnSelectTable;
+        private System.Windows.Forms.Button btnPay;
     }
 }

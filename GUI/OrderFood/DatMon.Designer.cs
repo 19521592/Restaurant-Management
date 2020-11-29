@@ -284,8 +284,7 @@
             // 
             // CustomerOrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1280, 600);
             this.Controls.Add(this.flowLayoutPanelMain);
             this.Controls.Add(this.panel1);

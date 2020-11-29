@@ -72,10 +72,10 @@ namespace Restaurant_Management
         }
         private void OpenOrderThucAnForm()
         {
-            TrangChinh frmOrderFood = new TrangChinh();
-            frmOrderFood.Parent = this;
-            frmOrderFood.Show();
-            this.Hide();
+            TrangChinh trangChinh = new TrangChinh();
+            trangChinh.ShowDialog();
+            trangChinh.ParentForm = this;
+            this.Close();
         }
 
     }

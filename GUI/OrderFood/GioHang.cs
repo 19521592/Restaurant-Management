@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restaurant_Management.GUI.CustomNofication;
 using Restaurant_Management.GUI.Table;
+using Restaurant_Management.BLL;
 
 namespace Restaurant_Management.GUI
 {
@@ -76,8 +77,8 @@ namespace Restaurant_Management.GUI
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Form_Alert frmAlert = new Form_Alert();
-            frmAlert.showAlert("Đặt món thành công!", Form_Alert.enmType.Success);
+            Form_Alert.Alert("Đặt món thành công!", Form_Alert.enmType.Success);
+            BANAN.Ins.setTableStatus(this.selectedTable.tableId, "1");
         }
     }
 }

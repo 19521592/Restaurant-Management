@@ -52,6 +52,11 @@ namespace Restaurant_Management.BLL
             DataTable rs = Provider.Ins.ExcuteQuery(query);
             return rs;
         }
+        public void setTableStatus(string id, string status)
+        {
+            string query = "UPDATE BAN SET TINHTRANG = @tableStatus WHERE ID = @id ";
+            Provider.Ins.ExcuteNonQuery(query, new object[] { status, id});
+        }
 
     }
 }

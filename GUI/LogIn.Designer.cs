@@ -49,7 +49,7 @@
             this.txb_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txb_UserName.CausesValidation = false;
             this.txb_UserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_UserName.ForeColor = System.Drawing.Color.DarkGray;
+            this.txb_UserName.ForeColor = System.Drawing.Color.Transparent;
             this.txb_UserName.Location = new System.Drawing.Point(807, 185);
             this.txb_UserName.Multiline = true;
             this.txb_UserName.Name = "txb_UserName";
@@ -62,7 +62,7 @@
             this.txbPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txbPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbPassWord.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPassWord.ForeColor = System.Drawing.Color.DarkGray;
+            this.txbPassWord.ForeColor = System.Drawing.Color.White;
             this.txbPassWord.Location = new System.Drawing.Point(807, 306);
             this.txbPassWord.Multiline = true;
             this.txbPassWord.Name = "txbPassWord";
@@ -76,9 +76,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-254, -220);
+            this.pictureBox1.Location = new System.Drawing.Point(-197, -88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(986, 932);
+            this.pictureBox1.Size = new System.Drawing.Size(980, 671);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -130,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1127, 493);
+            this.ClientSize = new System.Drawing.Size(1140, 500);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txbPassWord);

@@ -15,22 +15,27 @@ namespace Restaurant_Management.GUI.Table
 {
     public partial class BanAn : Form
     {
+        IDictionary<string, Ban> listTable { get; set; }
         Ban selectingTable;
         public Ban selectedTable { get; set; }
         public BanAn()
         {
             InitializeComponent();
             loadTableIntoFlowLayoutPanel();
+            btnPay.Visible = false;
         }
         public void loadTableIntoFlowLayoutPanel()
         {
+            this.flpnlTable.Controls.Clear();
             DataTable listTable = BANAN.Ins.getListTable();
+            this.listTable = new Dictionary<string, Ban>();
             foreach (DataRow table in listTable.Rows)
             {
                 string tableId = table[0].ToString();
                 string tableName = table[1].ToString();
                 string tableStatus = table[2].ToString();
                 Ban tableItem = new Ban(tableId, tableName, tableStatus, this);
+                this.listTable.Add(tableId, tableItem);
                 flpnlTable.Controls.Add(tableItem);
             }
         }
@@ -46,12 +51,18 @@ namespace Restaurant_Management.GUI.Table
             {
                 case "True":
                     this.lblTableStatus.Text = "Đã có khách";
+                    btnPay.Visible = true;
+                    btnSelectTable.Visible = false;
                     break;
                 case "False":
                     this.lblTableStatus.Text = "Trống";
+                    btnPay.Visible = false;
+                    btnSelectTable.Visible = true;
                     break;
                 default:
                     this.lblTableStatus.Text = "Đang được đặt";
+                    btnPay.Visible = false;
+                    btnSelectTable.Visible = false;
                     break;
             }
             foreach (var control in this.flpnlTable.Controls)
@@ -67,11 +78,21 @@ namespace Restaurant_Management.GUI.Table
             {
                 this.selectedTable = this.selectingTable;
                 Form_Alert.Alert("Thêm bàn thành công!", Form_Alert.enmType.Success);
+                BANAN.Ins.setTableStatus(selectingTable.tableId, "1");
+                this.Close();
+                //this.ParentForm.Focus();
             }
             else
             {
                 Form_Alert.Alert("Thêm bàn thất bại!", Form_Alert.enmType.Error);
             }
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            Form_Alert.Alert("Thanh toán thành công!", Form_Alert.enmType.Success);
+            BANAN.Ins.setTableStatus(selectingTable.tableId, "0");
+            loadTableIntoFlowLayoutPanel();
         }
     }
 }

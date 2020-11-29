@@ -16,7 +16,7 @@ namespace Restaurant_Management.BLL
         public enum TypeAcc
         {
             Admin = 1,
-            Staff = 0
+            Staff = 0,
         }
         
         //
@@ -36,7 +36,7 @@ namespace Restaurant_Management.BLL
             this.userName = "";
             this.passWords = "";
         }
-        //
+       
         public string GetHashPassword(string password)
         {
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
@@ -52,7 +52,7 @@ namespace Restaurant_Management.BLL
         }
         public TypeAcc? Login(string userName = null, string passWords = null)
         {
-            string query = "select * from ACCOUNT where username = @username and pass = @pass ;";
+            string query = "select * from ACCOUNT where username = @username and passwords = @pass ;";
             if (userName != null && passWords != null)
             {
                 this.userName = userName;
@@ -93,7 +93,7 @@ namespace Restaurant_Management.BLL
         }
         public bool Insert(TypeAcc atype)
         {
-            string query = "select * from account where username = @username and pass = @pass ;";
+            string query = "select * from account where username = @username and passwords = @pass ;";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { userName, passWords });
             if (rs.Rows.Count > 0)
             {
@@ -124,7 +124,7 @@ namespace Restaurant_Management.BLL
         //      true: thành cong.
         public bool UpdatePassWords(string ID, string NewPass)
         {          
-            string UpPassQuery = "UPDATE ACCOUNT SET PASS = @NewPass WHERE ID =  @ID ;";
+            string UpPassQuery = "UPDATE ACCOUNT SET PASSWORDS = @NewPass WHERE ID =  @ID ;";
             int rs = Provider.Ins.ExcuteNonQuery(UpPassQuery, new object[]{
             NewPass,ID});
             return (rs > 0);

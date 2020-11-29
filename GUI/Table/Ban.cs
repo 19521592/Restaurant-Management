@@ -18,7 +18,7 @@ namespace Restaurant_Management.GUI.Table
         string bookedImg;
         public string tableStatus { get; set; }
         public string tableName { get; set; }
-        string tableId { get; set; }
+        public string tableId { get; set; }
         BanAn ParentForm { get; set; }
         public Ban(string tableId, string tableName, string tableStatus, BanAn ParentForm)
         {
@@ -31,6 +31,7 @@ namespace Restaurant_Management.GUI.Table
             this.tableStatus = tableStatus;
             this.ParentForm = ParentForm;
             this.Click += new EventHandler(Table_Click);
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             designTable();
         }
 

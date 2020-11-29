@@ -13,6 +13,7 @@ namespace Restaurant_Management
 {
     public partial class TrangChinh : Form
     {
+        public frmLogin ParentForm { get; set; }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -27,8 +28,9 @@ namespace Restaurant_Management
         public TrangChinh()
         {
             normalRegion = Region;
+            this.Controls.Clear();
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 40, 40));
             hideSubMenu();
         }
         private void hideSubMenu()
@@ -134,5 +136,9 @@ namespace Restaurant_Management
             WindowState = FormWindowState.Minimized;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -321,8 +321,7 @@
             // 
             // ThemMon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(824, 436);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlInformation);
