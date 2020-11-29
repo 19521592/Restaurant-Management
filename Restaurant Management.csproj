@@ -55,10 +55,10 @@
     <Compile Include="BLL\Bill.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
-    <Compile Include="GUI\CustomNofication\Form_Alert.cs">
+    <Compile Include="GUI\CustomNotification\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\CustomNofication\Form_Alert.Designer.cs">
+    <Compile Include="GUI\CustomNotification\Form_Alert.Designer.cs">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\OrderFood\DatMon.cs">
@@ -125,7 +125,7 @@
     <Compile Include="GUI\TrangChinh.Designer.cs">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\CustomNofication\Form_Alert.resx">
+    <EmbeddedResource Include="GUI\CustomNotification\Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
