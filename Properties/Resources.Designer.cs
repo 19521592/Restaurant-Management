@@ -73,11 +73,37 @@ namespace Restaurant_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< Updated upstream
+=======
+        internal static System.Drawing.Bitmap dev1 {
+            get {
+                object obj = ResourceManager.GetObject("dev1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+>>>>>>> Stashed changes
         internal static System.Drawing.Bitmap NH {
             get {
                 object obj = ResourceManager.GetObject("NH", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+<<<<<<< Updated upstream
+=======
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NH1 {
+            get {
+                object obj = ResourceManager.GetObject("NH1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+>>>>>>> Stashed changes
     }
 }
