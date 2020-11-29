@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Restaurant_Management.DTO;
 namespace Restaurant_Management.GUI.ManagerStaff
 {
     public partial class StaffItem : UserControl
-    {
+    {        
         public StaffItem()
         {
-            InitializeComponent();
+            InitializeComponent();      
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

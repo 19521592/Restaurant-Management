@@ -23,12 +23,15 @@ namespace Restaurant_Management.GUI.ManagerStaff
             StaffItem a = new StaffItem();
             StaffItem b = new StaffItem();
             StaffItem c = new StaffItem();
-
+            a.BackColor = Color.AliceBlue;
+            b.BackColor = Color.Red;
+            a.lbName.Text = "Minh";
             staffDTO stf = NhanVien.Ins.getNV("NV002");
+
             this.flowLayoutPanel1.Controls.Add(a);
             this.flowLayoutPanel1.Controls.Add(b);
             this.flowLayoutPanel1.Controls.Add(c);
-            a.Dock = DockStyle.Top;
+            
         }
     }
 }

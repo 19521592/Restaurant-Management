@@ -52,8 +52,10 @@
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
     <Compile Include="BLL\BANAN.cs" />
+    <Compile Include="BLL\HOADONBAN.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="BLL\THUCDONBAN.cs" />
     <Compile Include="DTO\FoodDTO.cs" />
     <Compile Include="DTO\staffDTO.cs" />
     <Compile Include="GUI\CustomNofication\Form_Alert.cs">

@@ -40,7 +40,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbSex = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -166,7 +166,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lbID);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lbName);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -175,15 +175,15 @@
             this.panel3.Size = new System.Drawing.Size(160, 150);
             this.panel3.TabIndex = 2;
             // 
-            // label2
+            // lbID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "lbID";
+            this.lbID.AutoSize = true;
+            this.lbID.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.Location = new System.Drawing.Point(38, 100);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(38, 19);
+            this.lbID.TabIndex = 2;
+            this.lbID.Text = "lbID";
             // 
             // label1
             // 
@@ -252,19 +252,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lbName;
+        public System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbSex;
+        public System.Windows.Forms.Label lbSex;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lbPhone;
+        public System.Windows.Forms.Label lbPhone;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lbCHUC;
+        public System.Windows.Forms.Label lbCHUC;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Label label1;
     }
 }
