@@ -35,6 +35,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.DataPanel = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lbCount = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -58,8 +60,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.DataPanel = new System.Windows.Forms.Panel();
-            this.lbCount = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -136,6 +136,15 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1167, 401);
             this.panel9.TabIndex = 7;
+            // 
+            // DataPanel
+            // 
+            this.DataPanel.AutoScroll = true;
+            this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataPanel.Location = new System.Drawing.Point(0, 70);
+            this.DataPanel.Name = "DataPanel";
+            this.DataPanel.Size = new System.Drawing.Size(1167, 331);
+            this.DataPanel.TabIndex = 1;
             // 
             // panel14
             // 
@@ -256,6 +265,16 @@
             this.panel8.Size = new System.Drawing.Size(1167, 44);
             this.panel8.TabIndex = 6;
             // 
+            // lbCount
+            // 
+            this.lbCount.AutoSize = true;
+            this.lbCount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCount.Location = new System.Drawing.Point(156, 18);
+            this.lbCount.Name = "lbCount";
+            this.lbCount.Size = new System.Drawing.Size(178, 23);
+            this.lbCount.TabIndex = 1;
+            this.lbCount.Text = "Số lượng nhân viên";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -354,7 +373,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(173, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 55);
+            this.label1.Size = new System.Drawing.Size(249, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nhân Viên";
             // 
@@ -368,29 +387,9 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // DataPanel
-            // 
-            this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataPanel.Location = new System.Drawing.Point(0, 70);
-            this.DataPanel.Name = "DataPanel";
-            this.DataPanel.Size = new System.Drawing.Size(1167, 331);
-            this.DataPanel.TabIndex = 1;
-            this.DataPanel.AutoScroll = true;
-            // 
-            // lbCount
-            // 
-            this.lbCount.AutoSize = true;
-            this.lbCount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCount.Location = new System.Drawing.Point(156, 18);
-            this.lbCount.Name = "lbCount";
-            this.lbCount.Size = new System.Drawing.Size(178, 23);
-            this.lbCount.TabIndex = 1;
-            this.lbCount.Text = "Số lượng nhân viên";
-            // 
             // QuanLyNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1187, 675);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);

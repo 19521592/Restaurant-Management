@@ -21,8 +21,9 @@ namespace Restaurant_Management.GUI.ManagerStaff
         {
             InitializeComponent();
             PathImg = "";
-            ImgStrDefault = Convert.ToBase64String(NhanVien.Ins.converImgToByte(@"..\..\images\user.png"));
+       
             staff = NhanVien.Ins.getNV(id);
+            ImgStrDefault = staff.ImgStr;
             BindingData();
             
         }
@@ -107,7 +108,7 @@ namespace Restaurant_Management.GUI.ManagerStaff
                     staff.ImgStr = Convert.ToBase64String(NhanVien.Ins.converImgToByte(PathImg));
                 }
 
-                bool rs = NhanVien.Ins.Insert(staff.Hoten, staff.Gtinh, staff.Ngsinh, staff.Dchi, staff.Cmnd, staff.Vitri, staff.ImgStr, staff.Sdt);
+                bool rs = NhanVien.Ins.Update(staff.Id, staff.Hoten, staff.Gtinh, staff.Ngsinh, staff.Dchi, staff.Cmnd, "1",staff.Vitri, staff.ImgStr, staff.Sdt);
                 if (rs == true)
                 {
                     Form_Alert.Alert("Lưu thành công!", Form_Alert.enmType.Success);

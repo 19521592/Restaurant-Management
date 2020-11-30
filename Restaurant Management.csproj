@@ -85,6 +85,18 @@
     <Compile Include="GUI\ManagerStaff\StaffItem.Designer.cs">
       <DependentUpon>StaffItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ManagerStaff\SuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\SuaNhanVien.Designer.cs">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Notification\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
     </Compile>
     <Compile Include="GUI\ManageFood\QuanLyMonAn.Designer.cs">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Revenue\Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\Revenue.designer.cs">
+      <DependentUpon>Revenue.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Table\Ban.cs">
       <SubType>UserControl</SubType>
@@ -164,6 +182,12 @@
     <EmbeddedResource Include="GUI\ManagerStaff\StaffItem.resx">
       <DependentUpon>StaffItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\SuaNhanVien.resx">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Notification\Form_Alert.resx" />
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
@@ -176,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\Revenue.resx">
+      <DependentUpon>Revenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Table\Ban.resx">
       <DependentUpon>Ban.cs</DependentUpon>
@@ -205,6 +232,8 @@
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="packages\FontAwesome.Sharp.5.15.3\.signature.p7s" />
+    <None Include="packages\FontAwesome.Sharp.5.15.3\FontAwesome.Sharp.5.15.3.nupkg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -220,6 +249,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\food.png" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net40\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Restaurant_Management.GUI.ManagerStaff;
 using Restaurant_Management.GUI.Login;
 using Restaurant_Management.GUI.About;
+using Restaurant_Management.GUI.Revenue;
 
 namespace Restaurant_Management
 {
@@ -173,6 +174,12 @@ namespace Restaurant_Management
         private void btnExitForm_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Revenue());
+            hideSubMenu();
         }
     }
 }

@@ -39,8 +39,7 @@
             this.btnRestaurantInfo = new System.Windows.Forms.Button();
             this.btnAbout = new FontAwesome.Sharp.IconButton();
             this.pnlStatisticsSubMenu = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnRevenue = new System.Windows.Forms.Button();
             this.btnStatistics = new FontAwesome.Sharp.IconButton();
             this.pnlManageSubMenu = new System.Windows.Forms.Panel();
             this.btnTable = new System.Windows.Forms.Button();
@@ -95,9 +94,9 @@
             this.pnlAccountSubMenu.Controls.Add(this.btnLogout);
             this.pnlAccountSubMenu.Controls.Add(this.button12);
             this.pnlAccountSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAccountSubMenu.Location = new System.Drawing.Point(0, 656);
+            this.pnlAccountSubMenu.Location = new System.Drawing.Point(0, 620);
             this.pnlAccountSubMenu.Name = "pnlAccountSubMenu";
-            this.pnlAccountSubMenu.Size = new System.Drawing.Size(229, 125);
+            this.pnlAccountSubMenu.Size = new System.Drawing.Size(250, 125);
             this.pnlAccountSubMenu.TabIndex = 9;
             // 
             // btnExitForm
@@ -109,7 +108,7 @@
             this.btnExitForm.Location = new System.Drawing.Point(0, 80);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnExitForm.Size = new System.Drawing.Size(229, 40);
+            this.btnExitForm.Size = new System.Drawing.Size(250, 40);
             this.btnExitForm.TabIndex = 6;
             this.btnExitForm.Text = "Thoát";
             this.btnExitForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +124,7 @@
             this.btnLogout.Location = new System.Drawing.Point(0, 40);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(229, 40);
+            this.btnLogout.Size = new System.Drawing.Size(250, 40);
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "Đăng Xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +140,7 @@
             this.button12.Location = new System.Drawing.Point(0, 0);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(229, 40);
+            this.button12.Size = new System.Drawing.Size(250, 40);
             this.button12.TabIndex = 4;
             this.button12.Text = "Tài Khoản Của Tôi";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,10 +155,10 @@
             this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAccount.IconColor = System.Drawing.Color.Black;
             this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAccount.Location = new System.Drawing.Point(0, 611);
+            this.btnAccount.Location = new System.Drawing.Point(0, 575);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(229, 45);
+            this.btnAccount.Size = new System.Drawing.Size(250, 45);
             this.btnAccount.TabIndex = 8;
             this.btnAccount.Text = "Tài Khoản";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,9 +171,9 @@
             this.pnlAboutSubMenu.Controls.Add(this.btnDevInfo);
             this.pnlAboutSubMenu.Controls.Add(this.btnRestaurantInfo);
             this.pnlAboutSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAboutSubMenu.Location = new System.Drawing.Point(0, 526);
+            this.pnlAboutSubMenu.Location = new System.Drawing.Point(0, 490);
             this.pnlAboutSubMenu.Name = "pnlAboutSubMenu";
-            this.pnlAboutSubMenu.Size = new System.Drawing.Size(229, 85);
+            this.pnlAboutSubMenu.Size = new System.Drawing.Size(250, 85);
             this.pnlAboutSubMenu.TabIndex = 7;
             // 
             // btnDevInfo
@@ -186,7 +185,7 @@
             this.btnDevInfo.Location = new System.Drawing.Point(0, 40);
             this.btnDevInfo.Name = "btnDevInfo";
             this.btnDevInfo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnDevInfo.Size = new System.Drawing.Size(229, 40);
+            this.btnDevInfo.Size = new System.Drawing.Size(250, 40);
             this.btnDevInfo.TabIndex = 5;
             this.btnDevInfo.Text = "Developer";
             this.btnDevInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -202,7 +201,7 @@
             this.btnRestaurantInfo.Location = new System.Drawing.Point(0, 0);
             this.btnRestaurantInfo.Name = "btnRestaurantInfo";
             this.btnRestaurantInfo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRestaurantInfo.Size = new System.Drawing.Size(229, 40);
+            this.btnRestaurantInfo.Size = new System.Drawing.Size(250, 40);
             this.btnRestaurantInfo.TabIndex = 4;
             this.btnRestaurantInfo.Text = "Nhà Hàng";
             this.btnRestaurantInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,10 +217,10 @@
             this.btnAbout.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAbout.IconColor = System.Drawing.Color.Black;
             this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAbout.Location = new System.Drawing.Point(0, 481);
+            this.btnAbout.Location = new System.Drawing.Point(0, 445);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAbout.Size = new System.Drawing.Size(229, 45);
+            this.btnAbout.Size = new System.Drawing.Size(250, 45);
             this.btnAbout.TabIndex = 6;
             this.btnAbout.Text = "About";
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,43 +230,28 @@
             // pnlStatisticsSubMenu
             // 
             this.pnlStatisticsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlStatisticsSubMenu.Controls.Add(this.button6);
-            this.pnlStatisticsSubMenu.Controls.Add(this.button8);
+            this.pnlStatisticsSubMenu.Controls.Add(this.btnRevenue);
             this.pnlStatisticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlStatisticsSubMenu.Location = new System.Drawing.Point(0, 396);
             this.pnlStatisticsSubMenu.Name = "pnlStatisticsSubMenu";
-            this.pnlStatisticsSubMenu.Size = new System.Drawing.Size(229, 85);
+            this.pnlStatisticsSubMenu.Size = new System.Drawing.Size(250, 49);
             this.pnlStatisticsSubMenu.TabIndex = 5;
             // 
-            // button6
+            // btnRevenue
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.LightGray;
-            this.button6.Location = new System.Drawing.Point(0, 40);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(229, 40);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Hóa Đơn";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.LightGray;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(229, 40);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Doanh Thu";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnRevenue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRevenue.FlatAppearance.BorderSize = 0;
+            this.btnRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRevenue.ForeColor = System.Drawing.Color.LightGray;
+            this.btnRevenue.Location = new System.Drawing.Point(0, 0);
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRevenue.Size = new System.Drawing.Size(250, 40);
+            this.btnRevenue.TabIndex = 4;
+            this.btnRevenue.Text = "Doanh Thu";
+            this.btnRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevenue.UseVisualStyleBackColor = true;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
             // btnStatistics
             // 
@@ -281,7 +265,7 @@
             this.btnStatistics.Location = new System.Drawing.Point(0, 351);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnStatistics.Size = new System.Drawing.Size(229, 45);
+            this.btnStatistics.Size = new System.Drawing.Size(250, 45);
             this.btnStatistics.TabIndex = 4;
             this.btnStatistics.Text = "Thống Kê";
             this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,7 +282,7 @@
             this.pnlManageSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlManageSubMenu.Location = new System.Drawing.Point(0, 190);
             this.pnlManageSubMenu.Name = "pnlManageSubMenu";
-            this.pnlManageSubMenu.Size = new System.Drawing.Size(229, 161);
+            this.pnlManageSubMenu.Size = new System.Drawing.Size(250, 161);
             this.pnlManageSubMenu.TabIndex = 3;
             // 
             // btnTable
@@ -310,7 +294,7 @@
             this.btnTable.Location = new System.Drawing.Point(0, 120);
             this.btnTable.Name = "btnTable";
             this.btnTable.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTable.Size = new System.Drawing.Size(229, 40);
+            this.btnTable.Size = new System.Drawing.Size(250, 40);
             this.btnTable.TabIndex = 3;
             this.btnTable.Text = "Bàn";
             this.btnTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,7 +309,7 @@
             this.btnManageFood.Location = new System.Drawing.Point(0, 80);
             this.btnManageFood.Name = "btnManageFood";
             this.btnManageFood.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnManageFood.Size = new System.Drawing.Size(229, 40);
+            this.btnManageFood.Size = new System.Drawing.Size(250, 40);
             this.btnManageFood.TabIndex = 2;
             this.btnManageFood.Text = "Món Ăn";
             this.btnManageFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,7 +325,7 @@
             this.btnCustomer.Location = new System.Drawing.Point(0, 40);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(229, 40);
+            this.btnCustomer.Size = new System.Drawing.Size(250, 40);
             this.btnCustomer.TabIndex = 1;
             this.btnCustomer.Text = "Khách Hàng";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -357,7 +341,7 @@
             this.btnStaff.Location = new System.Drawing.Point(0, 0);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStaff.Size = new System.Drawing.Size(229, 40);
+            this.btnStaff.Size = new System.Drawing.Size(250, 40);
             this.btnStaff.TabIndex = 0;
             this.btnStaff.Text = "Nhân VIên";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -376,7 +360,7 @@
             this.btnManage.Location = new System.Drawing.Point(0, 145);
             this.btnManage.Name = "btnManage";
             this.btnManage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManage.Size = new System.Drawing.Size(229, 45);
+            this.btnManage.Size = new System.Drawing.Size(250, 45);
             this.btnManage.TabIndex = 2;
             this.btnManage.Text = "Quản Lý";
             this.btnManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -395,7 +379,7 @@
             this.btnOrderFood.Location = new System.Drawing.Point(0, 100);
             this.btnOrderFood.Name = "btnOrderFood";
             this.btnOrderFood.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnOrderFood.Size = new System.Drawing.Size(229, 45);
+            this.btnOrderFood.Size = new System.Drawing.Size(250, 45);
             this.btnOrderFood.TabIndex = 1;
             this.btnOrderFood.Text = "Order Món Ăn";
             this.btnOrderFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -407,7 +391,7 @@
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(229, 100);
+            this.pnlLogo.Size = new System.Drawing.Size(250, 100);
             this.pnlLogo.TabIndex = 0;
             // 
             // pnlChildForm
@@ -531,7 +515,7 @@
         private FontAwesome.Sharp.IconButton btnManage;
         private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Panel pnlStatisticsSubMenu;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnRevenue;
         private FontAwesome.Sharp.IconButton btnStatistics;
         private System.Windows.Forms.Panel pnlAccountSubMenu;
         private System.Windows.Forms.Button btnLogout;
@@ -543,7 +527,6 @@
         private FontAwesome.Sharp.IconButton btnAbout;
         private System.Windows.Forms.Button btnExitForm;
         private System.Windows.Forms.Panel pnlChildForm;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;

@@ -71,7 +71,7 @@ namespace Restaurant_Management.GUI.ManagerStaff
                     throw new Exception("Giới tính chưa được chọn");
                 if (txtCMND.Text == "")
                     throw new Exception("Chứng minh nhân dân không được rỗng");
-
+                
                 staff.Hoten = txtName.Text;
                 if (radioButton1.Checked) staff.Gtinh = "Nam";
                 if (radioButton2.Checked) staff.Gtinh = "Nữ";
@@ -80,6 +80,7 @@ namespace Restaurant_Management.GUI.ManagerStaff
                 staff.Dchi = txtDiaChi.Text;
                 staff.Sdt = txtPhone.Text;
                 staff.Ngsinh = dateTimePicker1.Value;
+                MessageBox.Show(staff.Ngsinh.Date.ToString());
                 staff.Vitri = comboBox1.Text;              
                 if (PathImg == "")
                 {

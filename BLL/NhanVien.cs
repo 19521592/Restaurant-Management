@@ -93,8 +93,8 @@ namespace Restaurant_Management.BLL
         }
         public bool Update(string id, string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd, string isactive, string vitri, string avatar, string sdt)
         {
-            string query = "UPDATE NHANVIEN SET HOTEN = @hoten , GTINH = @gtinh , NGSINH = @ngsinh , DCHI = @dchi , CMND = @cmnd , @ACTIVE = @isactive , VITRI = @VITRI , AVATAR = @avatar , SDT = @sdt WHERE ID = @ID ; ";
-            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] {id , hoten, gtinh, ngsinh.ToString() , dchi , cmnd , isactive, vitri , avatar , sdt});
+            string query = "UPDATE NHANVIEN SET HOTEN = @hoten , GTINH = @gtinh , NGSINH = @ngsinh , DCHI = @dchi , CMND = @cmnd , ACTIVE = @isactive , VITRI = @VITRI , AVATAR = @avatar , SDT = @sdt WHERE ID = @ID ; ";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { hoten, gtinh, ngsinh.ToString() , dchi , cmnd , isactive, vitri , avatar , sdt, id});
             return (rs > 0);
         }
         public bool Delete(string ID)
