@@ -17,6 +17,7 @@ namespace Restaurant_Management.GUI
     public partial class GioHang : Form
     {
         private IDictionary<string, Food> orderedFood;
+        public CustomerOrderForm ParentForm { get; set; }
         private List<string> idOrderedFood;
         private Ban selectedTable;
         private string staffId;
@@ -33,9 +34,10 @@ namespace Restaurant_Management.GUI
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-        public GioHang(IDictionary<string, Food> orderedFood, List<string> idOrderedFood, Ban selectedTable, string staffId)
+        public GioHang(CustomerOrderForm ParentForm, IDictionary<string, Food> orderedFood, List<string> idOrderedFood, Ban selectedTable, string staffId)
         {
             InitializeComponent();
+            this.ParentForm = ParentForm;
             this.orderedFood = orderedFood;
             this.idOrderedFood = idOrderedFood;
             this.selectedTable = selectedTable;
@@ -45,6 +47,14 @@ namespace Restaurant_Management.GUI
 
         private void GioHang_Load(object sender, EventArgs e)
         {
+            loadCart();
+            btnSubmit.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSubmit.Width, btnSubmit.Height, 20, 20));
+            pnlInfo.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlInfo.Width, pnlInfo.Height, 30, 30));
+        }
+
+        private void loadCart()
+        {
+            flpnlSelectedFood.Controls.Clear();
             foreach (string idFoodItem in idOrderedFood)
             {
                 FoodCartItem foodCartItem = new FoodCartItem(orderedFood[idFoodItem]);
@@ -55,8 +65,6 @@ namespace Restaurant_Management.GUI
             lblTableNumber.Text = selectedTable.tableName;
             lblPrice.Text = Price.ToString("#,##0");
             lblFoodCount.Text = "(" + orderedFood.Count() + " món ăn)";
-            btnSubmit.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSubmit.Width, btnSubmit.Height, 20, 20));
-            pnlInfo.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlInfo.Width, pnlInfo.Height, 30, 30));
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -68,24 +76,41 @@ namespace Restaurant_Management.GUI
             if (isPlus == true)
             {
                 Price += money;
-                orderedFood[foodId].Number++;
+                ++orderedFood[foodId].Number;
             }
             else
             {
                 Price -= money;
-                orderedFood[foodId].Number--;
+                --orderedFood[foodId].Number;
             }
             lblPrice.Text = Price.ToString("#,##0");
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e) //
         {
-            addBanAn();
-            addThucDonBan();
-            addHoaDonBan();
+            if (orderedFood.Count == 0)
+            {
+                Form_Alert.Alert("Chưa có món ăn!", Form_Alert.enmType.Warning);
+            }
+            else if (this.ParentForm.idBanAn != null) // Delete existing banAn and its ThucDonBan
+            {
+                this.idBanAn = this.ParentForm.idBanAn;
+                THUCDONBAN.Ins.XoaAllMonTheoBanAn(idBanAn);
+                addThucDonBan();
+                this.ParentForm.selectedTable = null;
 
-            Form_Alert.Alert("Đặt món thành công!", Form_Alert.enmType.Success);
-            BANAN.Ins.setTableStatus(this.selectedTable.tableId, "1");
+                Form_Alert.Alert("Thêm món thành công!", Form_Alert.enmType.Success);
+            }
+            else
+            {
+                addBanAn();
+                addThucDonBan();
+                this.ParentForm.selectedTable = null;
+
+                Form_Alert.Alert("Đặt món thành công!", Form_Alert.enmType.Success);
+                BANAN.Ins.setTableStatus(this.selectedTable.tableId, "1");
+            }
+            this.Close();
         }
         private void addBanAn()
         {
@@ -98,9 +123,13 @@ namespace Restaurant_Management.GUI
                 THUCDONBAN.Ins.ThemMon(this.idBanAn, idFood, this.orderedFood[idFood].Number);
             }
         }
-        private void addHoaDonBan()
+        
+        public void removeFood(string foodId)
         {
-            HOADONBAN.Ins.Create(idBanAn, 0);
+            Price = 0;
+            idOrderedFood.Remove(foodId);
+            orderedFood.Remove(foodId);
+            loadCart();
         }
     }
 }

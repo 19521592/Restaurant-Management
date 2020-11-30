@@ -22,3 +22,6 @@ C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.exe
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.pdb
 C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.About.NhaHang.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\New folder\18\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Table.ThanhToanBan.resources

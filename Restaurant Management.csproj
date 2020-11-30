@@ -58,7 +58,15 @@
     <Compile Include="BLL\THUCDONBAN.cs" />
     <Compile Include="DTO\FoodDTO.cs" />
     <Compile Include="DTO\staffDTO.cs" />
-    <Compile Include="GUI\Login\AccountApp.cs" />
+    <Compile Include="GUI\About\deverloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\About\deverloper.Designer.cs" />
+    <Compile Include="GUI\About\NhaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\About\NhaHang.Designer.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="GUI\ManageFood\SuaMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +133,12 @@
     <Compile Include="GUI\Table\BanAn.Designer.cs">
       <DependentUpon>BanAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Table\ThanhToanBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Table\ThanhToanBan.Designer.cs">
+      <DependentUpon>ThanhToanBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\ManageFood\ThemMon.cs">
@@ -139,6 +153,8 @@
     <Compile Include="GUI\TrangChinh.Designer.cs">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\About\deverloper.resx" />
+    <EmbeddedResource Include="GUI\About\NhaHang.resx" />
     <EmbeddedResource Include="GUI\ManageFood\SuaMon.resx">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Table\BanAn.resx">
       <DependentUpon>BanAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Table\ThanhToanBan.resx">
+      <DependentUpon>ThanhToanBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

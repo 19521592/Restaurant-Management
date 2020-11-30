@@ -73,6 +73,12 @@ namespace Restaurant_Management.BLL
                 Provider.Ins.ExcuteNonQuery(query, new object[] { DBNull.Value, id });
             }
         }
+        public DataTable getBanAnChuaThanhToan(string tableId)
+        {
+            string query = "Select BA.ID, NHANVIEN.HOTEN From (Select BANAN.ID, IDBAN From BANAN, BAN Where BANAN.IDBAN = BAN.ID and BAN.TINHTRANG = 1 Except Select BANAN.ID, IDBAN From BANAN, BAN, HOADONBAN Where BANAN.IDBAN = BAN.ID and BANAN.ID = HOADONBAN.ID and BAN.TINHTRANG = 1 ) BA , NHANVIEN , BANAN B Where BA.IDBAN = @tableId and BA.ID = B.ID and B.IDNHANVIEN = NHANVIEN.ID ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { tableId });
+            return rs;
+        }
 
     }
 }

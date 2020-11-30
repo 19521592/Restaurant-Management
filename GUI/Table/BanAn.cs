@@ -17,9 +17,11 @@ namespace Restaurant_Management.GUI.Table
     {
         IDictionary<string, Ban> listTable { get; set; }
         Ban selectingTable;
+        public CustomerOrderForm ParentForm { get; set; }
         public Ban selectedTable { get; set; }
-        public BanAn(Ban selectedTable)
+        public BanAn(Ban selectedTable, CustomerOrderForm orderForm)
         {
+            this.ParentForm = orderForm;
             InitializeComponent();
             loadTableIntoFlowLayoutPanel();
             btnPay.Visible = false;
@@ -44,6 +46,7 @@ namespace Restaurant_Management.GUI.Table
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.ParentForm.Focus();
         }
         public void updateTableInfo(Ban table)
         {
@@ -53,7 +56,7 @@ namespace Restaurant_Management.GUI.Table
                 case "True":
                     this.lblTableStatus.Text = "Đã có khách";
                     btnPay.Visible = true;
-                    btnSelectTable.Visible = false;
+                    btnSelectTable.Visible = true;
                     break;
                 case "False":
                     this.lblTableStatus.Text = "Trống";
@@ -86,6 +89,11 @@ namespace Restaurant_Management.GUI.Table
                 BANAN.Ins.setTableStatus(selectingTable.tableId, "");
                 this.Close();
             }
+            else if (this.lblTableStatus.Text == "Đã có khách")
+            {
+                this.selectedTable = this.selectingTable;
+                this.Close();
+            }
             else
             {
                 Form_Alert.Alert("Thêm bàn thất bại!", Form_Alert.enmType.Error);
@@ -94,11 +102,10 @@ namespace Restaurant_Management.GUI.Table
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            Form_Alert.Alert("Thanh toán thành công!", Form_Alert.enmType.Success);
-            BANAN.Ins.setTableStatus(selectingTable.tableId, "0");
-            loadTableIntoFlowLayoutPanel();
-            lblTableName.Text = "Bàn";
-            lblTableStatus.Text = "";
+            ThanhToanBan thanhToan = new ThanhToanBan(selectingTable);
+            thanhToan.ShowDialog();
+            thanhToan.Focus();
+            this.Close();
         }
     }
 }

@@ -30,15 +30,11 @@
         {
             this.pnlInformation = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblNote = new System.Windows.Forms.Label();
             this.pnlNote = new System.Windows.Forms.Panel();
-            this.lblKind = new System.Windows.Forms.Label();
             this.pnlKind = new System.Windows.Forms.Panel();
-            this.lblUnitPrice = new System.Windows.Forms.Label();
             this.txtBoxNote = new System.Windows.Forms.TextBox();
             this.pnlUnitPrice = new System.Windows.Forms.Panel();
             this.txtBoxKind = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
             this.txtBoxUnitPrice = new System.Windows.Forms.TextBox();
             this.pnlName = new System.Windows.Forms.Panel();
             this.txtBoxName = new System.Windows.Forms.TextBox();
@@ -59,15 +55,11 @@
             // 
             this.pnlInformation.BackColor = System.Drawing.Color.White;
             this.pnlInformation.Controls.Add(this.button1);
-            this.pnlInformation.Controls.Add(this.lblNote);
             this.pnlInformation.Controls.Add(this.pnlNote);
-            this.pnlInformation.Controls.Add(this.lblKind);
             this.pnlInformation.Controls.Add(this.pnlKind);
-            this.pnlInformation.Controls.Add(this.lblUnitPrice);
             this.pnlInformation.Controls.Add(this.txtBoxNote);
             this.pnlInformation.Controls.Add(this.pnlUnitPrice);
             this.pnlInformation.Controls.Add(this.txtBoxKind);
-            this.pnlInformation.Controls.Add(this.lblName);
             this.pnlInformation.Controls.Add(this.txtBoxUnitPrice);
             this.pnlInformation.Controls.Add(this.pnlName);
             this.pnlInformation.Controls.Add(this.txtBoxName);
@@ -89,20 +81,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblNote
-            // 
-            this.lblNote.AutoSize = true;
-            this.lblNote.BackColor = System.Drawing.Color.White;
-            this.lblNote.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblNote.ForeColor = System.Drawing.Color.Silver;
-            this.lblNote.Location = new System.Drawing.Point(41, 222);
-            this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(87, 26);
-            this.lblNote.TabIndex = 4;
-            this.lblNote.Text = "Ghi chú";
-            this.lblNote.Click += new System.EventHandler(this.LabelEffect_Click);
-            // 
             // pnlNote
             // 
             this.pnlNote.BackColor = System.Drawing.Color.Silver;
@@ -111,20 +89,6 @@
             this.pnlNote.Size = new System.Drawing.Size(276, 2);
             this.pnlNote.TabIndex = 3;
             // 
-            // lblKind
-            // 
-            this.lblKind.AutoSize = true;
-            this.lblKind.BackColor = System.Drawing.Color.White;
-            this.lblKind.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblKind.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblKind.ForeColor = System.Drawing.Color.Silver;
-            this.lblKind.Location = new System.Drawing.Point(41, 166);
-            this.lblKind.Name = "lblKind";
-            this.lblKind.Size = new System.Drawing.Size(53, 26);
-            this.lblKind.TabIndex = 4;
-            this.lblKind.Text = "Loại";
-            this.lblKind.Click += new System.EventHandler(this.LabelEffect_Click);
-            // 
             // pnlKind
             // 
             this.pnlKind.BackColor = System.Drawing.Color.Silver;
@@ -132,20 +96,6 @@
             this.pnlKind.Name = "pnlKind";
             this.pnlKind.Size = new System.Drawing.Size(276, 2);
             this.pnlKind.TabIndex = 3;
-            // 
-            // lblUnitPrice
-            // 
-            this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.BackColor = System.Drawing.Color.White;
-            this.lblUnitPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblUnitPrice.ForeColor = System.Drawing.Color.Silver;
-            this.lblUnitPrice.Location = new System.Drawing.Point(41, 110);
-            this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(87, 26);
-            this.lblUnitPrice.TabIndex = 4;
-            this.lblUnitPrice.Text = "Đơn giá";
-            this.lblUnitPrice.Click += new System.EventHandler(this.LabelEffect_Click);
             // 
             // txtBoxNote
             // 
@@ -178,20 +128,6 @@
             this.txtBoxKind.TabIndex = 3;
             this.txtBoxKind.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txtBoxKind.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.White;
-            this.lblName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblName.ForeColor = System.Drawing.Color.Silver;
-            this.lblName.Location = new System.Drawing.Point(41, 43);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(97, 26);
-            this.lblName.TabIndex = 4;
-            this.lblName.Text = "Tên món";
-            this.lblName.Click += new System.EventHandler(this.LabelEffect_Click);
             // 
             // txtBoxUnitPrice
             // 
@@ -319,8 +255,7 @@
             // 
             // SuaMon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(824, 436);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlInformation);
@@ -341,15 +276,11 @@
         }
 
         private System.Windows.Forms.Panel pnlInformation;
-        private System.Windows.Forms.Label lblNote;
         private System.Windows.Forms.Panel pnlNote;
-        private System.Windows.Forms.Label lblKind;
         private System.Windows.Forms.Panel pnlKind;
-        private System.Windows.Forms.Label lblUnitPrice;
         private System.Windows.Forms.TextBox txtBoxNote;
         private System.Windows.Forms.Panel pnlUnitPrice;
         private System.Windows.Forms.TextBox txtBoxKind;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtBoxUnitPrice;
         private System.Windows.Forms.Panel pnlName;
         private System.Windows.Forms.TextBox txtBoxName;

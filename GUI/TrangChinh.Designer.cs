@@ -30,13 +30,13 @@
         {
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.pnlAccountSubMenu = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnExitForm = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.btnAccount = new FontAwesome.Sharp.IconButton();
             this.pnlAboutSubMenu = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnDevInfo = new System.Windows.Forms.Button();
+            this.btnRestaurantInfo = new System.Windows.Forms.Button();
             this.btnAbout = new FontAwesome.Sharp.IconButton();
             this.pnlStatisticsSubMenu = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -91,8 +91,8 @@
             // pnlAccountSubMenu
             // 
             this.pnlAccountSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlAccountSubMenu.Controls.Add(this.button13);
-            this.pnlAccountSubMenu.Controls.Add(this.button11);
+            this.pnlAccountSubMenu.Controls.Add(this.btnExitForm);
+            this.pnlAccountSubMenu.Controls.Add(this.btnLogout);
             this.pnlAccountSubMenu.Controls.Add(this.button12);
             this.pnlAccountSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAccountSubMenu.Location = new System.Drawing.Point(0, 656);
@@ -100,35 +100,37 @@
             this.pnlAccountSubMenu.Size = new System.Drawing.Size(229, 125);
             this.pnlAccountSubMenu.TabIndex = 9;
             // 
-            // button13
+            // btnExitForm
             // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.LightGray;
-            this.button13.Location = new System.Drawing.Point(0, 80);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(229, 40);
-            this.button13.TabIndex = 6;
-            this.button13.Text = "Thoát";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnExitForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExitForm.FlatAppearance.BorderSize = 0;
+            this.btnExitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExitForm.ForeColor = System.Drawing.Color.LightGray;
+            this.btnExitForm.Location = new System.Drawing.Point(0, 80);
+            this.btnExitForm.Name = "btnExitForm";
+            this.btnExitForm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnExitForm.Size = new System.Drawing.Size(229, 40);
+            this.btnExitForm.TabIndex = 6;
+            this.btnExitForm.Text = "Thoát";
+            this.btnExitForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExitForm.UseVisualStyleBackColor = true;
+            this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
             // 
-            // button11
+            // btnLogout
             // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.LightGray;
-            this.button11.Location = new System.Drawing.Point(0, 40);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(229, 40);
-            this.button11.TabIndex = 5;
-            this.button11.Text = "Đăng Xuất";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.LightGray;
+            this.btnLogout.Location = new System.Drawing.Point(0, 40);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(229, 40);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Đăng Xuất";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // button12
             // 
@@ -167,43 +169,45 @@
             // pnlAboutSubMenu
             // 
             this.pnlAboutSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlAboutSubMenu.Controls.Add(this.button9);
-            this.pnlAboutSubMenu.Controls.Add(this.button10);
+            this.pnlAboutSubMenu.Controls.Add(this.btnDevInfo);
+            this.pnlAboutSubMenu.Controls.Add(this.btnRestaurantInfo);
             this.pnlAboutSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAboutSubMenu.Location = new System.Drawing.Point(0, 526);
             this.pnlAboutSubMenu.Name = "pnlAboutSubMenu";
             this.pnlAboutSubMenu.Size = new System.Drawing.Size(229, 85);
             this.pnlAboutSubMenu.TabIndex = 7;
             // 
-            // button9
+            // btnDevInfo
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.LightGray;
-            this.button9.Location = new System.Drawing.Point(0, 40);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(229, 40);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Developer";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnDevInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDevInfo.FlatAppearance.BorderSize = 0;
+            this.btnDevInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDevInfo.ForeColor = System.Drawing.Color.LightGray;
+            this.btnDevInfo.Location = new System.Drawing.Point(0, 40);
+            this.btnDevInfo.Name = "btnDevInfo";
+            this.btnDevInfo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnDevInfo.Size = new System.Drawing.Size(229, 40);
+            this.btnDevInfo.TabIndex = 5;
+            this.btnDevInfo.Text = "Developer";
+            this.btnDevInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDevInfo.UseVisualStyleBackColor = true;
+            this.btnDevInfo.Click += new System.EventHandler(this.btnDevInfo_Click);
             // 
-            // button10
+            // btnRestaurantInfo
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.LightGray;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(229, 40);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Nhà Hàng";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnRestaurantInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRestaurantInfo.FlatAppearance.BorderSize = 0;
+            this.btnRestaurantInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestaurantInfo.ForeColor = System.Drawing.Color.LightGray;
+            this.btnRestaurantInfo.Location = new System.Drawing.Point(0, 0);
+            this.btnRestaurantInfo.Name = "btnRestaurantInfo";
+            this.btnRestaurantInfo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRestaurantInfo.Size = new System.Drawing.Size(229, 40);
+            this.btnRestaurantInfo.TabIndex = 4;
+            this.btnRestaurantInfo.Text = "Nhà Hàng";
+            this.btnRestaurantInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRestaurantInfo.UseVisualStyleBackColor = true;
+            this.btnRestaurantInfo.Click += new System.EventHandler(this.btnRestaurantInfo_Click);
             // 
             // btnAbout
             // 
@@ -530,14 +534,14 @@
         private System.Windows.Forms.Button button8;
         private FontAwesome.Sharp.IconButton btnStatistics;
         private System.Windows.Forms.Panel pnlAccountSubMenu;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button12;
         private FontAwesome.Sharp.IconButton btnAccount;
         private System.Windows.Forms.Panel pnlAboutSubMenu;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnDevInfo;
+        private System.Windows.Forms.Button btnRestaurantInfo;
         private FontAwesome.Sharp.IconButton btnAbout;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnExitForm;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;

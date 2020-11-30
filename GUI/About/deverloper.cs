@@ -19,7 +19,7 @@ namespace Restaurant_Management.GUI.About
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            TrangChinh f = new TrangChinh();
+            TrangChinh f = new TrangChinh(null);
             this.Hide();
             f.ShowDialog();
         }

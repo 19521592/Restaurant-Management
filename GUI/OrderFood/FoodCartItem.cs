@@ -24,11 +24,19 @@ namespace Restaurant_Management.GUI
             int nHeightEllipse // height of ellipse
         );
         Food foodItem;
+        bool isModify;
         public GioHang ParentForm { get; set; }
-        public FoodCartItem(Food foodItem)
+        public FoodCartItem(Food foodItem, bool isModify = true)
         {
             InitializeComponent();
             this.foodItem = foodItem;
+            if (isModify == false)
+            {
+                this.btnMinus.Enabled = false;
+                this.btnPlus.Enabled = false;
+                this.txtBoxNumber.Enabled = false;
+                this.btnExit.Visible = false;
+            }
             this.pictureBoxFood.BackgroundImage = foodItem.Image;
             this.lblFoodName.Text = foodItem.Name;
             this.lblFoodPrice.Text = foodItem.Price.ToString("#,##0");
@@ -77,6 +85,12 @@ namespace Restaurant_Management.GUI
             {
                 gioHang.updatePrice(foodItem.Price, true, foodItem.Id);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            GioHang gioHang = (this.ParentForm as GioHang);
+            gioHang.removeFood(foodItem.Id);
         }
     }
 }

@@ -326,7 +326,7 @@ namespace Restaurant_Management.GUI.About
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Restaurant_Management.Properties.Resources.NH;
+            //this.pictureBox1.Image = global::Restaurant_Management.Properties.Resources.NH;
             this.pictureBox1.Location = new System.Drawing.Point(0, -12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(728, 508);

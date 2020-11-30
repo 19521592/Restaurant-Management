@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restaurant_Management.GUI.ManagerStaff;
 using Restaurant_Management.GUI.Login;
+using Restaurant_Management.GUI.About;
 
 namespace Restaurant_Management
 {
@@ -29,8 +30,9 @@ namespace Restaurant_Management
             int nHeightEllipse // height of ellipse
         );
         Region normalRegion;
-        public TrangChinh(AccountApp account)
+        public TrangChinh(AccountApp account = null, frmLogin ParentForm = null)
         {
+            this.ParentForm = ParentForm;
             this.Account = account;
             normalRegion = Region;
             this.Controls.Clear();
@@ -147,6 +149,30 @@ namespace Restaurant_Management
         {
             openChildFormInPanel(new QuanLyNhanVien());
             hideSubMenu();
+        }
+
+        private void btnRestaurantInfo_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new NhaHang());
+            hideSubMenu();
+        }
+
+        private void btnDevInfo_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new deverloper());
+            hideSubMenu();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.ParentForm.Show();
+            this.ParentForm.Focus();
+            this.Close();
+        }
+
+        private void btnExitForm_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

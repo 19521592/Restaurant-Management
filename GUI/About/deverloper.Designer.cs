@@ -201,7 +201,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Restaurant_Management.Properties.Resources.dev;
+            //this.pictureBox1.Image = global::Restaurant_Management.Properties.Resources.dev;
             this.pictureBox1.Location = new System.Drawing.Point(0, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(496, 403);

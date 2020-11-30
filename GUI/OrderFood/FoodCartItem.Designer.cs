@@ -35,7 +35,9 @@ namespace Restaurant_Management.GUI
             this.btnMinus = new System.Windows.Forms.Button();
             this.txtBoxNumber = new System.Windows.Forms.TextBox();
             this.btnPlus = new System.Windows.Forms.Button();
+            this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxFood
@@ -106,10 +108,28 @@ namespace Restaurant_Management.GUI
             this.btnPlus.UseVisualStyleBackColor = false;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.ForeColor = System.Drawing.Color.Gray;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnExit.IconColor = System.Drawing.Color.Gray;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 23;
+            this.btnExit.Location = new System.Drawing.Point(689, 10);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(23, 23);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 6;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FoodCartItem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtBoxNumber);
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.btnMinus);
@@ -119,6 +139,7 @@ namespace Restaurant_Management.GUI
             this.Name = "FoodCartItem";
             this.Size = new System.Drawing.Size(723, 200);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +153,6 @@ namespace Restaurant_Management.GUI
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.TextBox txtBoxNumber;
         private System.Windows.Forms.Button btnPlus;
+        private FontAwesome.Sharp.IconPictureBox btnExit;
     }
 }

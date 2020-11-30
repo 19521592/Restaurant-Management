@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,13 @@ namespace Restaurant_Management.BLL
         {
             string query = "DELETE THUCDONBAN WHERE ID = @idBANAN AND IDMONAN = @idMONAN";
             int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { idBANAN, idMONAN });
+            return (rs > 0);
+        }
+
+        public bool XoaAllMonTheoBanAn(string idBANAN)
+        {
+            string query = "DELETE THUCDONBAN WHERE ID = @idBANAN ";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { idBANAN });
             return (rs > 0);
         }
     }

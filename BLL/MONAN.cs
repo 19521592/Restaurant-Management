@@ -114,5 +114,11 @@ namespace Restaurant_Management.BLL
             }
             return true;
         }
+        public DataTable getListMonThanhToan(string idBanAn)
+        {
+            string query = "Select MONAN.ID , MONAN.TEN , MONAN.DONGIA , THUCDONBAN.SOLUONG , MONAN.HINHANH From MONAN, THUCDONBAN Where MONAN.ID = THUCDONBAN.IDMONAN AND THUCDONBAN.ID = @idBanAn ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { idBanAn });
+            return rs;
+        }
     }
 }   

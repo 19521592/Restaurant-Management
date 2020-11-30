@@ -76,9 +76,8 @@ namespace Restaurant_Management
             AccountApp account = new AccountApp();
             account.Username = userName;
             account.Id = Account.Ins.getMaNV(userName);
-            TrangChinh trangChinh = new TrangChinh(account);
+            TrangChinh trangChinh = new TrangChinh(account, this);
             trangChinh.ShowDialog();
-            trangChinh.ParentForm = this;
             this.Close();
         }
 

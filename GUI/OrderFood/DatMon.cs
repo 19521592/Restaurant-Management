@@ -22,6 +22,7 @@ namespace Restaurant_Management
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         public string staffId { get; set; }
+        public string idBanAn { get; set; }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -42,6 +43,8 @@ namespace Restaurant_Management
             leftBorderBtn.Size = new Size(220, 7);
             panelMenu.Controls.Add(leftBorderBtn);
             orderedFood = new Dictionary<string, Food>();
+            idOrderedFood = new List<string>();
+
             //Form
             this.Text = string.Empty;
             this.ControlBox = false;
@@ -260,12 +263,17 @@ namespace Restaurant_Management
         }
 
         IDictionary<string, Food> orderedFood { get; set; }
-        List<string> idOrderedFood = new List<string>();
+        List<string> idOrderedFood;
         private double tempPrice = 0;
         private int allFoodCount = 0;
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (selectedTable == null)
+            {
+                Form_Alert.Alert("Thêm bàn trước!", Form_Alert.enmType.Warning);
+                return;
+            }
             IconButton button = sender as IconButton;
             Food selectedFood = button.Tag as Food;
             selectedFood.Number = Convert.ToInt32(selectedFood.Num.Text);
@@ -303,12 +311,12 @@ namespace Restaurant_Management
                 Form_Alert.Alert("Lỗi: Chưa thêm bàn!", Form_Alert.enmType.Error);
                 return;
             }
-            if (orderedFood == null)
+            if (orderedFood.Count == 0)
             {
                 Form_Alert.Alert("Lỗi: Chưa thêm món!", Form_Alert.enmType.Error);
                 return;
             }
-            GioHang gioHang = new GioHang(orderedFood, idOrderedFood, selectedTable, staffId);
+            GioHang gioHang = new GioHang(this, orderedFood, idOrderedFood, selectedTable, staffId);
             gioHang.ShowDialog();
             gioHang.Focus();
         }
@@ -329,13 +337,14 @@ namespace Restaurant_Management
             }
         }
         //Select Table
-        Ban selectedTable;
+        public Ban selectedTable { get; set;  }
         BanAn banAn;
         private void btnTable_Click(object sender, EventArgs e)
         {
-            banAn = new BanAn(selectedTable);
+            banAn = new BanAn(selectedTable, this);
             banAn.FormClosed += new FormClosedEventHandler(updateTableInfo);
             banAn.ShowDialog();
+            //this.Focus;
             banAn.Focus();
             banAn.loadTableIntoFlowLayoutPanel();
         }
@@ -346,6 +355,7 @@ namespace Restaurant_Management
             {
                 this.btnTable.Text = selectedTable.tableName;
             }
+            loadInfo();
         }
         private void checkValue(object sender, EventArgs e)
         {
@@ -371,12 +381,59 @@ namespace Restaurant_Management
         private void checkEmpty(object sender, EventArgs e)
         {
             TextBox txtBoxNumber = sender as TextBox;
-            string allowedchar = "0123456789";
             int num = 0;
             if (txtBoxNumber.Text == "")
             {
                 Form_Alert.Alert("Không được để trống", Form_Alert.enmType.Warning);
                 txtBoxNumber.Text = "1";
+            }
+        }
+        public void loadInfo()
+        {
+            this.idBanAn = loadOrderedTableInfo();
+        }
+        public string loadOrderedTableInfo()
+        {
+            orderedFood = new Dictionary<string, Food>();
+            idOrderedFood = new List<string>();
+            tempPrice = 0;
+            allFoodCount = 0;
+            string idBanAn = null;
+            if (selectedTable != null && selectedTable.tableStatus == "True")
+            {
+                idBanAn = BANAN.Ins.getBanAnChuaThanhToan(selectedTable.tableId).Rows[0][0].ToString();
+                var listFood = MONAN.Ins.getListMonThanhToan(idBanAn).Rows;
+                foreach (DataRow food in listFood)
+                {
+                    Food foodItem = new Food();
+                    foodItem.Id = food[0].ToString();
+                    foodItem.Name = food[1].ToString();
+                    foodItem.Price = Convert.ToDouble(food[2]);
+                    foodItem.Number = Convert.ToInt32(food[3]);
+                    foodItem.Image = MONAN.Ins.ByteToImg(food[4].ToString());
+
+                    idOrderedFood.Add(foodItem.Id);
+                    orderedFood.Add(foodItem.Id, foodItem);
+                    tempPrice += foodItem.Price * foodItem.Number;
+                    allFoodCount += foodItem.Number;
+                }
+            }
+            btnPrice.Text = tempPrice.ToString("#,##0");
+
+            return idBanAn;
+        }
+
+        private void btnPrice_Click(object sender, EventArgs e)
+        {
+            if (selectedTable != null && idBanAn != null && (BANAN.Ins.getBanAnChuaThanhToan(selectedTable.tableId).Rows[0][0].ToString()) != null)
+            {
+                ThanhToanBan thanhToan = new ThanhToanBan(selectedTable, this);
+                thanhToan.ShowDialog();
+                thanhToan.Focus();
+            }
+            else
+            {
+                Form_Alert.Alert("Chưa đặt món!", Form_Alert.enmType.Info);
             }
         }
     }

@@ -239,6 +239,7 @@
             this.btnPrice.TabIndex = 1;
             this.btnPrice.Text = "0";
             this.btnPrice.UseVisualStyleBackColor = false;
+            this.btnPrice.Click += new System.EventHandler(this.btnPrice_Click);
             this.btnPrice.Paint += new System.Windows.Forms.PaintEventHandler(this.btnPrice_Paint);
             // 
             // btnCart

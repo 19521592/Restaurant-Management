@@ -331,15 +331,11 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlInformation;
-        private System.Windows.Forms.Label lblNote;
         private System.Windows.Forms.Panel pnlNote;
-        private System.Windows.Forms.Label lblKind;
         private System.Windows.Forms.Panel pnlKind;
-        private System.Windows.Forms.Label lblUnitPrice;
         private System.Windows.Forms.TextBox txtBoxNote;
         private System.Windows.Forms.Panel pnlUnitPrice;
         private System.Windows.Forms.TextBox txtBoxKind;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtBoxUnitPrice;
         private System.Windows.Forms.Panel pnlName;
         private System.Windows.Forms.TextBox txtBoxName;
@@ -350,5 +346,9 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblNote;
+        private System.Windows.Forms.Label lblKind;
+        private System.Windows.Forms.Label lblUnitPrice;
+        private System.Windows.Forms.Label lblName;
     }
 }
