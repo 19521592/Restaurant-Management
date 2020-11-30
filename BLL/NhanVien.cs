@@ -50,7 +50,7 @@ namespace Restaurant_Management.BLL
             Image image = Image.FromStream(ms, true);
             return image;
         }
-        private string getMaNVnext()
+        public string getMaNVnext()
         {
             string query = "select ID from nhanvien";
             DataTable tbl = Provider.Ins.ExcuteQuery(query);
@@ -85,28 +85,47 @@ namespace Restaurant_Management.BLL
             res.Sdt = rs.Rows[0][9].ToString();
             return res;
       }
-        public bool Insert(string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd, string vitri, Image avatar, string sdt)
+        public bool Insert(string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd ,string vitri, string avatar, string sdt)
         {
             string query = "insert into NHANVIEN values( @ID , @HOTEN , @GTINH , @NGSINH , @DCHI , @CMND , @ACTIVE , @VITRI , @AVATAR , @SDT );";
             int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { getMaNVnext(), hoten, gtinh, ngsinh.ToString(), dchi, cmnd, "1" , vitri, avatar , sdt});
             return (rs > 0);
         }
-        public bool Update(string id, string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd, string isactive, string vitri, Image avatar, string sdt)
+        public bool Update(string id, string hoten, string gtinh, DateTime ngsinh, string dchi, string cmnd, string isactive, string vitri, string avatar, string sdt)
         {
             string query = "UPDATE NHANVIEN SET HOTEN = @hoten , GTINH = @gtinh , NGSINH = @ngsinh , DCHI = @dchi , CMND = @cmnd , @ACTIVE = @isactive , VITRI = @VITRI , AVATAR = @avatar , SDT = @sdt WHERE ID = @ID ; ";
             int rs = Provider.Ins.ExcuteNonQuery(query, new object[] {id , hoten, gtinh, ngsinh.ToString() , dchi , cmnd , isactive, vitri , avatar , sdt});
             return (rs > 0);
-        }
-        public DataTable Exist(string foo) // chưa chĩnh sửa.
-        {
-            DataTable rs = new DataTable();
-            return rs;
         }
         public bool Delete(string ID)
         {
             string query = "UPDATE NHANVIEN SET ACTIVE = 0 WHERE ID = @ID ";
             int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { ID });
             return (rs > 0);
+        }
+        public List<staffDTO> getListDTO()
+        {
+            string query = "SELECT * FROM NHANVIEN WHERE ACTIVE = 1";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+
+            List<staffDTO> ls = new List<staffDTO>();
+            staffDTO p;
+            for (int i =0; i < rs.Rows.Count; i++)
+            {
+                p = new staffDTO();
+                p.Id = rs.Rows[i][0].ToString();
+                p.Hoten = rs.Rows[i][1].ToString();
+                p.Gtinh = rs.Rows[i][2].ToString();
+                p.Ngsinh = (DateTime)rs.Rows[i][3];
+                p.Dchi = rs.Rows[i][4].ToString();
+                p.Cmnd = rs.Rows[i][5].ToString();
+                p.Trangthai = (bool)rs.Rows[i][6];
+                p.Vitri = rs.Rows[i][7].ToString();
+                p.ImgStr = rs.Rows[i][8].ToString();
+                p.Sdt = rs.Rows[i][9].ToString();
+                ls.Add(p);               
+            }
+            return ls;
         }
     }
 }
