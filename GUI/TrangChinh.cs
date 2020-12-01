@@ -147,7 +147,7 @@ namespace Restaurant_Management
         }
 
         private void btnStaff_Click_1(object sender, EventArgs e)
-        {
+        {                           
             openChildFormInPanel(new QuanLyNhanVien());
             hideSubMenu();
         }

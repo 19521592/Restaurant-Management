@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Security.Cryptography;
-
+using Restaurant_Management.GUI.Login;
 namespace Restaurant_Management.BLL
 {
     class Account
@@ -134,6 +134,19 @@ namespace Restaurant_Management.BLL
             string query = "select ID from account where username = @userName";
             DataTable tbl = Provider.Ins.ExcuteQuery(query, new object[] { userName });
             return tbl.Rows[0][0].ToString();
+        }
+        public AccountApp getAccount(string id)
+        {
+            string query = "SELECT USERNAME, PASSWORDS FROM ACCOUNT WHERE ID = @ID ";
+            DataTable tmp = Provider.Ins.ExcuteQuery(query, new object[] { id });
+            
+            if (tmp.Rows.Count == 0) return null;
+
+            AccountApp rs = new AccountApp();
+            rs.Username = tmp.Rows[0][0].ToString();
+            rs.Passwords = tmp.Rows[0][1].ToString();
+            return rs;
+            
         }
     }
 }

@@ -35,7 +35,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.DataPanel = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,6 +59,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.DataPanel = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -130,21 +131,13 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.DataPanel);
+            this.panel9.Controls.Add(this.panel20);
             this.panel9.Controls.Add(this.panel14);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 210);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1167, 401);
             this.panel9.TabIndex = 7;
-            // 
-            // DataPanel
-            // 
-            this.DataPanel.AutoScroll = true;
-            this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataPanel.Location = new System.Drawing.Point(0, 70);
-            this.DataPanel.Name = "DataPanel";
-            this.DataPanel.Size = new System.Drawing.Size(1167, 331);
-            this.DataPanel.TabIndex = 1;
             // 
             // panel14
             // 
@@ -373,7 +366,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(173, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 55);
+            this.label1.Size = new System.Drawing.Size(248, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nhân Viên";
             // 
@@ -386,6 +379,24 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.SystemColors.Control;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel20.Location = new System.Drawing.Point(0, 391);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1167, 10);
+            this.panel20.TabIndex = 1;
+            // 
+            // DataPanel
+            // 
+            this.DataPanel.AutoScroll = true;
+            this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataPanel.Location = new System.Drawing.Point(0, 70);
+            this.DataPanel.Name = "DataPanel";
+            this.DataPanel.Size = new System.Drawing.Size(1167, 321);
+            this.DataPanel.TabIndex = 2;
             // 
             // QuanLyNhanVien
             // 
@@ -458,7 +469,8 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel DataPanel;
         private System.Windows.Forms.Label lbCount;
+        private System.Windows.Forms.Panel DataPanel;
+        private System.Windows.Forms.Panel panel20;
     }
 }

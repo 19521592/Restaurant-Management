@@ -22,17 +22,6 @@ namespace Restaurant_Management.BLL
         }
         private NhanVien() { }
 
-        //   ID VARCHAR(5) NOT NULL,
-        //   HOTEN NVARCHAR(100) NOT NULL,
-        //   GTINH NVARCHAR(4) NOT NULL,
-        //   NGSINH SMALLDATETIME NOT NULL,
-        //   DCHI NVARCHAR(100) ,
-        //   CMND VARCHAR(10) NOT NULL,
-        //   ACTIVE BIT,
-        //   VITRI NVARCHAR(50),
-        //   AVATAR NTEXT,
-        //   CONSTRAINT PK_NHANVIEN PRIMARY KEY(ID)
-
         public byte[] converImgToByte(string Path)
         {
             FileStream fs;
