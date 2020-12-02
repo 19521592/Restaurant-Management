@@ -308,6 +308,7 @@
             this.Size = new System.Drawing.Size(378, 504);
             this.Load += new System.EventHandler(this.AccControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
+            this.LostFocus += new System.EventHandler(this.LOSTFOCUS);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -26,13 +26,20 @@ namespace Restaurant_Management.GUI.ManagerStaff
             if (rs = true)
             {
                 Form_Alert.Alert("Xóa thành công!", Form_Alert.enmType.Success);
-            }               
+            }
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             SuaNhanVien form = new SuaNhanVien(lbID.Text);
             form.ShowDialog();
+            staffDTO p = NhanVien.Ins.getNV(lbID.Text);
+            lbName.Text = p.Hoten;
+            lbPhone.Text = p.Sdt;
+            lbSex.Text = p.Gtinh;
+            lbCHUC.Text = p.Vitri;
+            pictureBox1.Image = NhanVien.Ins.ByteToImg(p.ImgStr);
         }
     }
 }

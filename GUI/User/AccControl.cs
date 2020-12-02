@@ -81,5 +81,19 @@ namespace Restaurant_Management.GUI.User
                 button2_Click( sender, e);
 
         }
+        protected override void OnGotFocus(EventArgs e)
+        {
+            base.OnGotFocus(e);
+            this.Dispose();
+        }
+        protected override void OnLostFocus(EventArgs e)
+        {
+            base.OnLostFocus(e);
+            this.Dispose();
+        }
+        private void LOSTFOCUS(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

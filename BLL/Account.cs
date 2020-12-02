@@ -91,26 +91,12 @@ namespace Restaurant_Management.BLL
             res = "NV" + res;
             return res;
         }
-        public bool Insert(TypeAcc atype)
+        public bool Insert(string id ,string userName, string pass, TypeAcc atype)
         {
-            string query = "select * from account where username = @username and passwords = @pass ;";
-            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { userName, passWords });
-            if (rs.Rows.Count > 0)
-            {
-                return false;
-            }
-            else
-            {
-                string Rgtquery = "insert into account values ( @ID , @UserName , @Pass , @type );";
-
-                int res = Provider.Ins.ExcuteNonQuery(Rgtquery, new object[]{
-                    this.getMaNVnext(), userName, passWords, atype.ToString()});
-
-                if (res > 0)
-                    return true;
-                else
-                    return false;               
-            }
+            string query = "INSERT INTO ACCOUNT VALUES( @1 , @2 , @3 , @4 )";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { id, userName, pass, atype });
+            return (rs > 0);
+            
         }
         public bool Delete(string ID)
         {
@@ -147,6 +133,40 @@ namespace Restaurant_Management.BLL
             rs.Passwords = tmp.Rows[0][1].ToString();
             return rs;
             
+        }
+        public string getUserName(string id)
+        {
+            string query = "SELECT USERNAME FROM ACCOUNT WHERE ID = @ID ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { id });
+            return rs.Rows[0][0].ToString();
+        }
+        public List<string> getListID()
+        {
+            List<string> rs = new List<string>();
+            string query = "SELECT ID FROM ACCOUNT";
+            DataTable tmp = Provider.Ins.ExcuteQuery(query);
+            for(int i=0; i < tmp.Rows.Count; i++)
+            {
+                rs.Add(tmp.Rows[i][0].ToString());
+            }
+            return rs;
+        }
+        public List<string> getListStaffID()
+        {
+            List<string> rs = new List<string>();
+            string query = "SELECT ID FROM NHANVIEN WHERE VITRI = N'Nhân viên' AND ACTIVE = 1 AND ID NOT IN (SELECT ID FROM ACCOUNT)";
+            DataTable tmp = Provider.Ins.ExcuteQuery(query);
+            for (int i = 0; i < tmp.Rows.Count; i++)
+            {
+                rs.Add(tmp.Rows[i][0].ToString());
+            }
+            return rs;
+        }
+        public bool ExistUserName(string userName)
+        {
+            string query = "SELECT ID FROM ACCOUNT WHERE USERNAME = @USERNAME ";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { userName });
+            return (rs > 0);
         }
     }
 }

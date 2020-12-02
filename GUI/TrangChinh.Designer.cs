@@ -145,6 +145,7 @@
             this.button12.Text = "Tài Khoản Của Tôi";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // btnAccount
             // 

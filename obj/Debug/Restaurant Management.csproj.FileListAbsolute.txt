@@ -29,5 +29,9 @@ D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CopyComplete
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.exe
 D:\Git\Restaurant-Management\obj\Debug\Restaurant Management.pdb
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.User.AccControl.resources
-D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.User.Form1.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Customer.ThemKhachHang.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.AccountGUI.QuanLyTaiKhoan.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.AccountGUI.AccItem.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.AccountGUI.ThemTaiKhoan.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Customer.QuanLyKhachHang.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Customer.CusItem.resources

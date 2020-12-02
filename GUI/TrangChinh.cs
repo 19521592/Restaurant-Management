@@ -181,5 +181,11 @@ namespace Restaurant_Management
             openChildFormInPanel(new Revenue());
             hideSubMenu();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new GUI.AccountGUI.QuanLyTaiKhoan());
+            hideSubMenu();
+        }
     }
 }

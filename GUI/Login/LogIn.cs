@@ -49,7 +49,7 @@ namespace Restaurant_Management
         private void Login()
         {
             string userName = txb_UserName.Text;
-            string password = Account.Ins.GetHashPassword(txbPassWord.Text);
+            string password = Account.Ins.GetHashPassword(txbPassWord.Text);       
             var loginResult = Account.Ins.Login(userName, password);
             //try
             {
