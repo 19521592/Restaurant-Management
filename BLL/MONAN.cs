@@ -147,7 +147,7 @@ namespace Restaurant_Management.BLL
                     day = 69696;
                     break;
             }
-            string query = "SELECT TOP 10 IDMONAN , SUM( TD.SOLUONG ) AS 'NUMBER' FROM THUCDONBAN TD , HOADONBAN HD WHERE TD.ID = HD.ID AND ( DATEDIFF( DAY , HD.NGAYTHANHTOAN , GETDATE() ) <= @day ) GROUP BY TD.IDMONAN ORDER BY SUM( TD.SOLUONG ) DESC ";
+            string query = "SELECT TOP 10 IDMONAN , SUM( TD.SOLUONG ) AS 'NUMBER' FROM THUCDONBAN TD , HOADONBAN HD WHERE TD.ID = HD.ID AND ( DATEDIFF( DAY , HD.NGAYTHANHTOAN , GETDATE() ) IN ( 0 , @day ) ) GROUP BY TD.IDMONAN ORDER BY SUM( TD.SOLUONG ) DESC ";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { day });
             return rs;
         }

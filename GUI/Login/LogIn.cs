@@ -17,7 +17,7 @@ namespace Restaurant_Management
     {
         public formLogin()
         {
-            InitializeComponent();         
+            InitializeComponent();          
         }
 
 
@@ -44,6 +44,10 @@ namespace Restaurant_Management
             if (e.KeyChar == (char)13)
             {
                 Login();
+            }
+            else
+            {
+
             }
         }
         private void Login()
@@ -81,5 +85,20 @@ namespace Restaurant_Management
             this.Close();
         }
 
+        private void txb_UserName_Click(object sender, EventArgs e)
+        {
+            txb_UserName.Text = string.Empty;
+        }
+
+        private void txbPassWord_Click(object sender, EventArgs e)
+        {
+            txbPassWord.Text = string.Empty;
+        }
+
+        private void txb_UserName_Leave(object sender, EventArgs e)
+        {
+            txbPassWord.Text = string.Empty;
+            txbPassWord.UseSystemPasswordChar = false;
+        }
     }
 }

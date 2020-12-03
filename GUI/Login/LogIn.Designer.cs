@@ -48,22 +48,24 @@
             this.txb_UserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txb_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txb_UserName.CausesValidation = false;
-            this.txb_UserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_UserName.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_UserName.ForeColor = System.Drawing.Color.Transparent;
-            this.txb_UserName.Location = new System.Drawing.Point(807, 185);
+            this.txb_UserName.Location = new System.Drawing.Point(807, 174);
             this.txb_UserName.Multiline = true;
             this.txb_UserName.Name = "txb_UserName";
             this.txb_UserName.Size = new System.Drawing.Size(224, 33);
             this.txb_UserName.TabIndex = 0;
             this.txb_UserName.Text = "User name";
+            this.txb_UserName.Click += new System.EventHandler(this.txb_UserName_Click);
+            this.txb_UserName.Leave += new System.EventHandler(this.txb_UserName_Leave);
             // 
             // txbPassWord
             // 
             this.txbPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txbPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbPassWord.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPassWord.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassWord.ForeColor = System.Drawing.Color.White;
-            this.txbPassWord.Location = new System.Drawing.Point(807, 306);
+            this.txbPassWord.Location = new System.Drawing.Point(807, 295);
             this.txbPassWord.Multiline = true;
             this.txbPassWord.Name = "txbPassWord";
             this.txbPassWord.PasswordChar = '•';
@@ -71,14 +73,15 @@
             this.txbPassWord.TabIndex = 1;
             this.txbPassWord.Text = "Password";
             this.txbPassWord.UseSystemPasswordChar = true;
+            this.txbPassWord.Click += new System.EventHandler(this.txbPassWord_Click);
             this.txbPassWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPassWord_KeyPress);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-197, -88);
+            this.pictureBox1.Location = new System.Drawing.Point(-197, -93);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(980, 671);
+            this.pictureBox1.Size = new System.Drawing.Size(980, 689);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -125,7 +128,7 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.Btn_Exit_Click);
             // 
-            // frmLogin
+            // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +142,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmLogin";
+            this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);

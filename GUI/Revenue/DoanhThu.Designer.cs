@@ -29,9 +29,9 @@ namespace Restaurant_Management.GUI.Revenue
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.lblTableNumber = new System.Windows.Forms.Label();
@@ -148,15 +148,15 @@ namespace Restaurant_Management.GUI.Revenue
             // 
             // lblRevenue
             // 
-            this.lblRevenue.AutoSize = true;
             this.lblRevenue.BackColor = System.Drawing.Color.White;
             this.lblRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRevenue.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRevenue.Location = new System.Drawing.Point(679, 41);
+            this.lblRevenue.Location = new System.Drawing.Point(664, 41);
             this.lblRevenue.Name = "lblRevenue";
-            this.lblRevenue.Size = new System.Drawing.Size(18, 20);
+            this.lblRevenue.Size = new System.Drawing.Size(108, 24);
             this.lblRevenue.TabIndex = 2;
             this.lblRevenue.Text = "0";
+            this.lblRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblUsingTable
             // 
@@ -447,17 +447,17 @@ namespace Restaurant_Management.GUI.Revenue
             // 
             // chartRevenue
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea1);
+            chartArea4.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea4);
             this.chartRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend1);
+            legend4.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend4);
             this.chartRevenue.Location = new System.Drawing.Point(0, 0);
             this.chartRevenue.Name = "chartRevenue";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh Thu";
-            this.chartRevenue.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Doanh Thu";
+            this.chartRevenue.Series.Add(series4);
             this.chartRevenue.Size = new System.Drawing.Size(972, 431);
             this.chartRevenue.TabIndex = 0;
             this.chartRevenue.Text = "chart1";

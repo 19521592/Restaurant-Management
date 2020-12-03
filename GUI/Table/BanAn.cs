@@ -82,10 +82,17 @@ namespace Restaurant_Management.GUI.Table
                     }
                     break;
                 case "False":
-                    this.lblTableStatus.Text = "Trống";
-                    btnSelectTable.Text = "Chọn món";
+                    if (this.ParentForm == null)
+                    {
+                        btnSelectTable.Visible = false;
+                    }
+                    else
+                    {
+                        btnSelectTable.Text = "Chọn món";
+                        btnSelectTable.Visible = true;
+                    }
                     btnPay.Visible = false;
-                    btnSelectTable.Visible = true;
+                    this.lblTableStatus.Text = "Trống";
                     break;
                 default:
                     this.lblTableStatus.Text = "Đang được đặt";
