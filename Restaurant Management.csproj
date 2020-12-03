@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
+    <Compile Include="BLL\ACCOUNTKHACHHANG.cs" />
     <Compile Include="BLL\BANAN.cs" />
     <Compile Include="BLL\HOADONBAN.cs" />
     <Compile Include="BLL\KHACHHANG.cs" />

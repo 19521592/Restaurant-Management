@@ -41,8 +41,8 @@ namespace Restaurant_Management.GUI.Customer
                     throw new Exception("Số điện thoại không hợp lệ");
                 if (KHACHHANG.Ins.Exist_Phone(txtPhone.Text))
                     throw new Exception("Mỗi số điện thoại chỉ đăng kí 1 lần.");
-                //if (ACCOUNTKHACHHANG.Ins.Exists_UserName(txtUserName.Text))
-                //    throw new Exception("Tên tài khoản đã tồn tại.");   chưa viết BLL :v 
+                if (ACCOUNTKHACHHANG.Ins.Exists_UserName(txtUserName.Text))
+                    throw new Exception("Tên tài khoản đã tồn tại.");   
                 if (txtPassWords.Text != txtPassWordsConfirm.Text)
                     throw new Exception("Mật khẩu nhập lại không trùng khớp");
                             
@@ -52,7 +52,8 @@ namespace Restaurant_Management.GUI.Customer
                 p.Sdt = txtPhone.Text;
 
                 bool rs = KHACHHANG.Ins.Insert(p);
-                if (rs == true)
+                bool rs1 = ACCOUNTKHACHHANG.Ins.Insert(txtID.Text, txtUserName.Text, Account.Ins.GetHashPassword(txtPassWords.Text), p.LoaiKH);
+                if (rs == true && rs1 == true)
                     Form_Alert.Alert("Đăng kí thành công.", Form_Alert.enmType.Success);
                 else
                     Form_Alert.Alert("Lỗi", Form_Alert.enmType.Error);              
