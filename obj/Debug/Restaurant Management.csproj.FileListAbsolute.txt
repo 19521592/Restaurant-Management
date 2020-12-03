@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\Restaurant Management.exe.config
 C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\Restaurant Management.exe
 C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\Restaurant Management.pdb
@@ -33,6 +34,8 @@ C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Man
 C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.FoodItem.resources
 C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.RecentAction.resources
 =======
+=======
+>>>>>>> 3c69ad31da69ba07069f5855195856755db91ad1
 D:\Downloads\1\Restaurant-Management\bin\Debug\Restaurant Management.exe.config
 D:\Downloads\1\Restaurant-Management\bin\Debug\Restaurant Management.exe
 D:\Downloads\1\Restaurant-Management\bin\Debug\Restaurant Management.pdb
@@ -66,4 +69,7 @@ D:\Downloads\1\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.OrderFo
 D:\Downloads\1\Restaurant-Management\bin\Debug\PdfSharp.dll
 D:\Downloads\1\Restaurant-Management\bin\Debug\PdfSharp.pdb
 D:\Downloads\1\Restaurant-Management\bin\Debug\de\PdfSharp.resources.dll
+<<<<<<< HEAD
 >>>>>>> Add print bill feature
+=======
+>>>>>>> 3c69ad31da69ba07069f5855195856755db91ad1
