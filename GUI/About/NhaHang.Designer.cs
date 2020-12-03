@@ -258,7 +258,7 @@ namespace Restaurant_Management.GUI.About
             this.label17.Size = new System.Drawing.Size(162, 17);
             this.label17.TabIndex = 16;
             this.label17.Text = "Liên hệ sđt 0123456789";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
+            //this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -322,7 +322,7 @@ namespace Restaurant_Management.GUI.About
             this.iconButton1.Text = "Home";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+           // this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // pictureBox1
             // 

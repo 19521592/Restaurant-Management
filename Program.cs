@@ -16,7 +16,7 @@ namespace Restaurant_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new Restaurant_Management.GUI.OrderFood.BILL());
         }
     }
 }

@@ -201,7 +201,6 @@
             // 
             // pictureBox1
             // 
-            //this.pictureBox1.Image = global::Restaurant_Management.Properties.Resources.dev;
             this.pictureBox1.Location = new System.Drawing.Point(0, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(496, 403);
@@ -218,12 +217,11 @@
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.Location = new System.Drawing.Point(777, 477);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(115, 55);
+            this.iconButton1.Size = new System.Drawing.Size(138, 55);
             this.iconButton1.TabIndex = 13;
             this.iconButton1.Text = "Home";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // deverloper
             // 
@@ -234,7 +232,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "deverloper";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "deverloper";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
