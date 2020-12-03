@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,17 +16,30 @@ namespace Restaurant_Management.GUI.Table
 {
     public partial class BanAn : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
         IDictionary<string, Ban> listTable { get; set; }
         Ban selectingTable;
         public CustomerOrderForm ParentForm { get; set; }
         public Ban selectedTable { get; set; }
-        public BanAn(Ban selectedTable, CustomerOrderForm orderForm)
+        public BanAn(Ban selectedTable = null, CustomerOrderForm orderForm = null)
         {
             this.ParentForm = orderForm;
             InitializeComponent();
             loadTableIntoFlowLayoutPanel();
             btnPay.Visible = false;
             this.selectedTable = selectedTable;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
+            btnPay.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnPay.Width, btnPay.Height, 10, 10));
+            btnSelectTable.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSelectTable.Width, btnSelectTable.Height, 10, 10));
         }
         public void loadTableIntoFlowLayoutPanel()
         {
@@ -46,7 +60,6 @@ namespace Restaurant_Management.GUI.Table
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            this.ParentForm.Focus();
         }
         public void updateTableInfo(Ban table)
         {
@@ -56,10 +69,21 @@ namespace Restaurant_Management.GUI.Table
                 case "True":
                     this.lblTableStatus.Text = "Đã có khách";
                     btnPay.Visible = true;
-                    btnSelectTable.Visible = true;
+                    btnPay.Text = "Thanh toán";
+                    if (this.ParentForm != null)
+                    {
+                        btnSelectTable.Visible = true;
+                        btnSelectTable.Text = "Thêm món";
+                    }
+                    else
+                    {
+                        btnPay.Text = "Xem món";
+                        btnSelectTable.Visible = false;
+                    }
                     break;
                 case "False":
                     this.lblTableStatus.Text = "Trống";
+                    btnSelectTable.Text = "Chọn món";
                     btnPay.Visible = false;
                     btnSelectTable.Visible = true;
                     break;
@@ -102,10 +126,23 @@ namespace Restaurant_Management.GUI.Table
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            ThanhToanBan thanhToan = new ThanhToanBan(selectingTable);
+            ThanhToanBan thanhToan = new ThanhToanBan(selectingTable, this.ParentForm);
             thanhToan.ShowDialog();
             thanhToan.Focus();
             this.Close();
+        }
+        public void showPanelInfo()
+        {
+            this.pnlInfo.Visible = true;
+        }
+        private void closePanelInfo()
+        {
+            this.pnlInfo.Visible = false;
+        }
+
+        private void btnCloseInfo_Click(object sender, EventArgs e)
+        {
+            closePanelInfo();
         }
     }
 }

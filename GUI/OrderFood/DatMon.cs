@@ -360,7 +360,6 @@ namespace Restaurant_Management
         private void checkValue(object sender, EventArgs e)
         {
             TextBox txtBoxNumber = sender as TextBox;
-            string allowedchar = "0123456789";
             int num = 0;
             if (txtBoxNumber.Text == "") return;
             if (/*!txtBoxNumber.Text.All(allowedchar.Contains) ||*/ !Int32.TryParse(txtBoxNumber.Text, out num))
@@ -378,6 +377,7 @@ namespace Restaurant_Management
                 return;
             }
         }
+
         private void checkEmpty(object sender, EventArgs e)
         {
             TextBox txtBoxNumber = sender as TextBox;
@@ -435,6 +435,13 @@ namespace Restaurant_Management
             {
                 Form_Alert.Alert("Chưa đặt món!", Form_Alert.enmType.Info);
             }
+        }
+        public void resetInfoForm()
+        {
+            this.btnPrice.Text = "0";
+            this.btnTable.Text = "Chọn bàn";
+            this.allFoodCount = 0;
+            this.selectedTable = null;
         }
     }
 }

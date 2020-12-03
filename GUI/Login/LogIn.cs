@@ -13,9 +13,9 @@ using Restaurant_Management.GUI.Login;
 
 namespace Restaurant_Management
 {
-    public partial class frmLogin : Form
+    public partial class formLogin : Form
     {
-        public frmLogin()
+        public formLogin()
         {
             InitializeComponent();         
         }

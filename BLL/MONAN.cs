@@ -116,8 +116,39 @@ namespace Restaurant_Management.BLL
         }
         public DataTable getListMonThanhToan(string idBanAn)
         {
-            string query = "Select MONAN.ID , MONAN.TEN , MONAN.DONGIA , THUCDONBAN.SOLUONG , MONAN.HINHANH From MONAN, THUCDONBAN Where MONAN.ID = THUCDONBAN.IDMONAN AND THUCDONBAN.ID = @idBanAn ";
+            string query = "Select MONAN.ID , MONAN.TEN , MONAN.DONGIA , THUCDONBAN.SOLUONG , MONAN.HINHANH From MONAN , THUCDONBAN Where MONAN.ID = THUCDONBAN.IDMONAN AND THUCDONBAN.ID = @idBanAn ";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { idBanAn });
+            return rs;
+        }
+        public DataTable getListMonTheoId(string idBanAn)
+        {
+            string query = "Select MONAN.ID as N'ID' , MONAN.TEN as N'Tên món' , MONAN.DONGIA as N'Đơn giá' , THUCDONBAN.SOLUONG as N'Số lượng' , NGAYTHANHTOAN as N'Ngày thanh toán' From MONAN , THUCDONBAN , HOADONBAN Where MONAN.ID = THUCDONBAN.IDMONAN AND THUCDONBAN.ID = HOADONBAN.ID AND THUCDONBAN.ID = @idBanAn ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { idBanAn });
+            return rs;
+        }
+        public DataTable getListMonBanChay(string kindOfTime)
+        {
+            int day = 0;
+            switch (kindOfTime)
+            {
+                case "7 ngày trước":
+                    day = 7;
+                    break;
+                case "Tháng này":
+                    day = 30;
+                    break;
+                case "Quý":
+                    day = 180;
+                    break;
+                case "Năm này":
+                    day = 360;
+                    break;
+                case "Các năm":
+                    day = 69696;
+                    break;
+            }
+            string query = "SELECT TOP 10 IDMONAN , SUM( TD.SOLUONG ) AS 'NUMBER' FROM THUCDONBAN TD , HOADONBAN HD WHERE TD.ID = HD.ID AND ( DATEDIFF( DAY , HD.NGAYTHANHTOAN , GETDATE() ) <= @day ) GROUP BY TD.IDMONAN ORDER BY SUM( TD.SOLUONG ) DESC ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { day });
             return rs;
         }
     }

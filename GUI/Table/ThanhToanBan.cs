@@ -32,6 +32,8 @@ namespace Restaurant_Management.GUI.Table
             lblStaff.Text = BANAN.Ins.getBanAnChuaThanhToan(selectedTable.tableId).Rows[0][1].ToString();
             idOrderedFood = new List<string>();
             orderedFood = new Dictionary<string, Food>();
+            if (ParentForm == null) btnPay.Visible = false;
+            else btnPay.Visible = true;
         }
         private void loadMenu()
         {

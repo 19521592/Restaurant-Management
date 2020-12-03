@@ -94,6 +94,7 @@ namespace Restaurant_Management.GUI
             this.txtBoxNumber.TabIndex = 4;
             this.txtBoxNumber.Text = "1";
             this.txtBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxNumber.TextChanged += new System.EventHandler(this.checkValue);
             // 
             // btnPlus
             // 
@@ -104,7 +105,7 @@ namespace Restaurant_Management.GUI
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(41, 30);
             this.btnPlus.TabIndex = 3;
-            this.btnPlus.Text = "-";
+            this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = false;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 

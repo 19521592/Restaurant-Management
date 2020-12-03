@@ -18,20 +18,22 @@ namespace Restaurant_Management
     public partial class TrangChinh : Form
     {
 
-        public frmLogin ParentForm { get; set; }
+        public formLogin ParentForm { get; set; }
         public AccountApp Account { get; set; }
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // width of ellipse
-            int nHeightEllipse // height of ellipse
+            int nLeftRect,  
+            int nTopRect,      
+            int nRightRect,   
+            int nBottomRect,   
+            int nWidthEllipse, 
+            int nHeightEllipse 
         );
+
         Region normalRegion;
-        public TrangChinh(AccountApp account = null, frmLogin ParentForm = null)
+        public TrangChinh(AccountApp account = null, formLogin ParentForm = null)
         {
             this.ParentForm = ParentForm;
             this.Account = account;
@@ -178,7 +180,7 @@ namespace Restaurant_Management
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new Revenue());
+            openChildFormInPanel(new DoanhThu());
             hideSubMenu();
         }
     }
