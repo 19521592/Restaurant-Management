@@ -181,7 +181,5 @@ namespace Restaurant_Management
             openChildFormInPanel(new Revenue());
             hideSubMenu();
         }
-
-        
     }
 }

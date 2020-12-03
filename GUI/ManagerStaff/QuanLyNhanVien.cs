@@ -58,6 +58,6 @@ namespace Restaurant_Management.GUI.ManagerStaff
             QuanLyNhanVien_Load(sender, e);
         }
 
-
+    
     }
 }

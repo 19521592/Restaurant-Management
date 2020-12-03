@@ -35,6 +35,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.DataPanel = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.DataPanel = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -138,6 +138,24 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1167, 401);
             this.panel9.TabIndex = 7;
+            // 
+            // DataPanel
+            // 
+            this.DataPanel.AutoScroll = true;
+            this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataPanel.Location = new System.Drawing.Point(0, 70);
+            this.DataPanel.Name = "DataPanel";
+            this.DataPanel.Size = new System.Drawing.Size(1167, 321);
+            this.DataPanel.TabIndex = 2;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.SystemColors.Control;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel20.Location = new System.Drawing.Point(0, 391);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1167, 10);
+            this.panel20.TabIndex = 1;
             // 
             // panel14
             // 
@@ -379,24 +397,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.SystemColors.Control;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel20.Location = new System.Drawing.Point(0, 391);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1167, 10);
-            this.panel20.TabIndex = 1;
-            // 
-            // DataPanel
-            // 
-            this.DataPanel.AutoScroll = true;
-            this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataPanel.Location = new System.Drawing.Point(0, 70);
-            this.DataPanel.Name = "DataPanel";
-            this.DataPanel.Size = new System.Drawing.Size(1167, 321);
-            this.DataPanel.TabIndex = 2;
             // 
             // QuanLyNhanVien
             // 
