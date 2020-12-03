@@ -36,6 +36,10 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.50.4740.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\PdfSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -102,6 +106,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Notification\Form_Alert.Designer.cs" />
+    <Compile Include="GUI\OrderFood\BILL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\BILL.Designer.cs">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\OrderFood\DatMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +218,9 @@
       <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Notification\Form_Alert.resx" />
+    <EmbeddedResource Include="GUI\OrderFood\BILL.resx">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +295,7 @@
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
+    <Content Include="packages\PdfSharp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
