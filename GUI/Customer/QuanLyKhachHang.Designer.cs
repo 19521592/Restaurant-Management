@@ -37,6 +37,8 @@
             this.DataPanel = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -58,11 +60,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -73,7 +74,6 @@
             this.panel10.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -169,11 +169,30 @@
             this.panel14.Size = new System.Drawing.Size(1167, 70);
             this.panel14.TabIndex = 0;
             // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.label7);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel19.Location = new System.Drawing.Point(680, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(200, 70);
+            this.panel19.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(152, 23);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Loại khách hàng";
+            // 
             // panel18
             // 
             this.panel18.Controls.Add(this.label6);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel18.Location = new System.Drawing.Point(510, 0);
+            this.panel18.Location = new System.Drawing.Point(520, 0);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(160, 70);
             this.panel18.TabIndex = 1;
@@ -192,7 +211,7 @@
             // 
             this.panel17.Controls.Add(this.label5);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel17.Location = new System.Drawing.Point(390, 0);
+            this.panel17.Location = new System.Drawing.Point(400, 0);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(120, 70);
             this.panel17.TabIndex = 1;
@@ -213,7 +232,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel16.Location = new System.Drawing.Point(160, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(230, 70);
+            this.panel16.Size = new System.Drawing.Size(240, 70);
             this.panel16.TabIndex = 1;
             // 
             // label4
@@ -377,25 +396,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.label7);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel19.Location = new System.Drawing.Point(670, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(213, 70);
-            this.panel19.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 23);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Loại khách hàng";
-            // 
             // QuanLyKhachHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -413,6 +413,8 @@
             this.panel5.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.panel17.ResumeLayout(false);
@@ -430,8 +432,6 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
             this.ResumeLayout(false);
 
         }

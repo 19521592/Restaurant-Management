@@ -50,7 +50,7 @@ namespace Restaurant_Management.GUI.Customer
                 p.Gioitinh = (radioButton1.Checked == true) ? "Nam" : "Nữ";
                 p.LoaiKH = "Bình thường";
                 p.Sdt = txtPhone.Text;
-
+                p.Diem = "0";
                 bool rs = KHACHHANG.Ins.Insert(p);
                 bool rs1 = ACCOUNTKHACHHANG.Ins.Insert(txtID.Text, txtUserName.Text, Account.Ins.GetHashPassword(txtPassWords.Text), p.LoaiKH);
                 if (rs == true && rs1 == true)
