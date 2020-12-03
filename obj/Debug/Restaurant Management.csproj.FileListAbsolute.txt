@@ -66,3 +66,5 @@ D:\abc\obj\Debug\Restaurant Management.exe
 D:\abc\obj\Debug\Restaurant Management.pdb
 D:\abc\bin\Debug\PdfSharp.dll
 D:\abc\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\PdfSharp.dll
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources

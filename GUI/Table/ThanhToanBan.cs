@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restaurant_Management.BLL;
 using Restaurant_Management.GUI.CustomNofication;
+using Restaurant_Management.GUI.OrderFood;
 
 namespace Restaurant_Management.GUI.Table
 {
@@ -70,6 +71,8 @@ namespace Restaurant_Management.GUI.Table
         {
             addHoaDonBan();
             Form_Alert.Alert("Thanh toán thành công!", Form_Alert.enmType.Success);
+            BILL bill = new BILL(idBanAn);
+            bill.printBill();
             BANAN.Ins.setTableStatus(this.selectedTable.tableId, "0");
             if (this.ParentForm != null)
             {

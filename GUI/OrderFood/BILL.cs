@@ -11,43 +11,42 @@ using System.Windows.Forms;
 using PdfSharp.Pdf;
 using System.Data.SqlClient;
 using PdfSharp.Drawing;
-
+using Restaurant_Management.BLL;
 
 namespace Restaurant_Management.GUI.OrderFood
 {
     public partial class BILL : Form
     {
-        public BILL()
+        string idBanAn;
+        public BILL(string idBanAn)
         {
             InitializeComponent();
+            this.idBanAn = idBanAn;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void printBill()
         {
             try
             {
-                string connetionString = null;
-                SqlConnection connection;
-                SqlCommand command;
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                DataSet ds = new DataSet();
                 int i = 0;
-                string sql = null;
                 int yPoint = 0;
                 string TenMonAn = null;
-                string SoLuong= null;
+                string SoLuong = null;
                 string DonGia = null;
-               // string ThanhTien = null;
+                string ThanhTien = null;
+                string MaHoaDon = null;
+                if (idBanAn != null)
+                    ThanhTien = Double.Parse(HOADONBAN.Ins.getTongTienTheoBanAn(idBanAn).Rows[0][0].ToString()).ToString("#,##0");
 
-                connetionString = "Data Source=THANHNGUYEN;Initial Catalog=QLKH;User ID=sa;Password=1334567701";
-                sql = "select TenMonAn,SoLuong,DonGia from TestHoaDon";
-                connection = new SqlConnection(connetionString);
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                adapter.SelectCommand = command;
-                adapter.Fill(ds);
-                connection.Close();
-
+                // connetionString = "Data Source=THANHNGUYEN;Initial Catalog=QLKH;User ID=sa;Password=1334567701";
+                // sql = "select TenMonAn,SoLuong,DonGia from TestHoaDon";
+                // connection = new SqlConnection(connetionString);
+                // connection.Open();
+                // command = new SqlCommand(sql, connection);
+                // adapter.SelectCommand = command;
+                // adapter.Fill(ds);
+                // connection.Close();
+                DataTable ds = BLL.MONAN.Ins.getListMonTheoId(idBanAn);
+                string NgayBan = ds.Rows[0].ItemArray[4].ToString();
                 PdfDocument pdf = new PdfDocument();
                 pdf.Info.Title = "Database to PDF";
                 PdfPage pdfPage = pdf.AddPage();
@@ -58,44 +57,44 @@ namespace Restaurant_Management.GUI.OrderFood
                 graph.DrawString("Hóa Đơn Bán", Font_1, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
                 yPoint = yPoint + 50;
                 graph.DrawString("khu phố 6 phường Linh Trung ", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-                yPoint = yPoint + 20;               
+                yPoint = yPoint + 20;
                 graph.DrawString("--------------------------------------------------------", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
                 yPoint = yPoint + 20;
                 graph.DrawString("Mã Hóa Đơn", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-                graph.DrawString(txtMaHD.Text, font, XBrushes.Black, new XRect(120, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                graph.DrawString(idBanAn, font, XBrushes.Black, new XRect(120, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
                 yPoint = yPoint + 20;
                 graph.DrawString("Ngày Bán", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-                graph.DrawString(dTimeNgayBan.Text, font, XBrushes.Black, new XRect(120, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                graph.DrawString(NgayBan, font, XBrushes.Black, new XRect(120, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
                 yPoint = yPoint + 20;
                 graph.DrawString("--------------------------------------------------------", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
                 yPoint = yPoint + 20;
                 graph.DrawString("Tên Món Ăn", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-                graph.DrawString("Số Lượng", font, XBrushes.Black, new XRect(120, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-                graph.DrawString("Đơn Giá", font, XBrushes.Black, new XRect(200, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                graph.DrawString("Số Lượng", font, XBrushes.Black, new XRect(160, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                graph.DrawString("Đơn Giá", font, XBrushes.Black, new XRect(250, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
                 yPoint = yPoint + 20;
-                for (i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
+                for (i = 0; i <= ds.Rows.Count - 1; i++)
                 {
-                     TenMonAn = ds.Tables[0].Rows[i].ItemArray[0].ToString();
-                    SoLuong = ds.Tables[0].Rows[i].ItemArray[1].ToString();
-                    DonGia = ds.Tables[0].Rows[i].ItemArray[2].ToString();
+                    TenMonAn = ds.Rows[i].ItemArray[1].ToString();
+                    SoLuong = ds.Rows[i].ItemArray[3].ToString();
+                    DonGia = ds.Rows[i].ItemArray[2].ToString();
 
-                   graph.DrawString(TenMonAn, font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(TenMonAn, font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
 
-                    graph.DrawString(SoLuong, font, XBrushes.Black, new XRect(120, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(SoLuong, font, XBrushes.Black, new XRect(160, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
 
-                      graph.DrawString(DonGia, font, XBrushes.Black, new XRect(200, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(DonGia, font, XBrushes.Black, new XRect(250, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
 
-                  yPoint = yPoint + 20;
+                    yPoint = yPoint + 20;
                 }
                 graph.DrawString("--------------------------------------------------------", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
                 yPoint = yPoint + 20;
                 graph.DrawString("Tổng Tiền", font, XBrushes.Black, new XRect(40, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
 
-                graph.DrawString(txtThanhTien.Text, font, XBrushes.Black, new XRect(120, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+                graph.DrawString(ThanhTien, font, XBrushes.Black, new XRect(250, yPoint, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
 
                 string pdfFilename = "dbtopdf.pdf";
                 pdf.Save(pdfFilename);
-               Process.Start(pdfFilename);
+                Process.Start(pdfFilename);
             }
             catch (Exception ex)
             {
@@ -103,29 +102,9 @@ namespace Restaurant_Management.GUI.OrderFood
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            
-                btnHuyHD.Enabled = false;
-                btnLuuHD.Enabled = true;
-                btnInHD.Enabled = false;
-                btnThemHD.Enabled = false;
-                ResetValues();
-                           
-        }
-
-        private void ResetValues()
-        {
-            txtMaHD.Text = "";
-            dTimeNgayBan.Text = DateTime.Now.ToShortDateString();
-            cboMaNV.Text = "";
-            txtThanhTien.Text = "0";
+            printBill();
         }
     }
 }

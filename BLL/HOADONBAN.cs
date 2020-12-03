@@ -89,6 +89,11 @@ namespace Restaurant_Management.BLL
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { day });
             return rs;
         }
-
+        public DataTable getTongTienTheoBanAn(string idBanAn)
+        {
+            string query = "SELECT TONGTIEN FROM HOADONBAN WHERE ID = @idBanAn ";
+            DataTable rs = Provider.Ins.ExcuteQuery( query , new object[]{ idBanAn } );
+            return rs;
+        }
     }
 }

@@ -86,6 +86,7 @@ namespace Restaurant_Management.GUI
             // txtBoxNumber
             // 
             this.txtBoxNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxNumber.Enabled = false;
             this.txtBoxNumber.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNumber.Location = new System.Drawing.Point(613, 100);
             this.txtBoxNumber.Multiline = true;

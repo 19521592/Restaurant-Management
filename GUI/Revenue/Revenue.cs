@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restaurant_Management.GUI.OrderFood;
 
 namespace Restaurant_Management.GUI.Revenue
 {
     public partial class Revenue : Form
     {
+        BILL bill;
         string recentKind;
         public Revenue(string recentKind)
         {
@@ -51,19 +53,22 @@ namespace Restaurant_Management.GUI.Revenue
             dataGridView2.DataSource = null;
             dataGridView2.Refresh();
             dataGridView2.Visible = false;
+            if (bill != null) bill.Close();
         }
         private void openChildFormInPanel(Form childForm)
         {
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            pnlDetailFood.Controls.Add(childForm);
-            pnlDetailFood.Tag = childForm;
+            pnlChildForm.Controls.Add(childForm);
+            pnlChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
         private void loadDetailRevenue(string idBanAn)
         {
+            bill = new BILL(idBanAn);
+            openChildFormInPanel(bill);
             DataTable rs = BLL.MONAN.Ins.getListMonTheoId(idBanAn);
             dataGridView2.DataSource = rs;
         }
