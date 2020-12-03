@@ -36,6 +36,9 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\PDFsharp-MigraDocFoundation-1_50-beta5\PDFsharp\src\PdfSharp\bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -59,15 +62,19 @@
     <Compile Include="BLL\THUCDONBAN.cs" />
     <Compile Include="DTO\FoodDTO.cs" />
     <Compile Include="DTO\staffDTO.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="GUI\About\deverloper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\About\deverloper.Designer.cs" />
+    <Compile Include="GUI\About\deverloper.Designer.cs">
+      <DependentUpon>deverloper.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\About\NhaHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\About\NhaHang.Designer.cs" />
-    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="GUI\About\NhaHang.Designer.cs">
+      <DependentUpon>NhaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ManageFood\SuaMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +109,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Notification\Form_Alert.Designer.cs" />
+    <Compile Include="GUI\OrderFood\BILL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\BILL.Designer.cs">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\OrderFood\DatMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,8 +203,9 @@
     <Compile Include="GUI\TrangChinh.Designer.cs">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\About\deverloper.resx" />
-    <EmbeddedResource Include="GUI\About\NhaHang.resx" />
+    <EmbeddedResource Include="GUI\About\deverloper.resx">
+      <DependentUpon>deverloper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManageFood\SuaMon.resx">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +222,9 @@
       <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Notification\Form_Alert.resx" />
+    <EmbeddedResource Include="GUI\OrderFood\BILL.resx">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
     </EmbeddedResource>
