@@ -98,7 +98,7 @@ namespace Restaurant_Management.BLL
         }
         public DataTable getList()
         {
-            string query = "select ID , TEN , DONGIA from MONAN where TRANGTHAI = 1 ";
+            string query = "select ID , TEN as N'Tên món' , DONGIA as 'Đơn giá (VND)' from MONAN where TRANGTHAI = 1 ";
             DataTable rs = Provider.Ins.ExcuteQuery(query);
             return rs;
         }

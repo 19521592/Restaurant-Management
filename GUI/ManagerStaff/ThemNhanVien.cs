@@ -80,7 +80,6 @@ namespace Restaurant_Management.GUI.ManagerStaff
                 staff.Dchi = txtDiaChi.Text;
                 staff.Sdt = txtPhone.Text;
                 staff.Ngsinh = dateTimePicker1.Value;
-                MessageBox.Show(staff.Ngsinh.Date.ToString());
                 staff.Vitri = comboBox1.Text;              
                 if (PathImg == "")
                 {

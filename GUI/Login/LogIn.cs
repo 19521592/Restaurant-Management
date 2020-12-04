@@ -63,10 +63,10 @@ namespace Restaurant_Management
                         MessageBox.Show("Tài khoản / mật khẩu không đúng, xin vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OKCancel);
                         break;
                     case Account.TypeAcc.Admin: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OpenOrderThucAnForm(userName);
+                        OpenOrderThucAnForm(userName, true);
                         break;
                     case Account.TypeAcc.Staff: // Sẽ có thêm chỉnh sửa quyền truy cập giữa các loại tài khoản
-                        OpenOrderThucAnForm(userName);
+                        OpenOrderThucAnForm(userName, false);
                         break;
                 }
             }
@@ -75,14 +75,24 @@ namespace Restaurant_Management
                // MessageBox.Show(ex.Message);
             }
         }
-        private void OpenOrderThucAnForm(string userName)
+        private void OpenOrderThucAnForm(string userName, bool isAdmin)
         {
             AccountApp account = new AccountApp();
             account.Username = userName;
             account.Id = Account.Ins.getMaNV(userName);
             TrangChinh trangChinh = new TrangChinh(account, this);
+            if (isAdmin == true)
+            {
+                trangChinh.loadStaff();
+            }
+            else
+            {
+                trangChinh.loadAdmin();
+            }
+            this.Hide();
             trangChinh.ShowDialog();
-            this.Close();
+            //this.Hide();
+            //this.Close();
         }
 
         private void txb_UserName_Click(object sender, EventArgs e)

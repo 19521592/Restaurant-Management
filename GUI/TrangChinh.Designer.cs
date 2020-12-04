@@ -32,7 +32,7 @@
             this.pnlAccountSubMenu = new System.Windows.Forms.Panel();
             this.btnExitForm = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnAccountInfo = new System.Windows.Forms.Button();
             this.btnAccount = new FontAwesome.Sharp.IconButton();
             this.pnlAboutSubMenu = new System.Windows.Forms.Panel();
             this.btnDevInfo = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@
             this.btnRevenue = new System.Windows.Forms.Button();
             this.btnStatistics = new FontAwesome.Sharp.IconButton();
             this.pnlManageSubMenu = new System.Windows.Forms.Panel();
+            this.btnManageAccount = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
             this.btnManageFood = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
@@ -49,6 +50,8 @@
             this.btnManage = new FontAwesome.Sharp.IconButton();
             this.btnOrderFood = new FontAwesome.Sharp.IconButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
@@ -60,6 +63,8 @@
             this.pnlAboutSubMenu.SuspendLayout();
             this.pnlStatisticsSubMenu.SuspendLayout();
             this.pnlManageSubMenu.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
@@ -92,11 +97,11 @@
             this.pnlAccountSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.pnlAccountSubMenu.Controls.Add(this.btnExitForm);
             this.pnlAccountSubMenu.Controls.Add(this.btnLogout);
-            this.pnlAccountSubMenu.Controls.Add(this.button12);
+            this.pnlAccountSubMenu.Controls.Add(this.btnAccountInfo);
             this.pnlAccountSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAccountSubMenu.Location = new System.Drawing.Point(0, 620);
+            this.pnlAccountSubMenu.Location = new System.Drawing.Point(0, 665);
             this.pnlAccountSubMenu.Name = "pnlAccountSubMenu";
-            this.pnlAccountSubMenu.Size = new System.Drawing.Size(250, 125);
+            this.pnlAccountSubMenu.Size = new System.Drawing.Size(229, 125);
             this.pnlAccountSubMenu.TabIndex = 9;
             // 
             // btnExitForm
@@ -108,7 +113,7 @@
             this.btnExitForm.Location = new System.Drawing.Point(0, 80);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnExitForm.Size = new System.Drawing.Size(250, 40);
+            this.btnExitForm.Size = new System.Drawing.Size(229, 40);
             this.btnExitForm.TabIndex = 6;
             this.btnExitForm.Text = "Thoát";
             this.btnExitForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,27 +129,28 @@
             this.btnLogout.Location = new System.Drawing.Point(0, 40);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(250, 40);
+            this.btnLogout.Size = new System.Drawing.Size(229, 40);
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "Đăng Xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button12
+            // btnAccountInfo
             // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.LightGray;
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(250, 40);
-            this.button12.TabIndex = 4;
-            this.button12.Text = "Tài Khoản Của Tôi";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnAccountInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccountInfo.FlatAppearance.BorderSize = 0;
+            this.btnAccountInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccountInfo.ForeColor = System.Drawing.Color.LightGray;
+            this.btnAccountInfo.Location = new System.Drawing.Point(0, 0);
+            this.btnAccountInfo.Name = "btnAccountInfo";
+            this.btnAccountInfo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAccountInfo.Size = new System.Drawing.Size(229, 40);
+            this.btnAccountInfo.TabIndex = 4;
+            this.btnAccountInfo.Text = "Tài Khoản Của Tôi";
+            this.btnAccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccountInfo.UseVisualStyleBackColor = true;
+            this.btnAccountInfo.Click += new System.EventHandler(this.btnAccountInfo_Click);
             // 
             // btnAccount
             // 
@@ -152,13 +158,15 @@
             this.btnAccount.FlatAppearance.BorderSize = 0;
             this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAccount.IconColor = System.Drawing.Color.Black;
+            this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.btnAccount.IconColor = System.Drawing.Color.White;
             this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAccount.Location = new System.Drawing.Point(0, 575);
+            this.btnAccount.IconSize = 35;
+            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAccount.Location = new System.Drawing.Point(0, 620);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(250, 45);
+            this.btnAccount.Size = new System.Drawing.Size(229, 45);
             this.btnAccount.TabIndex = 8;
             this.btnAccount.Text = "Tài Khoản";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,9 +179,9 @@
             this.pnlAboutSubMenu.Controls.Add(this.btnDevInfo);
             this.pnlAboutSubMenu.Controls.Add(this.btnRestaurantInfo);
             this.pnlAboutSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAboutSubMenu.Location = new System.Drawing.Point(0, 490);
+            this.pnlAboutSubMenu.Location = new System.Drawing.Point(0, 535);
             this.pnlAboutSubMenu.Name = "pnlAboutSubMenu";
-            this.pnlAboutSubMenu.Size = new System.Drawing.Size(250, 85);
+            this.pnlAboutSubMenu.Size = new System.Drawing.Size(229, 85);
             this.pnlAboutSubMenu.TabIndex = 7;
             // 
             // btnDevInfo
@@ -185,7 +193,7 @@
             this.btnDevInfo.Location = new System.Drawing.Point(0, 40);
             this.btnDevInfo.Name = "btnDevInfo";
             this.btnDevInfo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnDevInfo.Size = new System.Drawing.Size(250, 40);
+            this.btnDevInfo.Size = new System.Drawing.Size(229, 40);
             this.btnDevInfo.TabIndex = 5;
             this.btnDevInfo.Text = "Developer";
             this.btnDevInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,7 +209,7 @@
             this.btnRestaurantInfo.Location = new System.Drawing.Point(0, 0);
             this.btnRestaurantInfo.Name = "btnRestaurantInfo";
             this.btnRestaurantInfo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRestaurantInfo.Size = new System.Drawing.Size(250, 40);
+            this.btnRestaurantInfo.Size = new System.Drawing.Size(229, 40);
             this.btnRestaurantInfo.TabIndex = 4;
             this.btnRestaurantInfo.Text = "Nhà Hàng";
             this.btnRestaurantInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,13 +222,15 @@
             this.btnAbout.FlatAppearance.BorderSize = 0;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAbout.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAbout.IconColor = System.Drawing.Color.Black;
+            this.btnAbout.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.btnAbout.IconColor = System.Drawing.Color.White;
             this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAbout.Location = new System.Drawing.Point(0, 445);
+            this.btnAbout.IconSize = 35;
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAbout.Location = new System.Drawing.Point(0, 490);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAbout.Size = new System.Drawing.Size(250, 45);
+            this.btnAbout.Size = new System.Drawing.Size(229, 45);
             this.btnAbout.TabIndex = 6;
             this.btnAbout.Text = "About";
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -232,9 +242,9 @@
             this.pnlStatisticsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.pnlStatisticsSubMenu.Controls.Add(this.btnRevenue);
             this.pnlStatisticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStatisticsSubMenu.Location = new System.Drawing.Point(0, 396);
+            this.pnlStatisticsSubMenu.Location = new System.Drawing.Point(0, 441);
             this.pnlStatisticsSubMenu.Name = "pnlStatisticsSubMenu";
-            this.pnlStatisticsSubMenu.Size = new System.Drawing.Size(250, 49);
+            this.pnlStatisticsSubMenu.Size = new System.Drawing.Size(229, 49);
             this.pnlStatisticsSubMenu.TabIndex = 5;
             // 
             // btnRevenue
@@ -246,7 +256,7 @@
             this.btnRevenue.Location = new System.Drawing.Point(0, 0);
             this.btnRevenue.Name = "btnRevenue";
             this.btnRevenue.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRevenue.Size = new System.Drawing.Size(250, 40);
+            this.btnRevenue.Size = new System.Drawing.Size(229, 40);
             this.btnRevenue.TabIndex = 4;
             this.btnRevenue.Text = "Doanh Thu";
             this.btnRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,13 +269,15 @@
             this.btnStatistics.FlatAppearance.BorderSize = 0;
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnStatistics.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnStatistics.IconColor = System.Drawing.Color.Black;
+            this.btnStatistics.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.btnStatistics.IconColor = System.Drawing.Color.White;
             this.btnStatistics.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 351);
+            this.btnStatistics.IconSize = 35;
+            this.btnStatistics.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStatistics.Location = new System.Drawing.Point(0, 396);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnStatistics.Size = new System.Drawing.Size(250, 45);
+            this.btnStatistics.Size = new System.Drawing.Size(229, 45);
             this.btnStatistics.TabIndex = 4;
             this.btnStatistics.Text = "Thống Kê";
             this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,6 +287,7 @@
             // pnlManageSubMenu
             // 
             this.pnlManageSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlManageSubMenu.Controls.Add(this.btnManageAccount);
             this.pnlManageSubMenu.Controls.Add(this.btnTable);
             this.pnlManageSubMenu.Controls.Add(this.btnManageFood);
             this.pnlManageSubMenu.Controls.Add(this.btnCustomer);
@@ -282,8 +295,24 @@
             this.pnlManageSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlManageSubMenu.Location = new System.Drawing.Point(0, 190);
             this.pnlManageSubMenu.Name = "pnlManageSubMenu";
-            this.pnlManageSubMenu.Size = new System.Drawing.Size(250, 161);
+            this.pnlManageSubMenu.Size = new System.Drawing.Size(229, 206);
             this.pnlManageSubMenu.TabIndex = 3;
+            // 
+            // btnManageAccount
+            // 
+            this.btnManageAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageAccount.FlatAppearance.BorderSize = 0;
+            this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageAccount.ForeColor = System.Drawing.Color.LightGray;
+            this.btnManageAccount.Location = new System.Drawing.Point(0, 160);
+            this.btnManageAccount.Name = "btnManageAccount";
+            this.btnManageAccount.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageAccount.Size = new System.Drawing.Size(229, 40);
+            this.btnManageAccount.TabIndex = 4;
+            this.btnManageAccount.Text = "Tài khoản";
+            this.btnManageAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageAccount.UseVisualStyleBackColor = true;
+            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
             // 
             // btnTable
             // 
@@ -294,7 +323,7 @@
             this.btnTable.Location = new System.Drawing.Point(0, 120);
             this.btnTable.Name = "btnTable";
             this.btnTable.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTable.Size = new System.Drawing.Size(250, 40);
+            this.btnTable.Size = new System.Drawing.Size(229, 40);
             this.btnTable.TabIndex = 3;
             this.btnTable.Text = "Bàn";
             this.btnTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -309,7 +338,7 @@
             this.btnManageFood.Location = new System.Drawing.Point(0, 80);
             this.btnManageFood.Name = "btnManageFood";
             this.btnManageFood.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnManageFood.Size = new System.Drawing.Size(250, 40);
+            this.btnManageFood.Size = new System.Drawing.Size(229, 40);
             this.btnManageFood.TabIndex = 2;
             this.btnManageFood.Text = "Món Ăn";
             this.btnManageFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,7 +354,7 @@
             this.btnCustomer.Location = new System.Drawing.Point(0, 40);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(250, 40);
+            this.btnCustomer.Size = new System.Drawing.Size(229, 40);
             this.btnCustomer.TabIndex = 1;
             this.btnCustomer.Text = "Khách Hàng";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,9 +370,9 @@
             this.btnStaff.Location = new System.Drawing.Point(0, 0);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStaff.Size = new System.Drawing.Size(250, 40);
+            this.btnStaff.Size = new System.Drawing.Size(229, 40);
             this.btnStaff.TabIndex = 0;
-            this.btnStaff.Text = "Nhân VIên";
+            this.btnStaff.Text = "Nhân Viên";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaff.UseVisualStyleBackColor = true;
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click_1);
@@ -354,13 +383,15 @@
             this.btnManage.FlatAppearance.BorderSize = 0;
             this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManage.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManage.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnManage.IconColor = System.Drawing.Color.Black;
+            this.btnManage.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.btnManage.IconColor = System.Drawing.Color.White;
             this.btnManage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnManage.IconSize = 35;
+            this.btnManage.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnManage.Location = new System.Drawing.Point(0, 145);
             this.btnManage.Name = "btnManage";
             this.btnManage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManage.Size = new System.Drawing.Size(250, 45);
+            this.btnManage.Size = new System.Drawing.Size(229, 45);
             this.btnManage.TabIndex = 2;
             this.btnManage.Text = "Quản Lý";
             this.btnManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -373,13 +404,15 @@
             this.btnOrderFood.FlatAppearance.BorderSize = 0;
             this.btnOrderFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnOrderFood.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnOrderFood.IconColor = System.Drawing.Color.Black;
+            this.btnOrderFood.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.btnOrderFood.IconColor = System.Drawing.Color.White;
             this.btnOrderFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOrderFood.IconSize = 30;
+            this.btnOrderFood.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOrderFood.Location = new System.Drawing.Point(0, 100);
             this.btnOrderFood.Name = "btnOrderFood";
             this.btnOrderFood.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnOrderFood.Size = new System.Drawing.Size(250, 45);
+            this.btnOrderFood.Size = new System.Drawing.Size(229, 45);
             this.btnOrderFood.TabIndex = 1;
             this.btnOrderFood.Text = "Order Món Ăn";
             this.btnOrderFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -388,11 +421,37 @@
             // 
             // pnlLogo
             // 
+            this.pnlLogo.Controls.Add(this.iconPictureBox1);
+            this.pnlLogo.Controls.Add(this.label1);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(250, 100);
+            this.pnlLogo.Size = new System.Drawing.Size(229, 100);
             this.pnlLogo.TabIndex = 0;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(11)))), ((int)(((byte)(7)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Utensils;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 50;
+            this.iconPictureBox1.Location = new System.Drawing.Point(3, 29);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(51, 50);
+            this.iconPictureBox1.TabIndex = 2;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(60, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mộc quán";
             // 
             // pnlChildForm
             // 
@@ -494,6 +553,9 @@
             this.pnlAboutSubMenu.ResumeLayout(false);
             this.pnlStatisticsSubMenu.ResumeLayout(false);
             this.pnlManageSubMenu.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
+            this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
@@ -519,7 +581,7 @@
         private FontAwesome.Sharp.IconButton btnStatistics;
         private System.Windows.Forms.Panel pnlAccountSubMenu;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnAccountInfo;
         private FontAwesome.Sharp.IconButton btnAccount;
         private System.Windows.Forms.Panel pnlAboutSubMenu;
         private System.Windows.Forms.Button btnDevInfo;
@@ -532,5 +594,8 @@
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconPictureBox btnMaximize;
         private FontAwesome.Sharp.IconPictureBox btnExit;
+        private System.Windows.Forms.Button btnManageAccount;
+        private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

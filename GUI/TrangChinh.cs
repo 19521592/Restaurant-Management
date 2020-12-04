@@ -12,6 +12,8 @@ using Restaurant_Management.GUI.ManagerStaff;
 using Restaurant_Management.GUI.Login;
 using Restaurant_Management.GUI.About;
 using Restaurant_Management.GUI.Revenue;
+using Restaurant_Management.GUI.AccountGUI;
+using Restaurant_Management.GUI.User;
 
 namespace Restaurant_Management
 {
@@ -181,6 +183,51 @@ namespace Restaurant_Management
         private void btnRevenue_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new DoanhThu());
+            hideSubMenu();
+        }
+
+        private void btnManageAccount_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new QuanLyTaiKhoan());
+            hideSubMenu();
+        }
+        public void loadStaff()
+        {
+            //this.btnManage.Enabled = false;
+            //this.pnlManageSubMenu.Enabled = false;
+            //this.btnStatistics.Enabled = false;
+            //this.pnlStatisticsSubMenu.Enabled = false;
+            //this.btnAbout.Enabled = false;
+            //this.pnlAboutSubMenu.Enabled = false;
+
+            this.btnManage.Visible = false;
+            //this.pnlManageSubMenu.Enabled = false;
+            this.btnStatistics.Visible = false;
+            //this.pnlStatisticsSubMenu.Enabled = false;
+            this.btnAbout.Visible = false;
+            //this.pnlAboutSubMenu.Enabled = false;
+        }
+        public void loadAdmin()
+        {
+            //this.btnManage.Enabled = true;
+            //this.pnlManageSubMenu.Enabled = true;
+            //this.btnStatistics.Enabled = true;
+            //this.pnlStatisticsSubMenu.Enabled = true;
+            //this.btnAbout.Enabled = true;
+            //this.pnlAboutSubMenu.Enabled = true;
+
+            this.btnManage.Visible = true;
+            //this.pnlManageSubMenu.Enabled = true;
+            this.btnStatistics.Visible = true;
+            //this.pnlStatisticsSubMenu.Enabled = true;
+            this.btnAbout.Visible = true;
+            //this.pnlAboutSubMenu.Enabled = true;
+        }
+
+
+        private void btnAccountInfo_Click(object sender, EventArgs e)
+        {
+            (new accForm(Account.Id)).Show();
             hideSubMenu();
         }
     }

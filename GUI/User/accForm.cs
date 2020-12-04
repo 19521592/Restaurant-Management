@@ -16,6 +16,7 @@ namespace Restaurant_Management.GUI.User
     {
         staffDTO p;
         AccountApp acc;
+
         CustomerDTO pK;
         CustomerAccDTO accK;
         public accForm(string id)
@@ -75,7 +76,7 @@ namespace Restaurant_Management.GUI.User
                 if (txtOldPass.Text == "" || txtNewPass.Text == "" | txtNewPassConfirm.Text == "")
                     throw new Exception("Không được bỏ trống");
                 if (Account.Ins.GetHashPassword(txtOldPass.Text) != acc.Passwords)
-                    throw new Exception("Mật khẩu củ sai");
+                    throw new Exception("Mật khẩu cũ sai");
                 if (txtNewPass.Text != txtNewPassConfirm.Text)
                     throw new Exception("Mật khẩu mới và nhập lại không giống");
 
@@ -116,6 +117,11 @@ namespace Restaurant_Management.GUI.User
             this.Close();
         }
         private void LOSTFOCUS(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

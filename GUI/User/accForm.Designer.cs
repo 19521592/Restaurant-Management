@@ -50,9 +50,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtOldPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,6 +107,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(143)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.btnExit);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(2, 2);
@@ -152,7 +155,7 @@
             this.rBtnSex1.Location = new System.Drawing.Point(131, 240);
             this.rBtnSex1.Name = "rBtnSex1";
             this.rBtnSex1.Size = new System.Drawing.Size(71, 27);
-            this.rBtnSex1.TabIndex = 8;
+            this.rBtnSex1.TabIndex = 0;
             this.rBtnSex1.TabStop = true;
             this.rBtnSex1.Text = "Nam";
             this.rBtnSex1.UseVisualStyleBackColor = true;
@@ -165,7 +168,7 @@
             this.rBtnSex2.Location = new System.Drawing.Point(239, 238);
             this.rBtnSex2.Name = "rBtnSex2";
             this.rBtnSex2.Size = new System.Drawing.Size(57, 27);
-            this.rBtnSex2.TabIndex = 9;
+            this.rBtnSex2.TabIndex = 1;
             this.rBtnSex2.TabStop = true;
             this.rBtnSex2.Text = "Nữ";
             this.rBtnSex2.UseVisualStyleBackColor = true;
@@ -236,8 +239,10 @@
             this.txtNewPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewPassConfirm.Location = new System.Drawing.Point(126, 86);
             this.txtNewPassConfirm.Name = "txtNewPassConfirm";
+            this.txtNewPassConfirm.PasswordChar = '*';
             this.txtNewPassConfirm.Size = new System.Drawing.Size(182, 22);
             this.txtNewPassConfirm.TabIndex = 2;
+            this.txtNewPassConfirm.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -245,17 +250,19 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 83);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.Size = new System.Drawing.Size(69, 20);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Nhập lại:";
+            this.label7.Text = "Nhập lại";
             // 
             // txtNewPass
             // 
             this.txtNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewPass.Location = new System.Drawing.Point(126, 58);
             this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.Size = new System.Drawing.Size(182, 22);
             this.txtNewPass.TabIndex = 1;
+            this.txtNewPass.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -263,17 +270,19 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(8, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 20);
+            this.label6.Size = new System.Drawing.Size(107, 20);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Mật khẩu mới:";
+            this.label6.Text = "Mật khẩu mới";
             // 
             // txtOldPass
             // 
             this.txtOldPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOldPass.Location = new System.Drawing.Point(126, 30);
             this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.PasswordChar = '*';
             this.txtOldPass.Size = new System.Drawing.Size(182, 22);
             this.txtOldPass.TabIndex = 0;
+            this.txtOldPass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -281,14 +290,30 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
+            this.label4.Size = new System.Drawing.Size(98, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Mật khẩu củ:";
+            this.label4.Text = "Mật khẩu cũ";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 23;
+            this.btnExit.Location = new System.Drawing.Point(323, 10);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(23, 23);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 6;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // accForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(179)))));
             this.ClientSize = new System.Drawing.Size(360, 486);
             this.Controls.Add(this.groupBox1);
@@ -305,7 +330,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "accForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AccControl_Load);
             this.LostFocus += new System.EventHandler(this.LOSTFOCUS);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
@@ -313,6 +340,7 @@
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,6 +370,7 @@
         private System.Windows.Forms.TextBox txtOldPass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private FontAwesome.Sharp.IconPictureBox btnExit;
     }
       
 }

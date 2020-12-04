@@ -68,3 +68,46 @@ D:\abc\bin\Debug\PdfSharp.dll
 D:\abc\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
 C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\PdfSharp.dll
 C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.About.NhaHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.AccountGUI.AccItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.AccountGUI.QuanLyTaiKhoan.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.AccountGUI.ThemTaiKhoan.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Customer.CusItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Customer.QuanLyKhachHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Customer.ThemKhachHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManageFood.SuaMon.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.QuanLyNhanVien.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.SuaNhanVien.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.ThemNhanVien.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Notification.Form_Alert.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.FoodCartItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.GioHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.formLogin.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.DoanhThu.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.FoodItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.RecentAction.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.Revenue.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Table.Ban.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Table.ThanhToanBan.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.User.AccControl.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.User.accForm.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.Properties.Resources.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.ThemMon.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.TrangChinh.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.exe
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.pdb
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\Restaurant Management.exe.config
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\Restaurant Management.exe
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\Restaurant Management.pdb
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\PdfSharp.dll
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csproj.CopyComplete

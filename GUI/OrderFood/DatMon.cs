@@ -121,21 +121,24 @@ namespace Restaurant_Management
             flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color2);
             loadFoodIntoFlowLayoutPanel("Món Chính");
-            //OpenChildForm(new FormMainCourse());
         }
         private void dessertBtn_Click(object sender, EventArgs e)
         {
+            flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color3);
+            loadFoodIntoFlowLayoutPanel("Tráng miệng");
         }
         private void drinkBtn_Click(object sender, EventArgs e)
         {
+            flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color4);
-            //OpenChildForm(new FormCustomers());
+            loadFoodIntoFlowLayoutPanel("Thức uống");
         }
         private void comboBtn_Click(object sender, EventArgs e)
         {
+            flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color5);
-            //OpenChildForm(new FormMarketing());
+            loadFoodIntoFlowLayoutPanel("Combo");
         }
 
 
