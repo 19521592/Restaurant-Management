@@ -54,6 +54,7 @@ namespace Restaurant_Management.GUI.Table
         private void Table_Click(object sender, EventArgs e)
         {
             this.ParentForm.updateTableInfo(this);
+            this.ParentForm.showPanelInfo();
             this.BackColor = Color.Aqua;
         }
     }

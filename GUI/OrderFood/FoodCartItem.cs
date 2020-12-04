@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restaurant_Management.GUI.CustomNofication;
 
 namespace Restaurant_Management.GUI
 {
@@ -29,7 +30,7 @@ namespace Restaurant_Management.GUI
         public FoodCartItem(Food foodItem, bool isModify = true)
         {
             InitializeComponent();
-            this.foodItem = foodItem;
+            this.foodItem = new Food(foodItem);
             if (isModify == false)
             {
                 this.btnMinus.Enabled = false;
@@ -47,44 +48,48 @@ namespace Restaurant_Management.GUI
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            bool canChangePrice = true;
+            if (txtBoxNumber.Text == "")
+            {
+                txtBoxNumber.Text = "" + foodItem.Number;
+                Form_Alert.Alert("Không để số lượng trống!", Form_Alert.enmType.Warning);
+                return;
+            }
             int num = Convert.ToInt32(txtBoxNumber.Text);
             if (num > 1)
             {
                 txtBoxNumber.Text = "" + (--num);
+                foodItem.Number = num;
+                this.Tag = foodItem;
+                changeCartPrice(foodItem);
             }
             else
             {
-                canChangePrice = false;
+                GioHang gioHang = (this.ParentForm as GioHang);
+                gioHang.removeFood(foodItem.Id);
                 return;
             }
-            foodItem.Number = num;
-            this.Tag = foodItem;
-            changeCartPrice("-", canChangePrice);
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
+            if (txtBoxNumber.Text == "")
+            {
+                txtBoxNumber.Text = "" + foodItem.Number;
+                Form_Alert.Alert("Không để số lượng trống!", Form_Alert.enmType.Warning);
+                return;
+            }
             int num = Convert.ToInt32(txtBoxNumber.Text);
             txtBoxNumber.Text = "" + (++num);
             foodItem.Number = num;
             this.Tag = foodItem;
-            changeCartPrice("+", true);
+            changeCartPrice(foodItem);
         }
-        private void changeCartPrice(string updown, bool canChangePrice)
+        private void changeCartPrice(Food foodItem)
         {
             if (ParentForm == null)
                 return;
             GioHang gioHang = (this.ParentForm as GioHang);
-
-            if (updown.CompareTo("-") == 0 && canChangePrice == true)
-            {
-                gioHang.updatePrice(foodItem.Price, false, foodItem.Id);
-            }
-            else
-            {
-                gioHang.updatePrice(foodItem.Price, true, foodItem.Id);
-            }
+            gioHang.updatePrice(foodItem);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -92,5 +97,38 @@ namespace Restaurant_Management.GUI
             GioHang gioHang = (this.ParentForm as GioHang);
             gioHang.removeFood(foodItem.Id);
         }
+
+        private void checkValue(object sender, EventArgs e)
+        {
+            TextBox txtBoxNumber = sender as TextBox;
+            int num = 0;
+            if (txtBoxNumber.Text == "")
+            {
+                return;
+            }
+            if (!Int32.TryParse(txtBoxNumber.Text, out num))
+            {
+                Form_Alert.Alert("Chỉ được nhập số", Form_Alert.enmType.Warning);
+
+                if (txtBoxNumber.Text.Length > 1) txtBoxNumber.Text = txtBoxNumber.Text.Remove(txtBoxNumber.Text.Length - 1, 1);
+                else if (txtBoxNumber.Text.Length == 1) txtBoxNumber.Text = "1";
+                return;
+            }
+            if (num <= 0)
+            {
+                Form_Alert.Alert("Số lượng phải >= 0", Form_Alert.enmType.Warning);
+                txtBoxNumber.Text = "1";
+                return;
+            }
+            updatePriceTxtBox();
+        }
+
+        private void updatePriceTxtBox()
+        {
+            foodItem.Number = Convert.ToInt32(txtBoxNumber.Text);
+            this.Tag = foodItem;
+            changeCartPrice(foodItem);
+        }
+
     }
 }

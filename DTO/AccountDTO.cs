@@ -12,6 +12,7 @@ namespace Restaurant_Management.GUI.Login
         {
             this.Id = account.Id;
             this.Username = account.Username;
+            this.Passwords = account.Passwords;
         }
         public AccountApp()
         {
@@ -19,6 +20,7 @@ namespace Restaurant_Management.GUI.Login
         }
         public string Id { get; set; }
         public string Username { get; set; }
+        public string Passwords { get; set; }
 
     }
 }

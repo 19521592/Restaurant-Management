@@ -36,9 +36,14 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.50.4740.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\PdfSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,11 +56,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Account.cs" />
+    <Compile Include="BLL\ACCOUNTKHACHHANG.cs" />
     <Compile Include="BLL\BANAN.cs" />
     <Compile Include="BLL\HOADONBAN.cs" />
+    <Compile Include="BLL\KHACHHANG.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
     <Compile Include="BLL\THUCDONBAN.cs" />
+    <Compile Include="DTO\CustomerAccDTO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
     <Compile Include="DTO\FoodDTO.cs" />
     <Compile Include="DTO\staffDTO.cs" />
     <Compile Include="GUI\About\deverloper.cs">
@@ -67,6 +76,42 @@
     </Compile>
     <Compile Include="GUI\About\NhaHang.Designer.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="GUI\AccountGUI\AccItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\AccItem.Designer.cs">
+      <DependentUpon>AccItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\ThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\ThemTaiKhoan.Designer.cs">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Customer\CusItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Customer\CusItem.Designer.cs">
+      <DependentUpon>CusItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Customer\QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Customer\QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Customer\ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Customer\ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ManageFood\SuaMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +146,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Notification\Form_Alert.Designer.cs" />
+    <Compile Include="GUI\OrderFood\BILL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\BILL.Designer.cs">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\OrderFood\DatMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +184,24 @@
     <Compile Include="GUI\ManageFood\QuanLyMonAn.Designer.cs">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Revenue\DoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\DoanhThu.Designer.cs">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Revenue\FoodItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\FoodItem.Designer.cs">
+      <DependentUpon>FoodItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Revenue\RecentAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\RecentAction.Designer.cs">
+      <DependentUpon>RecentAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Revenue\Revenue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +226,18 @@
     <Compile Include="GUI\Table\ThanhToanBan.Designer.cs">
       <DependentUpon>ThanhToanBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\User\AccControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\User\AccControl.Designer.cs">
+      <DependentUpon>AccControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\accForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\accForm.Designer.cs">
+      <DependentUpon>accForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\ManageFood\ThemMon.cs">
@@ -173,6 +254,24 @@
     </Compile>
     <EmbeddedResource Include="GUI\About\deverloper.resx" />
     <EmbeddedResource Include="GUI\About\NhaHang.resx" />
+    <EmbeddedResource Include="GUI\AccountGUI\AccItem.resx">
+      <DependentUpon>AccItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AccountGUI\QuanLyTaiKhoan.resx">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AccountGUI\ThemTaiKhoan.resx">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Customer\CusItem.resx">
+      <DependentUpon>CusItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Customer\QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Customer\ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManageFood\SuaMon.resx">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +288,9 @@
       <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Notification\Form_Alert.resx" />
+    <EmbeddedResource Include="GUI\OrderFood\BILL.resx">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +303,15 @@
     <EmbeddedResource Include="GUI\Login\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\DoanhThu.resx">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\FoodItem.resx">
+      <DependentUpon>FoodItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\RecentAction.resx">
+      <DependentUpon>RecentAction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Revenue\Revenue.resx">
       <DependentUpon>Revenue.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +323,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Table\ThanhToanBan.resx">
       <DependentUpon>ThanhToanBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\AccControl.resx">
+      <DependentUpon>AccControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\accForm.resx">
+      <DependentUpon>accForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -254,6 +371,7 @@
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
+    <Content Include="packages\PdfSharp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

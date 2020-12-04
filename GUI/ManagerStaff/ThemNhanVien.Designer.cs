@@ -250,7 +250,8 @@
             "Chạy bàn",
             "Quản lí",
             "Cầm đầu",
-            "Bảo vệ"});
+            "Bảo vệ",
+            "Nhân viên"});
             this.comboBox1.Location = new System.Drawing.Point(384, 260);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(226, 24);

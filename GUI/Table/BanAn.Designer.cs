@@ -32,8 +32,9 @@ namespace Restaurant_Management.GUI.Table
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlInfo = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
+            this.btnCloseInfo = new FontAwesome.Sharp.IconPictureBox();
             this.btnSelectTable = new System.Windows.Forms.Button();
             this.lblTableStatus = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -41,7 +42,8 @@ namespace Restaurant_Management.GUI.Table
             this.flpnlTable = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,7 +54,7 @@ namespace Restaurant_Management.GUI.Table
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 41);
+            this.panel1.Size = new System.Drawing.Size(644, 41);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -75,7 +77,7 @@ namespace Restaurant_Management.GUI.Table
             this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 23;
-            this.btnExit.Location = new System.Drawing.Point(765, 8);
+            this.btnExit.Location = new System.Drawing.Point(613, 10);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(23, 23);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,19 +85,21 @@ namespace Restaurant_Management.GUI.Table
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panel2
+            // pnlInfo
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnPay);
-            this.panel2.Controls.Add(this.btnSelectTable);
-            this.panel2.Controls.Add(this.lblTableStatus);
-            this.panel2.Controls.Add(this.lblStatus);
-            this.panel2.Controls.Add(this.lblTableName);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(644, 41);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(156, 409);
-            this.panel2.TabIndex = 1;
+            this.pnlInfo.BackColor = System.Drawing.Color.White;
+            this.pnlInfo.Controls.Add(this.btnPay);
+            this.pnlInfo.Controls.Add(this.btnCloseInfo);
+            this.pnlInfo.Controls.Add(this.btnSelectTable);
+            this.pnlInfo.Controls.Add(this.lblTableStatus);
+            this.pnlInfo.Controls.Add(this.lblStatus);
+            this.pnlInfo.Controls.Add(this.lblTableName);
+            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlInfo.Location = new System.Drawing.Point(644, 0);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(156, 450);
+            this.pnlInfo.TabIndex = 1;
+            this.pnlInfo.Visible = false;
             // 
             // btnPay
             // 
@@ -110,6 +114,22 @@ namespace Restaurant_Management.GUI.Table
             this.btnPay.Text = "Thanh toán";
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // btnCloseInfo
+            // 
+            this.btnCloseInfo.BackColor = System.Drawing.Color.White;
+            this.btnCloseInfo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCloseInfo.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCloseInfo.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnCloseInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloseInfo.IconSize = 23;
+            this.btnCloseInfo.Location = new System.Drawing.Point(10, 12);
+            this.btnCloseInfo.Name = "btnCloseInfo";
+            this.btnCloseInfo.Size = new System.Drawing.Size(23, 23);
+            this.btnCloseInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCloseInfo.TabIndex = 4;
+            this.btnCloseInfo.TabStop = false;
+            this.btnCloseInfo.Click += new System.EventHandler(this.btnCloseInfo_Click);
             // 
             // btnSelectTable
             // 
@@ -127,18 +147,18 @@ namespace Restaurant_Management.GUI.Table
             // 
             // lblTableStatus
             // 
-            this.lblTableStatus.AutoSize = true;
             this.lblTableStatus.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTableStatus.Location = new System.Drawing.Point(27, 179);
+            this.lblTableStatus.Location = new System.Drawing.Point(6, 147);
             this.lblTableStatus.Name = "lblTableStatus";
-            this.lblTableStatus.Size = new System.Drawing.Size(0, 19);
+            this.lblTableStatus.Size = new System.Drawing.Size(147, 64);
             this.lblTableStatus.TabIndex = 1;
+            this.lblTableStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblStatus.Location = new System.Drawing.Point(35, 128);
+            this.lblStatus.Location = new System.Drawing.Point(35, 126);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(83, 19);
             this.lblStatus.TabIndex = 0;
@@ -146,13 +166,13 @@ namespace Restaurant_Management.GUI.Table
             // 
             // lblTableName
             // 
-            this.lblTableName.AutoSize = true;
             this.lblTableName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTableName.Location = new System.Drawing.Point(51, 62);
+            this.lblTableName.Location = new System.Drawing.Point(31, 60);
             this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(38, 19);
+            this.lblTableName.Size = new System.Drawing.Size(87, 33);
             this.lblTableName.TabIndex = 0;
             this.lblTableName.Text = "Bàn";
+            this.lblTableName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flpnlTable
             // 
@@ -168,8 +188,8 @@ namespace Restaurant_Management.GUI.Table
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flpnlTable);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlInfo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BanAn";
@@ -178,8 +198,9 @@ namespace Restaurant_Management.GUI.Table
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,7 +208,7 @@ namespace Restaurant_Management.GUI.Table
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.FlowLayoutPanel flpnlTable;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox btnExit;
@@ -196,5 +217,6 @@ namespace Restaurant_Management.GUI.Table
         private System.Windows.Forms.Label lblTableName;
         private System.Windows.Forms.Button btnSelectTable;
         private System.Windows.Forms.Button btnPay;
+        private FontAwesome.Sharp.IconPictureBox btnCloseInfo;
     }
 }

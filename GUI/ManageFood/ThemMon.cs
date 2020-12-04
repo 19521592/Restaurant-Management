@@ -37,7 +37,7 @@ namespace Restaurant_Management
             {
                 lbl.Font = new Font("Microsoft Sans Serif", 9);
                 lbl.Cursor = Cursors.Arrow;
-                lbl.Location = new Point(lbl.Location.X, lbl.Location.Y - 12);
+                lbl.Location = new Point(lbl.Location.X, lbl.Location.Y - 15);
                 foreach (Control txt in pnlInformation.Controls)
                 {
                     if (txt.GetType() == typeof(TextBox) && txt.Name == "txtBox" + lbl.Name.Remove(0, 3))
@@ -67,7 +67,7 @@ namespace Restaurant_Management
                         txt.Clear();
                         ctrl.Font = new Font("Microsoft Sans Serif", 9);
                         ctrl.Cursor = Cursors.Arrow;
-                        ctrl.Location = new Point(ctrl.Location.X, ctrl.Location.Y - 12);
+                        ctrl.Location = new Point(ctrl.Location.X, ctrl.Location.Y - 15);
                     }
                 }
 
