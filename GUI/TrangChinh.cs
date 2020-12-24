@@ -14,6 +14,7 @@ using Restaurant_Management.GUI.About;
 using Restaurant_Management.GUI.Revenue;
 using Restaurant_Management.GUI.AccountGUI;
 using Restaurant_Management.GUI.User;
+using Restaurant_Management.GUI.Report;
 
 namespace Restaurant_Management
 {
@@ -209,25 +210,21 @@ namespace Restaurant_Management
         }
         public void loadAdmin()
         {
-            //this.btnManage.Enabled = true;
-            //this.pnlManageSubMenu.Enabled = true;
-            //this.btnStatistics.Enabled = true;
-            //this.pnlStatisticsSubMenu.Enabled = true;
-            //this.btnAbout.Enabled = true;
-            //this.pnlAboutSubMenu.Enabled = true;
-
             this.btnManage.Visible = true;
-            //this.pnlManageSubMenu.Enabled = true;
             this.btnStatistics.Visible = true;
-            //this.pnlStatisticsSubMenu.Enabled = true;
             this.btnAbout.Visible = true;
-            //this.pnlAboutSubMenu.Enabled = true;
         }
 
 
         private void btnAccountInfo_Click(object sender, EventArgs e)
         {
             (new accForm(Account.Id)).Show();
+            hideSubMenu();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new BaoCao());
             hideSubMenu();
         }
     }

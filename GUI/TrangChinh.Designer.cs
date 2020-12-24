@@ -58,6 +58,7 @@
             this.btnMaximize = new FontAwesome.Sharp.IconPictureBox();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlAccountSubMenu.SuspendLayout();
             this.pnlAboutSubMenu.SuspendLayout();
@@ -99,7 +100,7 @@
             this.pnlAccountSubMenu.Controls.Add(this.btnLogout);
             this.pnlAccountSubMenu.Controls.Add(this.btnAccountInfo);
             this.pnlAccountSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAccountSubMenu.Location = new System.Drawing.Point(0, 665);
+            this.pnlAccountSubMenu.Location = new System.Drawing.Point(0, 710);
             this.pnlAccountSubMenu.Name = "pnlAccountSubMenu";
             this.pnlAccountSubMenu.Size = new System.Drawing.Size(229, 125);
             this.pnlAccountSubMenu.TabIndex = 9;
@@ -163,7 +164,7 @@
             this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAccount.IconSize = 35;
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAccount.Location = new System.Drawing.Point(0, 620);
+            this.btnAccount.Location = new System.Drawing.Point(0, 665);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAccount.Size = new System.Drawing.Size(229, 45);
@@ -179,7 +180,7 @@
             this.pnlAboutSubMenu.Controls.Add(this.btnDevInfo);
             this.pnlAboutSubMenu.Controls.Add(this.btnRestaurantInfo);
             this.pnlAboutSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAboutSubMenu.Location = new System.Drawing.Point(0, 535);
+            this.pnlAboutSubMenu.Location = new System.Drawing.Point(0, 580);
             this.pnlAboutSubMenu.Name = "pnlAboutSubMenu";
             this.pnlAboutSubMenu.Size = new System.Drawing.Size(229, 85);
             this.pnlAboutSubMenu.TabIndex = 7;
@@ -227,7 +228,7 @@
             this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAbout.IconSize = 35;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAbout.Location = new System.Drawing.Point(0, 490);
+            this.btnAbout.Location = new System.Drawing.Point(0, 535);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAbout.Size = new System.Drawing.Size(229, 45);
@@ -240,11 +241,12 @@
             // pnlStatisticsSubMenu
             // 
             this.pnlStatisticsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlStatisticsSubMenu.Controls.Add(this.button1);
             this.pnlStatisticsSubMenu.Controls.Add(this.btnRevenue);
             this.pnlStatisticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlStatisticsSubMenu.Location = new System.Drawing.Point(0, 441);
             this.pnlStatisticsSubMenu.Name = "pnlStatisticsSubMenu";
-            this.pnlStatisticsSubMenu.Size = new System.Drawing.Size(229, 49);
+            this.pnlStatisticsSubMenu.Size = new System.Drawing.Size(229, 94);
             this.pnlStatisticsSubMenu.TabIndex = 5;
             // 
             // btnRevenue
@@ -535,6 +537,22 @@
             this.panel2.Size = new System.Drawing.Size(1205, 722);
             this.panel2.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.LightGray;
+            this.button1.Location = new System.Drawing.Point(0, 40);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(229, 40);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Báo cáo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TrangChinh
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -597,5 +615,6 @@
         private System.Windows.Forms.Button btnManageAccount;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

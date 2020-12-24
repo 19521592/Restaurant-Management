@@ -151,5 +151,10 @@ namespace Restaurant_Management.GUI.Table
         {
             closePanelInfo();
         }
+
+        private void BanAn_MouseLeave(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -342,7 +342,7 @@ namespace Restaurant_Management
         //Select Table
         public Ban selectedTable { get; set;  }
         BanAn banAn;
-        private void btnTable_Click(object sender, EventArgs e)
+        private void showTableList()
         {
             banAn = new BanAn(selectedTable, this);
             banAn.FormClosed += new FormClosedEventHandler(updateTableInfo);
@@ -350,6 +350,10 @@ namespace Restaurant_Management
             //this.Focus;
             banAn.Focus();
             banAn.loadTableIntoFlowLayoutPanel();
+        }
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            showTableList();
         }
         private void updateTableInfo(object sender, FormClosedEventArgs e)
         {
@@ -445,6 +449,11 @@ namespace Restaurant_Management
             this.btnTable.Text = "Chọn bàn";
             this.allFoodCount = 0;
             this.selectedTable = null;
+        }
+
+        private void btnTable_MouseMove(object sender, MouseEventArgs e)
+        {
+            showTableList();
         }
     }
 }

@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -43,6 +48,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,7 +69,20 @@
     <Compile Include="BLL\KHACHHANG.cs" />
     <Compile Include="BLL\MONAN.cs" />
     <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="BLL\Report.cs" />
     <Compile Include="BLL\THUCDONBAN.cs" />
+    <Compile Include="BUS\Report\DataSetRevenueDetail.cs">
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\Report\DataSetRevenueDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\Report\ReportPreview.cs" />
+    <Compile Include="BUS\Report\ReportTime.cs" />
+    <Compile Include="BUS\Report\ReportTitle.cs" />
+    <Compile Include="BUS\Report\RevenueDetail.cs" />
     <Compile Include="DTO\CustomerAccDTO.cs" />
     <Compile Include="DTO\CustomerDTO.cs" />
     <Compile Include="DTO\FoodDTO.cs" />
@@ -184,6 +204,19 @@
     <Compile Include="GUI\ManageFood\QuanLyMonAn.Designer.cs">
       <DependentUpon>QuanLyMonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Report\BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\BaoCao.Designer.cs">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\Report\ReportForm.cs" />
+    <Compile Include="GUI\Report\Template\RevenueDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RevenueDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\Revenue\DoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +336,13 @@
     <EmbeddedResource Include="GUI\Login\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\BaoCao.resx">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\RevenueDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RevenueDetail.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Revenue\DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +388,17 @@
     <EmbeddedResource Include="GUI\TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BUS\Report\DataSetRevenueDetail.xsc">
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </None>
+    <None Include="BUS\Report\DataSetRevenueDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRevenueDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BUS\Report\DataSetRevenueDetail.xss">
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="packages\FontAwesome.Sharp.5.15.3\.signature.p7s" />
     <None Include="packages\FontAwesome.Sharp.5.15.3\FontAwesome.Sharp.5.15.3.nupkg" />
@@ -372,6 +423,10 @@
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
     <Content Include="packages\PdfSharp.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
