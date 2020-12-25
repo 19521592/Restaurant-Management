@@ -299,6 +299,7 @@
             this.btnTable.Text = "Bàn";
             this.btnTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTable.UseVisualStyleBackColor = true;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // btnManageFood
             // 

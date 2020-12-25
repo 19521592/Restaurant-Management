@@ -52,7 +52,7 @@ namespace Restaurant_Management.GUI.Customer
                 p.Sdt = txtPhone.Text;
                 p.Diem = "0";
                 bool rs = KHACHHANG.Ins.Insert(p);
-                bool rs1 = ACCOUNTKHACHHANG.Ins.Insert(txtID.Text, txtUserName.Text, Account.Ins.GetHashPassword(txtPassWords.Text), p.LoaiKH);
+                bool rs1 = ACCOUNTKHACHHANG.Ins.Insert(txtID.Text, txtUserName.Text, Account.Ins.GetHashPassword(txtPassWords.Text));
                 if (rs == true && rs1 == true)
                     Form_Alert.Alert("Đăng kí thành công.", Form_Alert.enmType.Success);
                 else

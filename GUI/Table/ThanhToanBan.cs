@@ -17,7 +17,7 @@ namespace Restaurant_Management.GUI.Table
         private IDictionary<string, Food> orderedFood;
         private List<string> idOrderedFood;
         private Ban selectedTable;
-        private string staffId;
+      //  private string staffId;
         private string idBanAn;
         public CustomerOrderForm ParentForm { get; set; }
 

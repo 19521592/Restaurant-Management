@@ -409,7 +409,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuanLyKhachHang";
             this.Text = "QuanLyNhanVien";
-            this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
+            this.Load += new System.EventHandler(this.QuanLyKhachHang_Load);
             this.panel5.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel14.ResumeLayout(false);

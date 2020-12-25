@@ -39,7 +39,7 @@ namespace Restaurant_Management.BLL
         }
         public string getMaKHnext()
         {
-            string query = "SELECT ID FROM KHACHHANG";
+            string query = "SELECT MAKH FROM KHACHHANG";
             DataTable tbl = Provider.Ins.ExcuteQuery(query);
             string res = (tbl.Rows.Count + 1).ToString();
             while (res.Length < 3)
@@ -49,8 +49,8 @@ namespace Restaurant_Management.BLL
         }
         public bool Insert(CustomerDTO p)
         {
-            string query = "INSERT INTO KHACHHANG VALUES ( @MAKH , @HOTEN , @SDT , @DIEM , @LOAIKH )";
-            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { getMaKHnext() , p.Hoten, p.Sdt, p.Diem, p.LoaiKH });
+            string query = "INSERT INTO KHACHHANG VALUES ( @MAKH , @HOTEN , @GIOITINH , @SDT , @DIEM , @LOAIKH )";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { getMaKHnext() , p.Hoten, p.Gioitinh ,p.Sdt, p.Diem, p.LoaiKH });
             return (rs > 0);
         }   
         public CustomerDTO getKH(string MaKH)
@@ -64,15 +64,37 @@ namespace Restaurant_Management.BLL
             tmp.Hoten = rs.Rows[0][1].ToString();
             tmp.Gioitinh = rs.Rows[0][2].ToString();
             tmp.Sdt = rs.Rows[0][3].ToString();
-            tmp.Diem = rs.Rows[0][4].ToString();
+            tmp.Diem= rs.Rows[0][4].ToString();
             tmp.LoaiKH = rs.Rows[0][5].ToString();
             return tmp;
         }
+
         public bool Exist_Phone(string phone)
         {
             string query = "SELECT * FROM KHACHHANG WHERE SDT = @SDT ";
             int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { phone });
             return (rs > 0);
+        }
+
+        public List<CustomerDTO> getList()
+        {
+            List<CustomerDTO> list = new List<CustomerDTO>();
+            CustomerDTO p;
+            string query = "SELECT * FROM KHACHHANG";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+
+            for (int i=0; i< rs.Rows.Count; i++)
+            {
+                p = new CustomerDTO();
+                p.Makh = rs.Rows[i][0].ToString();
+                p.Hoten = rs.Rows[i][1].ToString();
+                p.Gioitinh = rs.Rows[i][2].ToString();
+                p.Sdt = rs.Rows[i][3].ToString();
+                p.Diem = rs.Rows[i][4].ToString();
+                p.LoaiKH = rs.Rows[i][5].ToString();
+                list.Add(p);
+            }
+            return list;
         }
     }
 }

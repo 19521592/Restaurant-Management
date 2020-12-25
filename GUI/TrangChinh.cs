@@ -12,7 +12,7 @@ using Restaurant_Management.GUI.ManagerStaff;
 using Restaurant_Management.GUI.Login;
 using Restaurant_Management.GUI.About;
 using Restaurant_Management.GUI.Revenue;
-
+using Restaurant_Management.GUI.Customer;
 namespace Restaurant_Management
 {
     public partial class TrangChinh : Form
@@ -137,17 +137,17 @@ namespace Restaurant_Management
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
+        } 
 
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new QuanLyNhanVien());
+            openChildFormInPanel(new QuanLyKhachHang());
             hideSubMenu();
         }
 
         private void btnStaff_Click_1(object sender, EventArgs e)
-        {                           
+        {
             openChildFormInPanel(new QuanLyNhanVien());
             hideSubMenu();
         }
@@ -180,6 +180,10 @@ namespace Restaurant_Management
         {
             openChildFormInPanel(new Revenue());
             hideSubMenu();
+        }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -20,14 +20,14 @@ namespace Restaurant_Management.BLL
         }
         public bool Exists_UserName(string userName)
         {
-            string query = "SELECT ID FROM ACCOUNTKHACHHANG WHERE USERNAME = @1";
+            string query = "SELECT MAKH FROM ACCOUNTKHACHHANG WHERE USERNAME = @1";
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { userName });
             return (rs.Rows.Count > 0);
         }
-        public bool Insert(string id, string userName, string pass, string loai)
+        public bool Insert(string id, string userName, string pass)
         {
-            string query = "INSERT INTO ACCOUNTKHACHHANG VALUES ( @1 , @2 , @3 , @4 )";
-            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { id, userName, pass, loai });
+            string query = "INSERT INTO ACCOUNTKHACHHANG VALUES ( @1 , @2 , @3 )";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { id, userName, pass});
             return (rs > 0);
         }
     }

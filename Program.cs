@@ -16,7 +16,7 @@ namespace Restaurant_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new GUI.Reviews.Form1("KH001"));
             
         }
     }

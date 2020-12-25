@@ -36,3 +36,8 @@ D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.AccountGUI.Them
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Customer.QuanLyKhachHang.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Customer.CusItem.resources
 D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.User.accForm.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Reviews.Form1.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Reviews.FoodRate.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Reviews.CusRate.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Reviews.ReviewFood.resources
+D:\Git\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Reviews.Writer.resources

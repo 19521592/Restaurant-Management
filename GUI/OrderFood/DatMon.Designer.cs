@@ -36,12 +36,12 @@
             this.btnAppetizer = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.homeBtn = new FontAwesome.Sharp.IconPictureBox();
-            this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlPurchase = new System.Windows.Forms.Panel();
             this.btnPrice = new FontAwesome.Sharp.IconButton();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).BeginInit();
@@ -198,17 +198,6 @@
             this.homeBtn.TabStop = false;
             this.homeBtn.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // flowLayoutPanelMain
-            // 
-            this.flowLayoutPanelMain.AutoScroll = true;
-            this.flowLayoutPanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelMain.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanelMain.Location = new System.Drawing.Point(7, 72);
-            this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1273, 475);
-            this.flowLayoutPanelMain.TabIndex = 3;
-            // 
             // pnlPurchase
             // 
             this.pnlPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -283,6 +272,17 @@
             this.panel1.Size = new System.Drawing.Size(7, 475);
             this.panel1.TabIndex = 6;
             // 
+            // flowLayoutPanelMain
+            // 
+            this.flowLayoutPanelMain.AutoScroll = true;
+            this.flowLayoutPanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelMain.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanelMain.Location = new System.Drawing.Point(7, 72);
+            this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1273, 475);
+            this.flowLayoutPanelMain.TabIndex = 3;
+            // 
             // CustomerOrderForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -313,11 +313,11 @@
         private FontAwesome.Sharp.IconButton btnAppetizer;
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconPictureBox homeBtn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
         private System.Windows.Forms.Panel pnlPurchase;
         private FontAwesome.Sharp.IconButton btnPrice;
         private System.Windows.Forms.Button btnCart;
         private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
     }
 }
