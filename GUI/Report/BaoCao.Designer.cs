@@ -68,6 +68,7 @@ namespace Restaurant_Management.GUI.Report
             this.panel6 = new System.Windows.Forms.Panel();
             this.pnlPreview = new System.Windows.Forms.Panel();
             this.crystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlOptionalTimeApply.SuspendLayout();
@@ -317,6 +318,7 @@ namespace Restaurant_Management.GUI.Report
             // 
             this.panel14.Controls.Add(this.rdBtnRevenueDetail);
             this.panel14.Controls.Add(this.rdBtnFoodByStaff);
+            this.panel14.Controls.Add(this.radioButton1);
             this.panel14.Controls.Add(this.rdBtnRevenueByStaff);
             this.panel14.Controls.Add(this.rdBtnFoodByCustomer);
             this.panel14.Controls.Add(this.rdBtnRevenueByCustomer);
@@ -329,57 +331,62 @@ namespace Restaurant_Management.GUI.Report
             // rdBtnRevenueDetail
             // 
             this.rdBtnRevenueDetail.AutoSize = true;
-            this.rdBtnRevenueDetail.Location = new System.Drawing.Point(3, 11);
+            this.rdBtnRevenueDetail.Location = new System.Drawing.Point(8, 8);
             this.rdBtnRevenueDetail.Name = "rdBtnRevenueDetail";
             this.rdBtnRevenueDetail.Size = new System.Drawing.Size(140, 21);
             this.rdBtnRevenueDetail.TabIndex = 2;
             this.rdBtnRevenueDetail.TabStop = true;
             this.rdBtnRevenueDetail.Text = "Chi tiết doanh thu";
             this.rdBtnRevenueDetail.UseVisualStyleBackColor = true;
+            this.rdBtnRevenueDetail.CheckedChanged += new System.EventHandler(this.rdBtnRevenueDetail_CheckedChanged);
             // 
             // rdBtnFoodByStaff
             // 
             this.rdBtnFoodByStaff.AutoSize = true;
-            this.rdBtnFoodByStaff.Location = new System.Drawing.Point(3, 121);
+            this.rdBtnFoodByStaff.Location = new System.Drawing.Point(8, 147);
             this.rdBtnFoodByStaff.Name = "rdBtnFoodByStaff";
             this.rdBtnFoodByStaff.Size = new System.Drawing.Size(189, 21);
             this.rdBtnFoodByStaff.TabIndex = 2;
             this.rdBtnFoodByStaff.TabStop = true;
             this.rdBtnFoodByStaff.Text = "Hàng bán theo nhân viên";
             this.rdBtnFoodByStaff.UseVisualStyleBackColor = true;
+            this.rdBtnFoodByStaff.CheckedChanged += new System.EventHandler(this.rdBtnRevenueDetail_CheckedChanged);
             // 
             // rdBtnRevenueByStaff
             // 
             this.rdBtnRevenueByStaff.AutoSize = true;
-            this.rdBtnRevenueByStaff.Location = new System.Drawing.Point(3, 66);
+            this.rdBtnRevenueByStaff.Location = new System.Drawing.Point(8, 63);
             this.rdBtnRevenueByStaff.Name = "rdBtnRevenueByStaff";
             this.rdBtnRevenueByStaff.Size = new System.Drawing.Size(193, 21);
             this.rdBtnRevenueByStaff.TabIndex = 2;
             this.rdBtnRevenueByStaff.TabStop = true;
             this.rdBtnRevenueByStaff.Text = "Doanh thu theo nhân viên";
             this.rdBtnRevenueByStaff.UseVisualStyleBackColor = true;
+            this.rdBtnRevenueByStaff.CheckedChanged += new System.EventHandler(this.rdBtnRevenueDetail_CheckedChanged);
             // 
             // rdBtnFoodByCustomer
             // 
             this.rdBtnFoodByCustomer.AutoSize = true;
-            this.rdBtnFoodByCustomer.Location = new System.Drawing.Point(3, 93);
+            this.rdBtnFoodByCustomer.Location = new System.Drawing.Point(8, 119);
             this.rdBtnFoodByCustomer.Name = "rdBtnFoodByCustomer";
             this.rdBtnFoodByCustomer.Size = new System.Drawing.Size(201, 21);
             this.rdBtnFoodByCustomer.TabIndex = 2;
             this.rdBtnFoodByCustomer.TabStop = true;
             this.rdBtnFoodByCustomer.Text = "Hàng bán theo khách hàng";
             this.rdBtnFoodByCustomer.UseVisualStyleBackColor = true;
+            this.rdBtnFoodByCustomer.CheckedChanged += new System.EventHandler(this.rdBtnRevenueDetail_CheckedChanged);
             // 
             // rdBtnRevenueByCustomer
             // 
             this.rdBtnRevenueByCustomer.AutoSize = true;
-            this.rdBtnRevenueByCustomer.Location = new System.Drawing.Point(3, 38);
+            this.rdBtnRevenueByCustomer.Location = new System.Drawing.Point(8, 35);
             this.rdBtnRevenueByCustomer.Name = "rdBtnRevenueByCustomer";
             this.rdBtnRevenueByCustomer.Size = new System.Drawing.Size(205, 21);
             this.rdBtnRevenueByCustomer.TabIndex = 2;
             this.rdBtnRevenueByCustomer.TabStop = true;
             this.rdBtnRevenueByCustomer.Text = "Doanh thu theo khách hàng";
             this.rdBtnRevenueByCustomer.UseVisualStyleBackColor = true;
+            this.rdBtnRevenueByCustomer.CheckedChanged += new System.EventHandler(this.rdBtnRevenueDetail_CheckedChanged);
             // 
             // panel13
             // 
@@ -496,6 +503,18 @@ namespace Restaurant_Management.GUI.Report
             this.crystalReportViewer.TabIndex = 0;
             this.crystalReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(8, 90);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(136, 21);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Hàng hóa bán ra";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.rdBtnRevenueDetail_CheckedChanged);
+            // 
             // BaoCao
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -572,5 +591,6 @@ namespace Restaurant_Management.GUI.Report
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel11;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

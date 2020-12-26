@@ -45,7 +45,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\PdfSharp.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -79,9 +81,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BUS\Report\FoodByCustomer.cs" />
+    <Compile Include="BUS\Report\FoodByStaff.cs" />
+    <Compile Include="BUS\Report\FoodSelling.cs" />
     <Compile Include="BUS\Report\ReportPreview.cs" />
     <Compile Include="BUS\Report\ReportTime.cs" />
     <Compile Include="BUS\Report\ReportTitle.cs" />
+    <Compile Include="BUS\Report\RevenueByCustomer.cs" />
+    <Compile Include="BUS\Report\RevenueByStaff.cs" />
     <Compile Include="BUS\Report\RevenueDetail.cs" />
     <Compile Include="DTO\CustomerAccDTO.cs" />
     <Compile Include="DTO\CustomerDTO.cs" />
@@ -211,6 +218,36 @@
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="BUS\Report\ReportForm.cs" />
+    <Compile Include="GUI\Report\Template\FoodByCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodByCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\FoodByStaff.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodByStaff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\FoodSelling.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodSelling.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\RevenueByCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RevenueByCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\RevenueByStaff.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RevenueByStaff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\Report\Template\RevenueDetail.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -338,6 +375,26 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Report\BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\FoodByCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FoodByCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\FoodByStaff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FoodByStaff.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\FoodSelling.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FoodSelling.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\RevenueByCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RevenueByCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\RevenueByStaff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RevenueByStaff.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Report\Template\RevenueDetail.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

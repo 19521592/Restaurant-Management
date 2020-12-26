@@ -13,13 +13,18 @@ namespace Restaurant_Management.GUI.Report
 {
     public partial class BaoCao : Form
     {
-
+        BUS.Report.ReportForm report;
+        ReportForm.Time kindOfTime;
+        string kindOfReportName;
         public BaoCao()
         {
             InitializeComponent();
-            loadInfo(ReportForm.Time.ThisMonth);
+            kindOfTime = ReportForm.Time.ThisMonth;
+            report = new BUS.Report.RevenueDetail(kindOfTime, pnlOptionalTime, crystalReportViewer);
+            kindOfReportName = report.reportTitle.title;
+            loadInfo(report);
             rdBtnThisMonth.Checked = true;
-            rdBtnRevenueDetail.Checked = true;
+            rdBtnRevenueDetail.Checked = true;        
         }
         private void attachTagForTimeRadioButton()
         {
@@ -31,9 +36,8 @@ namespace Restaurant_Management.GUI.Report
             rdBtnToday.Tag = ReportForm.Time.Today;
             rdBtnYesterday.Tag = ReportForm.Time.Yesterday;
         }
-        private void loadInfo(ReportForm.Time kindOfTime)
+        private void loadInfo(ReportForm report)
         {
-            BUS.Report.RevenueDetail report = new BUS.Report.RevenueDetail(kindOfTime, pnlOptionalTime, crystalReportViewer);
             report.loadInfo();
             attachTagForTimeRadioButton();
         }
@@ -55,7 +59,11 @@ namespace Restaurant_Management.GUI.Report
         private void rdBtnToday_CheckedChanged(object sender, EventArgs e)
         {
             if ((sender as RadioButton).Checked == true)
-                loadInfo((ReportForm.Time)(sender as RadioButton).Tag);
+            {
+                kindOfTime = (ReportForm.Time)(sender as RadioButton).Tag;
+                createReport(kindOfTime, kindOfReportName);
+                loadInfo(report);
+            }
         }
 
         private void btnOptionalTimeApply_Click(object sender, EventArgs e)
@@ -66,7 +74,46 @@ namespace Restaurant_Management.GUI.Report
             }
             else
             {
-                loadInfo(ReportForm.Time.Optional);
+                kindOfTime = ReportForm.Time.Optional;
+                createReport(kindOfTime, report.reportTitle.title);
+                loadInfo(report);
+            }
+        }
+
+        private void rdBtnRevenueDetail_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton kindOfReport = (sender as RadioButton);
+            if (kindOfReport.Checked == true)
+            {
+                this.kindOfReportName = kindOfReport.Text;
+                createReport(kindOfTime, kindOfReportName);
+                loadInfo(report);
+            }
+        }
+        private void createReport(ReportForm.Time kindOfTime, string kindOfReportName)
+        {
+            switch (kindOfReportName)
+            {
+                case "Chi tiết doanh thu":
+                    report = new RevenueDetail(kindOfTime, pnlOptionalTime, crystalReportViewer);
+                    break;
+                case "Doanh thu theo nhân viên":
+                    report = new RevenueByStaff(kindOfTime, pnlOptionalTime, crystalReportViewer);
+                    break;
+                case "Doanh thu theo khách hàng":
+                    report = new RevenueByCustomer(kindOfTime, pnlOptionalTime, crystalReportViewer);
+                    break;
+                case "Hàng hóa bán ra":
+                    report = new FoodSelling(kindOfTime, pnlOptionalTime, crystalReportViewer);
+                    break;
+                case "Hàng bán theo nhân viên":
+                    report = new FoodByStaff(kindOfTime, pnlOptionalTime, crystalReportViewer);
+                    break;
+                case "Hàng bán theo khách hàng":
+                    report = new FoodByCustomer(kindOfTime, pnlOptionalTime, crystalReportViewer);
+                    break;
+                default:
+                    break;
             }
         }
     }
