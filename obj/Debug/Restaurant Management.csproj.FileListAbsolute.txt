@@ -1,0 +1,133 @@
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\Restaurant Management.exe.config
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\Restaurant Management.exe
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\Restaurant Management.pdb
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.About.NhaHang.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManageFood.SuaMon.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.QuanLyNhanVien.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.SuaNhanVien.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.ManagerStaff.ThemNhanVien.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Notification.Form_Alert.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.FoodCartItem.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.GioHang.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.Revenue.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Table.Ban.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Table.ThanhToanBan.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.ThemMon.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.TrangChinh.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant Management.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant Management.exe
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant Management.pdb
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.DoanhThu.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.formLogin.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.FoodItem.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.Revenue.RecentAction.resources
+D:\abc\bin\Debug\Restaurant Management.exe.config
+D:\abc\bin\Debug\Restaurant Management.exe
+D:\abc\bin\Debug\Restaurant Management.pdb
+D:\abc\bin\Debug\FontAwesome.Sharp.dll
+D:\abc\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+D:\abc\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.About.NhaHang.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.ManageFood.SuaMon.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.ManagerStaff.QuanLyNhanVien.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.ManagerStaff.SuaNhanVien.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.ManagerStaff.ThemNhanVien.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Notification.Form_Alert.resources
+D:\abc\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.FoodCartItem.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.GioHang.resources
+D:\abc\obj\Debug\Restaurant_Management.formLogin.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Revenue.DoanhThu.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Revenue.FoodItem.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Revenue.RecentAction.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Revenue.Revenue.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Table.Ban.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
+D:\abc\obj\Debug\Restaurant_Management.GUI.Table.ThanhToanBan.resources
+D:\abc\obj\Debug\Restaurant_Management.Properties.Resources.resources
+D:\abc\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+D:\abc\obj\Debug\Restaurant_Management.ThemMon.resources
+D:\abc\obj\Debug\Restaurant_Management.TrangChinh.resources
+D:\abc\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+D:\abc\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+D:\abc\obj\Debug\Restaurant Management.csproj.CopyComplete
+D:\abc\obj\Debug\Restaurant Management.exe
+D:\abc\obj\Debug\Restaurant Management.pdb
+D:\abc\bin\Debug\PdfSharp.dll
+D:\abc\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\bin\Debug\PdfSharp.dll
+C:\Users\ASUS\Desktop\Year 2\LTTQ\Restaurant-Management\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.About.NhaHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.AccountGUI.AccItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.AccountGUI.QuanLyTaiKhoan.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.AccountGUI.ThemTaiKhoan.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Customer.CusItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Customer.QuanLyKhachHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Customer.ThemKhachHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManageFood.SuaMon.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.QuanLyNhanVien.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.SuaNhanVien.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.ManagerStaff.ThemNhanVien.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Notification.Form_Alert.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.FoodCartItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.GioHang.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.formLogin.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.DoanhThu.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.FoodItem.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.RecentAction.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Revenue.Revenue.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Table.Ban.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Table.ThanhToanBan.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.User.AccControl.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.User.accForm.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.Properties.Resources.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.ThemMon.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.TrangChinh.resources
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.exe
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.pdb
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\Restaurant Management.exe.config
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\Restaurant Management.exe
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\Restaurant Management.pdb
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\PdfSharp.dll
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant Management.csproj.CopyComplete
+C:\Users\ASUS\Desktop\baoCao\obj\Debug\Restaurant_Management.GUI.Report.BaoCao.resources
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\stdole.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\ASUS\Desktop\baoCao\bin\Debug\ShockwaveFlashObjects.dll

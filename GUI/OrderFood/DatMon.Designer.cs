@@ -248,7 +248,7 @@
             this.btnCart.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCart.FlatAppearance.BorderSize = 0;
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCart.ForeColor = System.Drawing.Color.White;
             this.btnCart.Location = new System.Drawing.Point(1122, 0);
             this.btnCart.Name = "btnCart";
@@ -273,6 +273,7 @@
             this.btnTable.Text = "Bàn";
             this.btnTable.UseVisualStyleBackColor = false;
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
+            this.btnTable.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnTable_MouseMove);
             // 
             // panel1
             // 

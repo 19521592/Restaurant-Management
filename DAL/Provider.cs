@@ -7,6 +7,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Windows.Forms;
+
 namespace Restaurant_Management.DAL
 {
     class Provider
@@ -20,6 +22,22 @@ namespace Restaurant_Management.DAL
             private set { ins = value; }
         }
         private Provider() { }
+
+        public bool TestConStr()
+        {
+            bool isConStrValid = true;
+            try
+            {
+                var con = new SqlConnectionStringBuilder(conStr);
+
+            }   
+            catch
+            {
+                MessageBox.Show(conStr);
+                isConStrValid = false;
+            }
+            return isConStrValid;
+        }
 
         public int ExcuteNonQuery(string query, object[] param = null)
         {          

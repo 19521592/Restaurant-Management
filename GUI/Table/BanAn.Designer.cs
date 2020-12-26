@@ -195,6 +195,7 @@ namespace Restaurant_Management.GUI.Table
             this.Name = "BanAn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BanAn";
+            this.MouseLeave += new System.EventHandler(this.BanAn_MouseLeave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
