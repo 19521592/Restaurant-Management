@@ -71,18 +71,12 @@ namespace Restaurant_Management.GUI
         {
             this.Close();
         }
-        public void updatePrice(double money, bool isPlus, string foodId)
+        public void updatePrice(Food updatingFood)
         {
-            if (isPlus == true)
-            {
-                Price += money;
-                ++orderedFood[foodId].Number;
-            }
-            else
-            {
-                Price -= money;
-                --orderedFood[foodId].Number;
-            }
+            int i = -orderedFood[updatingFood.Id].Number;
+            Price += (- orderedFood[updatingFood.Id].Number + updatingFood.Number) * updatingFood.Price;
+            orderedFood[updatingFood.Id].Number = updatingFood.Number;
+
             lblPrice.Text = Price.ToString("#,##0");
         }
 
@@ -97,7 +91,7 @@ namespace Restaurant_Management.GUI
                 this.idBanAn = this.ParentForm.idBanAn;
                 THUCDONBAN.Ins.XoaAllMonTheoBanAn(idBanAn);
                 addThucDonBan();
-                this.ParentForm.selectedTable = null;
+                this.ParentForm.resetInfoForm();
 
                 Form_Alert.Alert("Thêm món thành công!", Form_Alert.enmType.Success);
             }
@@ -105,7 +99,7 @@ namespace Restaurant_Management.GUI
             {
                 addBanAn();
                 addThucDonBan();
-                this.ParentForm.selectedTable = null;
+                this.ParentForm.resetInfoForm();
 
                 Form_Alert.Alert("Đặt món thành công!", Form_Alert.enmType.Success);
                 BANAN.Ins.setTableStatus(this.selectedTable.tableId, "1");

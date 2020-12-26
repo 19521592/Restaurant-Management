@@ -12,26 +12,30 @@ using Restaurant_Management.GUI.ManagerStaff;
 using Restaurant_Management.GUI.Login;
 using Restaurant_Management.GUI.About;
 using Restaurant_Management.GUI.Revenue;
+using Restaurant_Management.GUI.AccountGUI;
+using Restaurant_Management.GUI.User;
 
 namespace Restaurant_Management
 {
     public partial class TrangChinh : Form
     {
 
-        public frmLogin ParentForm { get; set; }
+        public formLogin ParentForm { get; set; }
         public AccountApp Account { get; set; }
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // width of ellipse
-            int nHeightEllipse // height of ellipse
+            int nLeftRect,  
+            int nTopRect,      
+            int nRightRect,   
+            int nBottomRect,   
+            int nWidthEllipse, 
+            int nHeightEllipse 
         );
+
         Region normalRegion;
-        public TrangChinh(AccountApp account = null, frmLogin ParentForm = null)
+        public TrangChinh(AccountApp account = null, formLogin ParentForm = null)
         {
             this.ParentForm = ParentForm;
             this.Account = account;
@@ -178,7 +182,52 @@ namespace Restaurant_Management
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new Revenue());
+            openChildFormInPanel(new DoanhThu());
+            hideSubMenu();
+        }
+
+        private void btnManageAccount_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new QuanLyTaiKhoan());
+            hideSubMenu();
+        }
+        public void loadStaff()
+        {
+            //this.btnManage.Enabled = false;
+            //this.pnlManageSubMenu.Enabled = false;
+            //this.btnStatistics.Enabled = false;
+            //this.pnlStatisticsSubMenu.Enabled = false;
+            //this.btnAbout.Enabled = false;
+            //this.pnlAboutSubMenu.Enabled = false;
+
+            this.btnManage.Visible = false;
+            //this.pnlManageSubMenu.Enabled = false;
+            this.btnStatistics.Visible = false;
+            //this.pnlStatisticsSubMenu.Enabled = false;
+            this.btnAbout.Visible = false;
+            //this.pnlAboutSubMenu.Enabled = false;
+        }
+        public void loadAdmin()
+        {
+            //this.btnManage.Enabled = true;
+            //this.pnlManageSubMenu.Enabled = true;
+            //this.btnStatistics.Enabled = true;
+            //this.pnlStatisticsSubMenu.Enabled = true;
+            //this.btnAbout.Enabled = true;
+            //this.pnlAboutSubMenu.Enabled = true;
+
+            this.btnManage.Visible = true;
+            //this.pnlManageSubMenu.Enabled = true;
+            this.btnStatistics.Visible = true;
+            //this.pnlStatisticsSubMenu.Enabled = true;
+            this.btnAbout.Visible = true;
+            //this.pnlAboutSubMenu.Enabled = true;
+        }
+
+
+        private void btnAccountInfo_Click(object sender, EventArgs e)
+        {
+            (new accForm(Account.Id)).Show();
             hideSubMenu();
         }
     }

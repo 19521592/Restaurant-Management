@@ -127,5 +127,11 @@ namespace Restaurant_Management.BLL
             }
             return ls;
         }
+        public DataTable getTop10NhanVienVuaThanhToan()
+        {
+            string query = " SELECT TOP 10 NV.HOTEN , DATEDIFF( Minute , HD.NGAYTHANHTOAN , GETDATE() ) AS 'DATE' , B.TEN , HD.TONGTIEN FROM NHANVIEN NV , BANAN BA , BAN B , HOADONBAN HD WHERE NV.ID = BA.IDNHANVIEN AND BA.IDBAN = B.ID AND BA.ID = HD.ID ORDER BY DATE ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            return rs;
+        }
     }
 }

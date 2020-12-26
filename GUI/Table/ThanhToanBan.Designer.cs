@@ -36,10 +36,10 @@ namespace Restaurant_Management.GUI.Table
             this.btnPay = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblPriceName = new System.Windows.Forms.Label();
+            this.lblStaff = new System.Windows.Forms.Label();
+            this.lblNhanVienName = new System.Windows.Forms.Label();
             this.lblTableName = new System.Windows.Forms.Label();
             this.flpnlFood = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblNhanVienName = new System.Windows.Forms.Label();
-            this.lblStaff = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.panel2.SuspendLayout();
@@ -105,7 +105,7 @@ namespace Restaurant_Management.GUI.Table
             this.btnPay.FlatAppearance.BorderSize = 0;
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(49, 441);
+            this.btnPay.Location = new System.Drawing.Point(48, 453);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(96, 44);
             this.btnPay.TabIndex = 2;
@@ -133,6 +133,26 @@ namespace Restaurant_Management.GUI.Table
             this.lblPriceName.TabIndex = 0;
             this.lblPriceName.Text = "Tổng tiền";
             // 
+            // lblStaff
+            // 
+            this.lblStaff.AutoSize = true;
+            this.lblStaff.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblStaff.Location = new System.Drawing.Point(43, 158);
+            this.lblStaff.Name = "lblStaff";
+            this.lblStaff.Size = new System.Drawing.Size(117, 19);
+            this.lblStaff.TabIndex = 0;
+            this.lblStaff.Text = "Tên Nhân Viên";
+            // 
+            // lblNhanVienName
+            // 
+            this.lblNhanVienName.AutoSize = true;
+            this.lblNhanVienName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblNhanVienName.Location = new System.Drawing.Point(60, 125);
+            this.lblNhanVienName.Name = "lblNhanVienName";
+            this.lblNhanVienName.Size = new System.Drawing.Size(85, 19);
+            this.lblNhanVienName.TabIndex = 0;
+            this.lblNhanVienName.Text = "Nhân Viên";
+            // 
             // lblTableName
             // 
             this.lblTableName.AutoSize = true;
@@ -151,26 +171,6 @@ namespace Restaurant_Management.GUI.Table
             this.flpnlFood.Name = "flpnlFood";
             this.flpnlFood.Size = new System.Drawing.Size(954, 532);
             this.flpnlFood.TabIndex = 5;
-            // 
-            // lblNhanVienName
-            // 
-            this.lblNhanVienName.AutoSize = true;
-            this.lblNhanVienName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblNhanVienName.Location = new System.Drawing.Point(60, 125);
-            this.lblNhanVienName.Name = "lblNhanVienName";
-            this.lblNhanVienName.Size = new System.Drawing.Size(85, 19);
-            this.lblNhanVienName.TabIndex = 0;
-            this.lblNhanVienName.Text = "Nhân Viên";
-            // 
-            // lblStaff
-            // 
-            this.lblStaff.AutoSize = true;
-            this.lblStaff.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblStaff.Location = new System.Drawing.Point(43, 158);
-            this.lblStaff.Name = "lblStaff";
-            this.lblStaff.Size = new System.Drawing.Size(117, 19);
-            this.lblStaff.TabIndex = 0;
-            this.lblStaff.Text = "Tên Nhân Viên";
             // 
             // ThanhToanBan
             // 

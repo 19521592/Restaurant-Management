@@ -121,21 +121,24 @@ namespace Restaurant_Management
             flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color2);
             loadFoodIntoFlowLayoutPanel("Món Chính");
-            //OpenChildForm(new FormMainCourse());
         }
         private void dessertBtn_Click(object sender, EventArgs e)
         {
+            flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color3);
+            loadFoodIntoFlowLayoutPanel("Tráng miệng");
         }
         private void drinkBtn_Click(object sender, EventArgs e)
         {
+            flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color4);
-            //OpenChildForm(new FormCustomers());
+            loadFoodIntoFlowLayoutPanel("Thức uống");
         }
         private void comboBtn_Click(object sender, EventArgs e)
         {
+            flowLayoutPanelMain.Controls.Clear();
             ActivateButton(sender, RGBColors.color5);
-            //OpenChildForm(new FormMarketing());
+            loadFoodIntoFlowLayoutPanel("Combo");
         }
 
 
@@ -360,7 +363,6 @@ namespace Restaurant_Management
         private void checkValue(object sender, EventArgs e)
         {
             TextBox txtBoxNumber = sender as TextBox;
-            string allowedchar = "0123456789";
             int num = 0;
             if (txtBoxNumber.Text == "") return;
             if (/*!txtBoxNumber.Text.All(allowedchar.Contains) ||*/ !Int32.TryParse(txtBoxNumber.Text, out num))
@@ -378,6 +380,7 @@ namespace Restaurant_Management
                 return;
             }
         }
+
         private void checkEmpty(object sender, EventArgs e)
         {
             TextBox txtBoxNumber = sender as TextBox;
@@ -435,6 +438,13 @@ namespace Restaurant_Management
             {
                 Form_Alert.Alert("Chưa đặt món!", Form_Alert.enmType.Info);
             }
+        }
+        public void resetInfoForm()
+        {
+            this.btnPrice.Text = "0";
+            this.btnTable.Text = "Chọn bàn";
+            this.allFoodCount = 0;
+            this.selectedTable = null;
         }
     }
 }

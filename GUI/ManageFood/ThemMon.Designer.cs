@@ -79,14 +79,13 @@
             // 
             // lblNote
             // 
-            this.lblNote.AutoSize = true;
             this.lblNote.BackColor = System.Drawing.Color.White;
             this.lblNote.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblNote.ForeColor = System.Drawing.Color.Silver;
             this.lblNote.Location = new System.Drawing.Point(41, 222);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(87, 26);
+            this.lblNote.Size = new System.Drawing.Size(263, 24);
             this.lblNote.TabIndex = 4;
             this.lblNote.Text = "Ghi chú";
             this.lblNote.Click += new System.EventHandler(this.LabelEffect_Click);
@@ -101,14 +100,13 @@
             // 
             // lblKind
             // 
-            this.lblKind.AutoSize = true;
             this.lblKind.BackColor = System.Drawing.Color.White;
             this.lblKind.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblKind.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblKind.ForeColor = System.Drawing.Color.Silver;
-            this.lblKind.Location = new System.Drawing.Point(41, 166);
+            this.lblKind.Location = new System.Drawing.Point(41, 169);
             this.lblKind.Name = "lblKind";
-            this.lblKind.Size = new System.Drawing.Size(53, 26);
+            this.lblKind.Size = new System.Drawing.Size(229, 21);
             this.lblKind.TabIndex = 4;
             this.lblKind.Text = "Loại";
             this.lblKind.Click += new System.EventHandler(this.LabelEffect_Click);
@@ -123,14 +121,13 @@
             // 
             // lblUnitPrice
             // 
-            this.lblUnitPrice.AutoSize = true;
             this.lblUnitPrice.BackColor = System.Drawing.Color.White;
             this.lblUnitPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblUnitPrice.ForeColor = System.Drawing.Color.Silver;
-            this.lblUnitPrice.Location = new System.Drawing.Point(41, 110);
+            this.lblUnitPrice.Location = new System.Drawing.Point(41, 113);
             this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(87, 26);
+            this.lblUnitPrice.Size = new System.Drawing.Size(263, 21);
             this.lblUnitPrice.TabIndex = 4;
             this.lblUnitPrice.Text = "Đơn giá";
             this.lblUnitPrice.Click += new System.EventHandler(this.LabelEffect_Click);
@@ -139,10 +136,10 @@
             // 
             this.txtBoxNote.BackColor = System.Drawing.Color.White;
             this.txtBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txtBoxNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNote.Location = new System.Drawing.Point(41, 228);
             this.txtBoxNote.Name = "txtBoxNote";
-            this.txtBoxNote.Size = new System.Drawing.Size(276, 31);
+            this.txtBoxNote.Size = new System.Drawing.Size(276, 23);
             this.txtBoxNote.TabIndex = 4;
             this.txtBoxNote.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txtBoxNote.Leave += new System.EventHandler(this.TextBox_Leave);
@@ -159,24 +156,23 @@
             // 
             this.txtBoxKind.BackColor = System.Drawing.Color.White;
             this.txtBoxKind.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxKind.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txtBoxKind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxKind.Location = new System.Drawing.Point(41, 169);
             this.txtBoxKind.Name = "txtBoxKind";
-            this.txtBoxKind.Size = new System.Drawing.Size(276, 31);
+            this.txtBoxKind.Size = new System.Drawing.Size(276, 23);
             this.txtBoxKind.TabIndex = 3;
             this.txtBoxKind.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txtBoxKind.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.White;
             this.lblName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblName.ForeColor = System.Drawing.Color.Silver;
-            this.lblName.Location = new System.Drawing.Point(41, 43);
+            this.lblName.Location = new System.Drawing.Point(41, 44);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(97, 26);
+            this.lblName.Size = new System.Drawing.Size(273, 22);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Tên món";
             this.lblName.Click += new System.EventHandler(this.LabelEffect_Click);
@@ -185,10 +181,10 @@
             // 
             this.txtBoxUnitPrice.BackColor = System.Drawing.Color.White;
             this.txtBoxUnitPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txtBoxUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxUnitPrice.Location = new System.Drawing.Point(41, 113);
             this.txtBoxUnitPrice.Name = "txtBoxUnitPrice";
-            this.txtBoxUnitPrice.Size = new System.Drawing.Size(276, 31);
+            this.txtBoxUnitPrice.Size = new System.Drawing.Size(276, 23);
             this.txtBoxUnitPrice.TabIndex = 2;
             this.txtBoxUnitPrice.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txtBoxUnitPrice.Leave += new System.EventHandler(this.TextBox_Leave);
@@ -205,10 +201,10 @@
             // 
             this.txtBoxName.BackColor = System.Drawing.Color.White;
             this.txtBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtBoxName.Location = new System.Drawing.Point(41, 44);
+            this.txtBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxName.Location = new System.Drawing.Point(41, 46);
             this.txtBoxName.Name = "txtBoxName";
-            this.txtBoxName.Size = new System.Drawing.Size(276, 31);
+            this.txtBoxName.Size = new System.Drawing.Size(276, 23);
             this.txtBoxName.TabIndex = 1;
             this.txtBoxName.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txtBoxName.Leave += new System.EventHandler(this.TextBox_Leave);

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restaurant_Management.GUI.OrderFood;
+using Restaurant_Management.GUI.Revenue;
 
 namespace Restaurant_Management
 {
@@ -16,7 +18,7 @@ namespace Restaurant_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new formLogin());
         }
     }
 }
