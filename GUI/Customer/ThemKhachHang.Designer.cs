@@ -288,11 +288,11 @@
             // 
             this.txtPassWordsConfirm.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPassWordsConfirm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassWordsConfirm.Enabled = false;
             this.txtPassWordsConfirm.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWordsConfirm.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassWordsConfirm.Location = new System.Drawing.Point(224, 110);
             this.txtPassWordsConfirm.Name = "txtPassWordsConfirm";
+            this.txtPassWordsConfirm.PasswordChar = '*';
             this.txtPassWordsConfirm.Size = new System.Drawing.Size(326, 21);
             this.txtPassWordsConfirm.TabIndex = 27;
             // 
@@ -318,11 +318,11 @@
             // 
             this.txtPassWords.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPassWords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassWords.Enabled = false;
             this.txtPassWords.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWords.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassWords.Location = new System.Drawing.Point(224, 70);
             this.txtPassWords.Name = "txtPassWords";
+            this.txtPassWords.PasswordChar = '*';
             this.txtPassWords.Size = new System.Drawing.Size(326, 21);
             this.txtPassWords.TabIndex = 24;
             // 
@@ -348,7 +348,6 @@
             // 
             this.txtUserName.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.Enabled = false;
             this.txtUserName.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.DimGray;
             this.txtUserName.Location = new System.Drawing.Point(224, 30);
@@ -467,5 +466,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel panel3;
-    }    
+    }
 }

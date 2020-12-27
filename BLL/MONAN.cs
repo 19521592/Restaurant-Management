@@ -151,5 +151,23 @@ namespace Restaurant_Management.BLL
             DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { day });
             return rs;
         }
+        public List<FoodDTO> getList(string loai)
+        {
+            string query = "select ID , TEN , DONGIA , HINHANH, GHICHU from MONAN where loai = @loai and TRANGTHAI = 1 ";
+            DataTable rs = Provider.Ins.ExcuteQuery(query, new object[] { loai });
+            List<FoodDTO> ls = new List<FoodDTO>();
+            FoodDTO food;
+            for (int i = 0; i < rs.Rows.Count; i++)
+            {
+                food = new FoodDTO();
+                food.Id = rs.Rows[i][0].ToString();
+                food.Ten = rs.Rows[i][1].ToString();
+                food.Dongia = rs.Rows[i][2].ToString();
+                food.Hinhanh = rs.Rows[i][3].ToString();
+                food.Ghichu = rs.Rows[i][4].ToString();
+                ls.Add(food);
+            }
+            return ls;
+        }
     }
 }   

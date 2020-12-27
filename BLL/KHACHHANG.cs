@@ -39,7 +39,7 @@ namespace Restaurant_Management.BLL
         }
         public string getMaKHnext()
         {
-            string query = "SELECT ID FROM KHACHHANG";
+            string query = "SELECT MAKH FROM KHACHHANG";
             DataTable tbl = Provider.Ins.ExcuteQuery(query);
             string res = (tbl.Rows.Count + 1).ToString();
             while (res.Length < 3)
@@ -49,8 +49,8 @@ namespace Restaurant_Management.BLL
         }
         public bool Insert(CustomerDTO p)
         {
-            string query = "INSERT INTO KHACHHANG VALUES ( @MAKH , @HOTEN , @SDT , @DIEM , @LOAIKH )";
-            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { getMaKHnext() , p.Hoten, p.Sdt, p.Diem, p.LoaiKH });
+            string query = "INSERT INTO KHACHHANG VALUES ( @MAKH , @HOTEN , @GIOITINH , @SDT , @DIEM , @LOAIKH )";
+            int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { getMaKHnext() , p.Hoten, p.Gioitinh , p.Sdt , p.Diem , p.LoaiKH });
             return (rs > 0);
         }   
         public CustomerDTO getKH(string MaKH)
@@ -73,6 +73,38 @@ namespace Restaurant_Management.BLL
             string query = "SELECT * FROM KHACHHANG WHERE SDT = @SDT ";
             int rs = Provider.Ins.ExcuteNonQuery(query, new object[] { phone });
             return (rs > 0);
+        }
+        public List<CustomerDTO> getList()
+        {
+            List<CustomerDTO> list = new List<CustomerDTO>();
+            CustomerDTO p;
+            string query = "SELECT * FROM KHACHHANG";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+
+            for (int i = 0; i < rs.Rows.Count; i++)
+            {
+                p = new CustomerDTO();
+                p.Makh = rs.Rows[i][0].ToString();
+                p.Hoten = rs.Rows[i][1].ToString();
+                p.Gioitinh = rs.Rows[i][2].ToString();
+                p.Sdt = rs.Rows[i][3].ToString();
+                p.Diem = rs.Rows[i][4].ToString();
+                p.LoaiKH = rs.Rows[i][5].ToString();
+                list.Add(p);
+            }
+            return list;
+        }
+        public DataTable getDataTable()
+        {
+            string query = "SELECT MAKH as 'Mã khách hàng', HOTEN as 'Họ tên', GIOITINH as 'Giới tính', SDT as 'Số điện thoại' FROM KHACHHANG";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            return rs;
+        }
+        public DataTable find(string x)
+        {
+            string query = "SELECT MAKH as 'Mã khách hàng', HOTEN as 'Họ tên', GIOITINH as 'Giới tính', SDT as 'Số điện thoại' FROM KHACHHANG WHERE HOTEN LIKE '%" + x + "%' OR SDT LIKE '%" + x + "%'";
+            DataTable rs = Provider.Ins.ExcuteQuery(query);
+            return rs;
         }
     }
 }

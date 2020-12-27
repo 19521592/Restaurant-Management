@@ -29,7 +29,8 @@ namespace Restaurant_Management.GUI.User
             }
             else
             {
-                pK = KHACHHANG.Ins.getKH(id);              
+                pK = KHACHHANG.Ins.getKH(id);
+                accK = ACCOUNTKHACHHANG.Ins.getAccDTO(id);
             }
 
         }
@@ -81,18 +82,35 @@ namespace Restaurant_Management.GUI.User
                     throw new Exception("Mật khẩu mới và nhập lại không giống");
 
                 string PassChange = Account.Ins.GetHashPassword(txtNewPass.Text);
-                bool rs = Account.Ins.UpdatePassWords(p.Id, PassChange);
-                if (rs = true)
-                {
-                    MessageBox.Show("Cập nhật mật khẩu thành công");
-                    acc.Passwords = txtNewPass.Text;
-                    txtNewPass.Text = "";
-                    txtNewPassConfirm.Text = "";
-                    txtOldPass.Text = "";
-                }
 
-                else
-                    MessageBox.Show("Cập nhật mật khẩu thất bại");
+                if (p != null) // trường hợp nhân vien
+                {
+                    bool rs = Account.Ins.UpdatePassWords(p.Id, PassChange);
+                    if (rs = true)
+                    {
+                        MessageBox.Show("Cập nhật mật khẩu thành công");
+                        acc.Passwords = txtNewPass.Text;
+                        txtNewPass.Text = "";
+                        txtNewPassConfirm.Text = "";
+                        txtOldPass.Text = "";
+                    }
+                    else
+                        MessageBox.Show("Cập nhật mật khẩu thất bại");
+                }
+                else            // trường hợp khách hàng
+                {
+                    bool rs = ACCOUNTKHACHHANG.Ins.UpdatePassWords(pK.Makh, PassChange);
+                    if (rs = true)
+                    {
+                        MessageBox.Show("Cập nhật mật khẩu thành công");
+                        acc.Passwords = txtNewPass.Text;
+                        txtNewPass.Text = "";
+                        txtNewPassConfirm.Text = "";
+                        txtOldPass.Text = "";
+                    }
+                    else
+                        MessageBox.Show("Cập nhật mật khẩu thất bại");
+                }
             }
             catch (Exception ex)
             {

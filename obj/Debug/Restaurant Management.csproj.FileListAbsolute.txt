@@ -131,3 +131,64 @@ C:\Users\ASUS\Desktop\baoCao\bin\Debug\stdole.dll
 C:\Users\ASUS\Desktop\baoCao\bin\Debug\AxShockwaveFlashObjects.dll
 C:\Users\ASUS\Desktop\baoCao\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\ASUS\Desktop\baoCao\bin\Debug\ShockwaveFlashObjects.dll
+D:\Git\masterNhahang\bin\Debug\Restaurant Management.exe.config
+D:\Git\masterNhahang\bin\Debug\Restaurant Management.exe
+D:\Git\masterNhahang\bin\Debug\Restaurant Management.pdb
+D:\Git\masterNhahang\bin\Debug\FontAwesome.Sharp.dll
+D:\Git\masterNhahang\bin\Debug\PdfSharp.dll
+D:\Git\masterNhahang\bin\Debug\ShockwaveFlashObjects.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Git\masterNhahang\bin\Debug\stdole.dll
+D:\Git\masterNhahang\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Git\masterNhahang\obj\Debug\Restaurant Management.csprojAssemblyReference.cache
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.About.deverloper.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.About.NhaHang.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.AccountGUI.AccItem.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.AccountGUI.QuanLyTaiKhoan.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.AccountGUI.ThemTaiKhoan.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Customer.ThemKhachHang.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.ManageFood.SuaMon.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.ManagerStaff.QuanLyNhanVien.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.ManagerStaff.StaffItem.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.ManagerStaff.SuaNhanVien.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.ManagerStaff.ThemNhanVien.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Notification.Form_Alert.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.OrderFood.BILL.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.CustomerOrderForm.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.FoodCartItem.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.GioHang.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.formLogin.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Report.BaoCao.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Revenue.DoanhThu.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Revenue.FoodItem.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Revenue.RecentAction.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Revenue.Revenue.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Reviews.CusRate.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Reviews.Form1.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Reviews.ReviewFood.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Reviews.Writer.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Table.Ban.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Table.BanAn.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.Table.ThanhToanBan.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.User.AccControl.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.User.accForm.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.Properties.Resources.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.QuanLyMonAn.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.ThemMon.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.TrangChinh.resources
+D:\Git\masterNhahang\obj\Debug\Restaurant Management.csproj.GenerateResource.cache
+D:\Git\masterNhahang\obj\Debug\Restaurant Management.csproj.CoreCompileInputs.cache
+D:\Git\masterNhahang\obj\Debug\Restaurant Management.csproj.CopyComplete
+D:\Git\masterNhahang\obj\Debug\Restaurant Management.exe
+D:\Git\masterNhahang\obj\Debug\Restaurant Management.pdb
+D:\Git\masterNhahang\obj\Debug\Restaurant_Management.GUI.OrderFood.SelectedCus.resources

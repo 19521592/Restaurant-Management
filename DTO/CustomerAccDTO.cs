@@ -11,6 +11,5 @@ namespace Restaurant_Management.DTO
         public string MaKH { get; set; }
         public string UserName { get; set; }
         public string PassWords { get; set; }
-        public string Loai { get; set; }
     }
 }

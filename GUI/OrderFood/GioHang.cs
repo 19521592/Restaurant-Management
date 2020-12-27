@@ -34,7 +34,7 @@ namespace Restaurant_Management.GUI
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-        public GioHang(CustomerOrderForm ParentForm, IDictionary<string, Food> orderedFood, List<string> idOrderedFood, Ban selectedTable, string staffId)
+        public GioHang(CustomerOrderForm ParentForm, IDictionary<string, Food> orderedFood, List<string> idOrderedFood, Ban selectedTable, string staffId, string idKhachhang)
         {
             InitializeComponent();
             this.ParentForm = ParentForm;
@@ -42,6 +42,7 @@ namespace Restaurant_Management.GUI
             this.idOrderedFood = idOrderedFood;
             this.selectedTable = selectedTable;
             this.staffId = staffId;
+            this.idKhachhang = idKhachhang;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
         }
 
@@ -108,7 +109,7 @@ namespace Restaurant_Management.GUI
         }
         private void addBanAn()
         {
-            this.idBanAn = BANAN.Ins.Insert(staffId, "", selectedTable.tableId);
+            this.idBanAn = BANAN.Ins.Insert(staffId, idKhachhang, selectedTable.tableId);
         }
         private void addThucDonBan()
         {
@@ -125,5 +126,8 @@ namespace Restaurant_Management.GUI
             orderedFood.Remove(foodId);
             loadCart();
         }
+
+        /// khách hàng
+        private string idKhachhang;
     }
 }

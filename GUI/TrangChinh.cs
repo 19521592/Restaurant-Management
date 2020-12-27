@@ -15,7 +15,7 @@ using Restaurant_Management.GUI.Revenue;
 using Restaurant_Management.GUI.AccountGUI;
 using Restaurant_Management.GUI.User;
 using Restaurant_Management.GUI.Report;
-
+using Restaurant_Management.GUI.Customer;
 namespace Restaurant_Management
 {
     public partial class TrangChinh : Form
@@ -147,7 +147,7 @@ namespace Restaurant_Management
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new QuanLyNhanVien());
+            openChildFormInPanel(new QuanLyKhachHang());
             hideSubMenu();
         }
 

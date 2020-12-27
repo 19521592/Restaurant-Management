@@ -38,6 +38,7 @@
             this.homeBtn = new FontAwesome.Sharp.IconPictureBox();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlPurchase = new System.Windows.Forms.Panel();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnPrice = new FontAwesome.Sharp.IconButton();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
@@ -212,6 +213,7 @@
             // pnlPurchase
             // 
             this.pnlPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.pnlPurchase.Controls.Add(this.btnCustomer);
             this.pnlPurchase.Controls.Add(this.btnPrice);
             this.pnlPurchase.Controls.Add(this.btnCart);
             this.pnlPurchase.Controls.Add(this.btnTable);
@@ -220,6 +222,22 @@
             this.pnlPurchase.Name = "pnlPurchase";
             this.pnlPurchase.Size = new System.Drawing.Size(1280, 53);
             this.pnlPurchase.TabIndex = 4;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.Green;
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Location = new System.Drawing.Point(170, 0);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(340, 53);
+            this.btnCustomer.TabIndex = 3;
+            this.btnCustomer.Text = "Khách hàng";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnPrice
             // 
@@ -273,7 +291,6 @@
             this.btnTable.Text = "Bàn";
             this.btnTable.UseVisualStyleBackColor = false;
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
-            this.btnTable.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnTable_MouseMove);
             // 
             // panel1
             // 
@@ -316,9 +333,10 @@
         private FontAwesome.Sharp.IconPictureBox homeBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
         private System.Windows.Forms.Panel pnlPurchase;
-        private FontAwesome.Sharp.IconButton btnPrice;
+        public FontAwesome.Sharp.IconButton btnPrice;
         private System.Windows.Forms.Button btnCart;
-        private System.Windows.Forms.Button btnTable;
+        public System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnCustomer;
     }
 }
