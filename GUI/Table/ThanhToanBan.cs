@@ -78,6 +78,12 @@ namespace Restaurant_Management.GUI.Table
             {
                 this.ParentForm.selectedTable = null;
             }
+            // khách
+            ParentForm.CustomerInTalbe.Remove(selectedTable.tableId);
+            ParentForm.selectedCustomer = null;
+            ParentForm.btnTable.Text = "Chọn bàn";
+            ParentForm.btnCustomer.Text = "Chọn khách hàng";
+            ParentForm.btnPrice.Text = "0";
             this.Close();
         }
         private void addHoaDonBan()

@@ -17,15 +17,9 @@ namespace Restaurant_Management
         [STAThread]
         static void Main()
         {
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (DAL.Provider.Ins.TestConStr() == false)
-            {
-                MessageBox.Show("Error Connection String. Please contact the developers to help!");
-            }
-            else
-                Application.Run(new formLogin());
+            Application.Run(new formLogin()); 
         }
     }
 }

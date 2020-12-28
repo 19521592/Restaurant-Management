@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restaurant_Management.BLL;
+using Restaurant_Management.GUI.OrderFood;
 
 namespace Restaurant_Management.GUI.Table
 {
@@ -16,6 +17,8 @@ namespace Restaurant_Management.GUI.Table
         public string notAvailableImg;
         string availableImg;
         string bookedImg;
+        private SelectedCus selectedCus;
+
         public string tableStatus { get; set; }
         public string tableName { get; set; }
         public string tableId { get; set; }
@@ -33,6 +36,14 @@ namespace Restaurant_Management.GUI.Table
             this.Click += new EventHandler(Table_Click);
             this.BackgroundImageLayout = ImageLayout.Stretch;
             designTable(this.tableStatus, this);
+        }
+
+        public Ban(string tableId, string tableName, string tableStatus, SelectedCus selectedCus)
+        {
+            this.tableId = tableId;
+            this.tableName = tableName;
+            this.tableStatus = tableStatus;
+            this.selectedCus = selectedCus;
         }
 
         public void designTable(string tableStatus, Ban table)

@@ -11,8 +11,10 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Restaurant_Management.BLL;
 using Restaurant_Management.GUI;
+using Restaurant_Management.GUI.OrderFood;
 using Restaurant_Management.GUI.Table;
 using Restaurant_Management.GUI.CustomNofication;
+using Restaurant_Management.DTO;
 
 namespace Restaurant_Management
 {
@@ -44,7 +46,7 @@ namespace Restaurant_Management
             panelMenu.Controls.Add(leftBorderBtn);
             orderedFood = new Dictionary<string, Food>();
             idOrderedFood = new List<string>();
-
+            CustomerInTalbe = new Dictionary<string, CustomerDTO>();
             //Form
             this.Text = string.Empty;
             this.ControlBox = false;
@@ -319,7 +321,12 @@ namespace Restaurant_Management
                 Form_Alert.Alert("Lỗi: Chưa thêm món!", Form_Alert.enmType.Error);
                 return;
             }
-            GioHang gioHang = new GioHang(this, orderedFood, idOrderedFood, selectedTable, staffId);
+            if (selectedCustomer == null)
+            {
+                Form_Alert.Alert("Lỗi: Chưa thêm khách hàng!", Form_Alert.enmType.Error);
+                return;
+            }
+            GioHang gioHang = new GioHang(this, orderedFood, idOrderedFood, selectedTable, staffId,selectedCustomer.Makh);
             gioHang.ShowDialog();
             gioHang.Focus();
         }
@@ -361,6 +368,16 @@ namespace Restaurant_Management
             if (selectedTable != null)
             {
                 this.btnTable.Text = selectedTable.tableName;
+                if (CustomerInTalbe.ContainsKey(selectedTable.tableId))
+                {
+                    selectedCustomer = CustomerInTalbe[selectedTable.tableId];
+                    this.btnCustomer.Text = "Khách hàng: " + selectedCustomer.Hoten;
+                }
+                else
+                {
+                    this.btnCustomer.Text = "Khách hàng:";
+                    selectedCustomer = null;
+                }
             }
             loadInfo();
         }
@@ -411,7 +428,7 @@ namespace Restaurant_Management
                 idBanAn = BANAN.Ins.getBanAnChuaThanhToan(selectedTable.tableId).Rows[0][0].ToString();
                 var listFood = MONAN.Ins.getListMonThanhToan(idBanAn).Rows;
                 foreach (DataRow food in listFood)
-                {
+                { 
                     Food foodItem = new Food();
                     foodItem.Id = food[0].ToString();
                     foodItem.Name = food[1].ToString();
@@ -447,13 +464,39 @@ namespace Restaurant_Management
         {
             this.btnPrice.Text = "0";
             this.btnTable.Text = "Chọn bàn";
+            this.btnCustomer.Text = "Chọn khách hàng";
             this.allFoodCount = 0;
             this.selectedTable = null;
+            this.selectedCustomer = null;
         }
 
-        private void btnTable_MouseMove(object sender, MouseEventArgs e)
+        //private void btnTable_MouseMove(object sender, MouseEventArgs e)
+        //{
+        //    showTableList();
+        //}
+        //----------- Khách hàng
+        
+        public CustomerDTO selectedCustomer;
+        public IDictionary<string, CustomerDTO> CustomerInTalbe { get; set; }
+        
+        private void btnCustomer_Click(object sender, EventArgs e)
         {
-            showTableList();
+            if (selectedTable == null)
+            { 
+                Form_Alert.Alert("Thêm bàn trước!", Form_Alert.enmType.Warning);
+                return;
+            }
+            SelectedCus form;
+            if (selectedCustomer == null)
+            {
+                form = new SelectedCus(null, this);
+                form.ShowDialog();
+            }
+            else
+            {
+                form = new SelectedCus(selectedCustomer.Makh, this);
+                form.ShowDialog();
+            } 
         }
     }
 }

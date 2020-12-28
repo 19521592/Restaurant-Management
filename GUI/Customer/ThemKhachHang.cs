@@ -18,7 +18,6 @@ namespace Restaurant_Management.GUI.Customer
         {
             InitializeComponent();
         }
-
         private void ThemKhachHang_Load(object sender, EventArgs e)
         {
             txtID.Text = KHACHHANG.Ins.getMaKHnext();
@@ -42,26 +41,28 @@ namespace Restaurant_Management.GUI.Customer
                 if (KHACHHANG.Ins.Exist_Phone(txtPhone.Text))
                     throw new Exception("Mỗi số điện thoại chỉ đăng kí 1 lần.");
                 if (ACCOUNTKHACHHANG.Ins.Exists_UserName(txtUserName.Text))
-                    throw new Exception("Tên tài khoản đã tồn tại.");   
+                    throw new Exception("Tên tài khoản đã tồn tại.");
                 if (txtPassWords.Text != txtPassWordsConfirm.Text)
                     throw new Exception("Mật khẩu nhập lại không trùng khớp");
-                            
+
+                p.Makh = txtID.Text;
                 p.Hoten = txtName.Text;
                 p.Gioitinh = (radioButton1.Checked == true) ? "Nam" : "Nữ";
                 p.LoaiKH = "Bình thường";
                 p.Sdt = txtPhone.Text;
                 p.Diem = "0";
                 bool rs = KHACHHANG.Ins.Insert(p);
-                bool rs1 = ACCOUNTKHACHHANG.Ins.Insert(txtID.Text, txtUserName.Text, Account.Ins.GetHashPassword(txtPassWords.Text), p.LoaiKH);
+                bool rs1 = ACCOUNTKHACHHANG.Ins.Insert(txtID.Text, txtUserName.Text, Account.Ins.GetHashPassword(txtPassWords.Text));
                 if (rs == true && rs1 == true)
                     Form_Alert.Alert("Đăng kí thành công.", Form_Alert.enmType.Success);
                 else
-                    Form_Alert.Alert("Lỗi", Form_Alert.enmType.Error);              
+                    Form_Alert.Alert("Lỗi", Form_Alert.enmType.Error);
             }
             catch (Exception ex)
             {
-                 MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
+            this.Close();
         }
     }
 }

@@ -118,6 +118,10 @@ namespace Restaurant_Management.GUI.Table
                 this.selectedTable = this.selectingTable;
                 Form_Alert.Alert("Thêm bàn thành công!", Form_Alert.enmType.Success);
                 BANAN.Ins.setTableStatus(selectingTable.tableId, "");
+                // khách hàng
+
+
+
                 this.Close();
             }
             else if (this.lblTableStatus.Text == "Đã có khách")

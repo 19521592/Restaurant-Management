@@ -150,7 +150,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "CusItem";
-            this.Size = new System.Drawing.Size(902, 60);
+            this.Size = new System.Drawing.Size(1151, 60);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -168,14 +168,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbID;
+        public System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lbName;
+        public System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbSex;
+        public System.Windows.Forms.Label lbSex;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lbPhone;
+        public System.Windows.Forms.Label lbPhone;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lbKind;
+        public System.Windows.Forms.Label lbKind;
     }
 }
