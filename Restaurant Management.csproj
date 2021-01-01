@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E23AE0AF-3895-47D0-A867-E9F64B3C47F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Restaurant_Management</RootNamespace>
+    <AssemblyName>Restaurant Management</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.4740.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Account.cs" />
+    <Compile Include="BLL\ACCOUNTKHACHHANG.cs" />
+    <Compile Include="BLL\BANAN.cs" />
+    <Compile Include="BLL\DANHGIAMONAN.cs" />
+    <Compile Include="BLL\HOADONBAN.cs" />
+    <Compile Include="BLL\KHACHHANG.cs" />
+    <Compile Include="BLL\MONAN.cs" />
+    <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="BLL\Report.cs" />
+    <Compile Include="BLL\SetTime.cs" />
+    <Compile Include="BLL\THUCDONBAN.cs" />
+    <Compile Include="BUS\Report\DataSetRevenueDetail.cs">
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\Report\DataSetRevenueDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\Report\FoodByCustomer.cs" />
+    <Compile Include="BUS\Report\FoodByStaff.cs" />
+    <Compile Include="BUS\Report\FoodSelling.cs" />
+    <Compile Include="BUS\Report\ReportPreview.cs" />
+    <Compile Include="BUS\Report\ReportTime.cs" />
+    <Compile Include="BUS\Report\ReportTitle.cs" />
+    <Compile Include="BUS\Report\RevenueByCustomer.cs" />
+    <Compile Include="BUS\Report\RevenueByStaff.cs" />
+    <Compile Include="BUS\Report\RevenueDetail.cs" />
+    <Compile Include="DTO\CustomerAccDTO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\DanhGiaDTO.cs" />
+    <Compile Include="DTO\FoodDTO.cs" />
+    <Compile Include="DTO\staffDTO.cs" />
+    <Compile Include="GUI\About\deverloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\About\deverloper.Designer.cs" />
+    <Compile Include="GUI\About\NhaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\About\NhaHang.Designer.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="GUI\AccountGUI\AccItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\AccItem.Designer.cs">
+      <DependentUpon>AccItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\ThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountGUI\ThemTaiKhoan.Designer.cs">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Customer\CusItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Customer\CusItem.Designer.cs">
+      <DependentUpon>CusItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Customer\QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Customer\QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Customer\ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Customer\ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManageFood\SuaMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageFood\SuaMon.Designer.cs">
+      <DependentUpon>SuaMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\StaffItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\StaffItem.Designer.cs">
+      <DependentUpon>StaffItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\SuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\SuaNhanVien.Designer.cs">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManagerStaff\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Notification\Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Notification\Form_Alert.Designer.cs" />
+    <Compile Include="GUI\OrderFood\BILL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\BILL.Designer.cs">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OrderFood\DatMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\DatMon.Designer.cs">
+      <DependentUpon>DatMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Provider.cs" />
+    <Compile Include="GUI\OrderFood\FoodCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\FoodCartItem.Designer.cs">
+      <DependentUpon>FoodCartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OrderFood\FoodItem.cs" />
+    <Compile Include="GUI\OrderFood\GioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\GioHang.Designer.cs">
+      <DependentUpon>GioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManageFood\QuanLyMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageFood\QuanLyMonAn.Designer.cs">
+      <DependentUpon>QuanLyMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OrderFood\SelectedCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderFood\SelectedCus.Designer.cs">
+      <DependentUpon>SelectedCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report\BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\BaoCao.Designer.cs">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\Report\ReportForm.cs" />
+    <Compile Include="GUI\Report\Template\FoodByCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodByCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\FoodByStaff.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodByStaff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\FoodSelling.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodSelling.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\RevenueByCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RevenueByCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\RevenueByStaff.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RevenueByStaff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Report\Template\RevenueDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RevenueDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\DoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\DoanhThu.Designer.cs">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Revenue\FoodItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\FoodItem.Designer.cs">
+      <DependentUpon>FoodItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Revenue\RecentAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\RecentAction.Designer.cs">
+      <DependentUpon>RecentAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Revenue\Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Revenue\Revenue.designer.cs">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reviews\CusRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Reviews\CusRate.Designer.cs">
+      <DependentUpon>CusRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reviews\FoodRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Reviews\FoodRate.Designer.cs">
+      <DependentUpon>FoodRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reviews\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reviews\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reviews\ReviewFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reviews\ReviewFood.Designer.cs">
+      <DependentUpon>ReviewFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reviews\Writer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reviews\Writer.Designer.cs">
+      <DependentUpon>Writer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Table\Ban.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Table\Ban.Designer.cs">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Table\BanAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Table\BanAn.Designer.cs">
+      <DependentUpon>BanAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Table\ThanhToanBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Table\ThanhToanBan.Designer.cs">
+      <DependentUpon>ThanhToanBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\AccControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\User\AccControl.Designer.cs">
+      <DependentUpon>AccControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\accForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\accForm.Designer.cs">
+      <DependentUpon>accForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI\ManageFood\ThemMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageFood\ThemMon.Designer.cs">
+      <DependentUpon>ThemMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TrangChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TrangChinh.Designer.cs">
+      <DependentUpon>TrangChinh.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\About\deverloper.resx" />
+    <EmbeddedResource Include="GUI\About\NhaHang.resx" />
+    <EmbeddedResource Include="GUI\AccountGUI\AccItem.resx">
+      <DependentUpon>AccItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AccountGUI\QuanLyTaiKhoan.resx">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AccountGUI\ThemTaiKhoan.resx">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Customer\CusItem.resx">
+      <DependentUpon>CusItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Customer\ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManageFood\SuaMon.resx">
+      <DependentUpon>SuaMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\StaffItem.resx">
+      <DependentUpon>StaffItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\SuaNhanVien.resx">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManagerStaff\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Notification\Form_Alert.resx" />
+    <EmbeddedResource Include="GUI\OrderFood\BILL.resx">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OrderFood\DatMon.resx">
+      <DependentUpon>DatMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OrderFood\FoodCartItem.resx">
+      <DependentUpon>FoodCartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OrderFood\GioHang.resx">
+      <DependentUpon>GioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OrderFood\SelectedCus.resx">
+      <DependentUpon>SelectedCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\BaoCao.resx">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\FoodByCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FoodByCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\FoodByStaff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FoodByStaff.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\FoodSelling.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FoodSelling.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\RevenueByCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RevenueByCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\RevenueByStaff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RevenueByStaff.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report\Template\RevenueDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RevenueDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\DoanhThu.resx">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\FoodItem.resx">
+      <DependentUpon>FoodItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\RecentAction.resx">
+      <DependentUpon>RecentAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Revenue\Revenue.resx">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reviews\CusRate.resx">
+      <DependentUpon>CusRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reviews\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reviews\ReviewFood.resx">
+      <DependentUpon>ReviewFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reviews\Writer.resx">
+      <DependentUpon>Writer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Table\Ban.resx">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Table\BanAn.resx">
+      <DependentUpon>BanAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Table\ThanhToanBan.resx">
+      <DependentUpon>ThanhToanBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\AccControl.resx">
+      <DependentUpon>AccControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\accForm.resx">
+      <DependentUpon>accForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\ManageFood\QuanLyMonAn.resx">
+      <DependentUpon>QuanLyMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManageFood\ThemMon.resx">
+      <DependentUpon>ThemMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TrangChinh.resx">
+      <DependentUpon>TrangChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BUS\Report\DataSetRevenueDetail.xsc">
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </None>
+    <None Include="BUS\Report\DataSetRevenueDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRevenueDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BUS\Report\DataSetRevenueDetail.xss">
+      <DependentUpon>DataSetRevenueDetail.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="packages\FontAwesome.Sharp.5.15.3\.signature.p7s" />
+    <None Include="packages\FontAwesome.Sharp.5.15.3\FontAwesome.Sharp.5.15.3.nupkg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\960x480.png" />
+    <Content Include="images\food.png" />
+    <Content Include="images\staff.png" />
+    <Content Include="images\user.png" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net40\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
+    <Content Include="packages\PdfSharp.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
